@@ -46,6 +46,11 @@
         BTN_Side_Logs.ForeColor = System.Drawing.Color.White
         BTN_Side_Settings.ForeColor = System.Drawing.Color.White
 
+        BTN_Side_Home.FlatAppearance.MouseOverBackColor = Color.White
+        BTN_Side_Items.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
+        BTN_Side_Logs.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
+        BTN_Side_Settings.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
+
     End Sub
 
     Private Sub BTN_Side_Items_Click(sender As Object, e As EventArgs) Handles BTN_Side_Items.Click
@@ -64,6 +69,11 @@
         BTN_Side_Items.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64)
         BTN_Side_Logs.ForeColor = System.Drawing.Color.White
         BTN_Side_Settings.ForeColor = System.Drawing.Color.White
+
+        BTN_Side_Home.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
+        BTN_Side_Items.FlatAppearance.MouseOverBackColor = Color.White
+        BTN_Side_Logs.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
+        BTN_Side_Settings.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
 
     End Sub
 
@@ -84,6 +94,11 @@
         BTN_Side_Logs.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64)
         BTN_Side_Settings.ForeColor = System.Drawing.Color.White
 
+        BTN_Side_Home.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
+        BTN_Side_Items.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
+        BTN_Side_Logs.FlatAppearance.MouseOverBackColor = Color.White
+        BTN_Side_Settings.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
+
     End Sub
 
     Private Sub BTN_Side_Settings_Click(sender As Object, e As EventArgs) Handles BTN_Side_Settings.Click
@@ -102,6 +117,11 @@
         BTN_Side_Items.ForeColor = System.Drawing.Color.White
         BTN_Side_Logs.ForeColor = System.Drawing.Color.White
         BTN_Side_Settings.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64)
+
+        BTN_Side_Home.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
+        BTN_Side_Items.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
+        BTN_Side_Logs.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
+        BTN_Side_Settings.FlatAppearance.MouseOverBackColor = Color.White
 
     End Sub
 
