@@ -1,6 +1,46 @@
 ﻿Public Class Form_Item
 
+    Dim Confirm_string = ""
+    Dim Query As Integer
+
+    Public Sub Reset()
+
+        FI_TBX_ITM_NAME.Text = ""
+        FI_CBX_ITM_CAT.Text = ""
+        FI_CBX_ITM_BRAND.Text = ""
+        FI_CBX_ITM_VARIANT.Text = ""
+
+        FI_NUD_ITM_STOCK.Value = 0
+        FI_NUD_ITM_THRESHOLD.Value = 0
+
+        RB_OWNED.Checked = False
+        RB_CONSIGNED.Checked = False
+        RB_LOANED.Checked = False
+
+        FI_TBX_ITEM_TOPAY.Text = ""
+        FI_TBX_ITEM_TOPAY.Enabled = False
+
+        FI_CBX_ITEM_SUPP.Text = ""
+        FI_TBX_ITEM_COST.Text = ""
+
+        FI_TBX_L_PERCENT.Text = ""
+        FI_TBX_U_PERCENT.Text = ""
+
+        Manual_CBX.Checked = False
+
+        FI_TBX_L_PRICE.Text = ""
+        FI_TBX_M_PRICE.Text = ""
+
+    End Sub
+
     Private Sub Form_Item_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        If FORM_LABEL.Text = "ADD NEW ITEM" Then
+
+            Confirm_string = "ITEM SUCCESSFULY ADDED"
+            Query = 0
+
+        End If
 
         '++++++++++++++++ ADD COMBO BOX VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -76,8 +116,6 @@
 
     End Sub
 
-
-
     '=[VALIDATORS]=======================================================================================================================
 
     Private Sub FI_TBX_ITEM_TOPAY_KeyPress(sender As Object, e As EventArgs) Handles FI_TBX_ITEM_TOPAY.KeyPress, FI_TBX_ITEM_COST.KeyPress, FI_TBX_L_PRICE.KeyPress, FI_TBX_M_PRICE.KeyPress, FI_TBX_L_PERCENT.KeyPress, FI_TBX_U_PERCENT.KeyPress
@@ -94,9 +132,9 @@
 
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles Manual_CBX.CheckedChanged
 
-        If CheckBox1.Checked = True Then
+        If Manual_CBX.Checked = True Then
             FI_TBX_L_PERCENT.Text = ""
             FI_TBX_L_PERCENT.Enabled = False
             FI_TBX_U_PERCENT.Text = ""
@@ -115,9 +153,15 @@
         If RB_OWNED.Checked = True Then
             FI_TBX_ITEM_TOPAY.Text = 0
             FI_TBX_ITEM_TOPAY.ReadOnly = True
-        Else
+            HoldStat = "Owned"
+        ElseIf RB_CONSIGNED.Checked Then
             FI_TBX_ITEM_TOPAY.Text = ""
             FI_TBX_ITEM_TOPAY.ReadOnly = False
+            HoldStat = "Consigned"
+        ElseIf RB_LOANED.Checked Then
+            FI_TBX_ITEM_TOPAY.Text = ""
+            FI_TBX_ITEM_TOPAY.ReadOnly = False
+            HoldStat = "Loaned"
         End If
 
     End Sub
@@ -188,4 +232,152 @@
 
     End Sub
 
+    '=[BUTTON FUNCTIONS]=======================================================================================================================
+
+    Dim HoldStat As String = ""
+
+    Private Sub FI_BTN_SAVE_Click(sender As Object, e As EventArgs) Handles FI_BTN_SAVE.Click
+
+        Dim cat_id As Integer
+        Dim brand_id As Integer
+        Dim var_id As Integer
+        Dim supp_id As Integer
+
+        Try
+
+            opencon()
+
+            cmd.Connection = con
+            cmd.Parameters.AddWithValue("@cat", FI_CBX_ITM_CAT.Text)
+            cmd.Parameters.AddWithValue("@brand", FI_CBX_ITM_BRAND.Text)
+            cmd.Parameters.AddWithValue("@var", FI_CBX_ITM_VARIANT.Text)
+            cmd.Parameters.AddWithValue("@supp", FI_CBX_ITEM_SUPP.Text)
+            cmd.CommandText = "SELECT (SELECT category_id FROM category WHERE category_name = @cat), (SELECT brand_id FROM brands WHERE brand_name = @brand), (SELECT variant_id FROM variants WHERE variant_name = @var), (SELECT supplier_id FROM supplier WHERE supplier_name = @supp)"
+            cmd.Prepare()
+
+            cmdreader = cmd.ExecuteReader
+
+            While cmdreader.Read
+                cat_id = cmdreader.GetValue(0)
+                brand_id = cmdreader.GetValue(1)
+                var_id = cmdreader.GetValue(2)
+                supp_id = cmdreader.GetValue(3)
+            End While
+
+            cmd.Parameters.Clear()
+
+            cmdreader.Close()
+            con.Close()
+
+        Catch ex As Exception
+
+        End Try
+
+        '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        Dim dupcheck As Boolean
+
+        opencon()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT product_id from products"
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+        While cmdreader.Read
+            dupcheck = cmdreader.IsDBNull(0)
+        End While
+
+        'WORKING ON DUPLICATE RECORD CHECKING - YOU ARE HERE!
+
+        cmd.Parameters.Clear()
+
+        cmdreader.Close()
+        con.Close()
+
+        '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        Dim StockStat As String = ""
+        Dim x As String = ""
+
+        If FI_NUD_ITM_STOCK.Value >= FI_NUD_ITM_THRESHOLD.Value Then
+            x = "NORMAL"
+        ElseIf FI_NUD_ITM_STOCK.Value = 0 Then
+            x = "OUT OF STOCK"
+        Else
+            x = "LOW STOCK"
+        End If
+
+        StockStat = x
+
+        Dim StockDate = Date.Now()
+        Dim StockDate_F = StockDate.ToString("yyyy\-MM\-dd")
+
+        Try
+
+            strconnection()
+
+            cmd.Connection = strconn
+            strconn.Open()
+
+            cmd.Parameters.AddWithValue("@item", FI_TBX_ITM_NAME.Text)
+            cmd.Parameters.AddWithValue("@cat", cat_id)
+            cmd.Parameters.AddWithValue("@brand", brand_id)
+            cmd.Parameters.AddWithValue("@var", var_id)
+            cmd.Parameters.AddWithValue("@supp", supp_id)
+
+            cmd.Parameters.AddWithValue("@pcost", FI_TBX_ITEM_COST.Text)
+            cmd.Parameters.AddWithValue("@mincost", FI_TBX_L_PRICE.Text)
+            cmd.Parameters.AddWithValue("@maxcost", FI_TBX_M_PRICE.Text)
+
+            cmd.Parameters.AddWithValue("@qty", FI_NUD_ITM_STOCK.Value)
+            cmd.Parameters.AddWithValue("@trh", FI_NUD_ITM_THRESHOLD.Value)
+
+            cmd.Parameters.AddWithValue("@sts", StockStat)
+            cmd.Parameters.AddWithValue("@dat", StockDate_F)
+
+            cmd.Parameters.AddWithValue("@hold", HoldStat)
+            cmd.Parameters.AddWithValue("@tpy", FI_TBX_ITEM_TOPAY.Text)
+
+            If Query = 0 Then
+                cmd.CommandText = "INSERT INTO `products`(`item_id`, `item_name`, `item_category`, `item_brand`, `item_variant`, `item_supplier`, `item_p_cost`, `item_s_cost_min`, `item_s_cost_max`, `item_qty`, `item_threshold`, `item_stock_status`, `item_last_restock`, `item_warn_date`, `item_rpr_stat`, `item_hld_stat`, `item_to_pay`) VALUES (DEFAULT, @item, @cat, @brand, @var, @supp, @pcost, @mincost, @maxcost, @qty, @trh, @sts, @dat, @dat, 'NORMAL', @hold, @tpy)"
+            ElseIf Query = 1 Then
+                cmd.CommandText = ""
+            End If
+
+            cmd.ExecuteNonQuery()
+
+            cmd.Parameters.Clear()
+            strconn.Close()
+
+        Catch ex As Exception
+
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+
+        End Try
+
+        Reset()
+        Me.Close()
+
+    End Sub
+
+    Private Sub FI_BTN_CANCEL_Click(sender As Object, e As EventArgs) Handles FI_BTN_CANCEL.Click
+
+        Try
+            Me.Close()
+
+        Catch ex As Exception
+
+        End Try
+
+        Reset()
+
+    End Sub
+
+    Private Sub FI_BTN_RESET_Click(sender As Object, e As EventArgs) Handles FI_BTN_RESET.Click
+
+        Reset()
+
+    End Sub
 End Class

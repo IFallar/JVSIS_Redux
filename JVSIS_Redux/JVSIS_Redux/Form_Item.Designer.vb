@@ -40,7 +40,7 @@ Partial Class Form_Item
         Me.Label5 = New System.Windows.Forms.Label()
         Me.FI_CBX_ITEM_SUPP = New System.Windows.Forms.ComboBox()
         Me.GB_SELL_PRICE = New System.Windows.Forms.GroupBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Manual_CBX = New System.Windows.Forms.CheckBox()
         Me.Price_Manual = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.FI_TBX_L_PRICE = New System.Windows.Forms.TextBox()
@@ -273,7 +273,7 @@ Partial Class Form_Item
         '
         'GB_SELL_PRICE
         '
-        Me.GB_SELL_PRICE.Controls.Add(Me.CheckBox1)
+        Me.GB_SELL_PRICE.Controls.Add(Me.Manual_CBX)
         Me.GB_SELL_PRICE.Controls.Add(Me.Price_Manual)
         Me.GB_SELL_PRICE.Controls.Add(Me.Label14)
         Me.GB_SELL_PRICE.Controls.Add(Me.Label13)
@@ -288,15 +288,15 @@ Partial Class Form_Item
         Me.GB_SELL_PRICE.TabStop = False
         Me.GB_SELL_PRICE.Text = "SELL PRICE:"
         '
-        'CheckBox1
+        'Manual_CBX
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(6, 73)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(102, 23)
-        Me.CheckBox1.TabIndex = 15
-        Me.CheckBox1.Text = "Manual Set"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.Manual_CBX.AutoSize = True
+        Me.Manual_CBX.Location = New System.Drawing.Point(6, 73)
+        Me.Manual_CBX.Name = "Manual_CBX"
+        Me.Manual_CBX.Size = New System.Drawing.Size(102, 23)
+        Me.Manual_CBX.TabIndex = 15
+        Me.Manual_CBX.Text = "Manual Set"
+        Me.Manual_CBX.UseVisualStyleBackColor = True
         '
         'Price_Manual
         '
@@ -646,7 +646,7 @@ Partial Class Form_Item
     Friend WithEvents Label14 As Label
     Friend WithEvents FI_TBX_U_PERCENT As TextBox
     Friend WithEvents FI_TBX_L_PERCENT As TextBox
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents Manual_CBX As CheckBox
     Friend WithEvents Price_Manual As Panel
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents ToolTip2 As ToolTip
