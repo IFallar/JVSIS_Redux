@@ -583,11 +583,11 @@ Partial Class Dashboard
         'APP_LABEL
         '
         Me.APP_LABEL.BackColor = System.Drawing.Color.Transparent
-        Me.APP_LABEL.Font = New System.Drawing.Font("Bahnschrift SemiBold", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.APP_LABEL.Font = New System.Drawing.Font("Leelawadee UI", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.APP_LABEL.ForeColor = System.Drawing.SystemColors.InfoText
         Me.APP_LABEL.Location = New System.Drawing.Point(23, 14)
         Me.APP_LABEL.Name = "APP_LABEL"
-        Me.APP_LABEL.Size = New System.Drawing.Size(441, 100)
+        Me.APP_LABEL.Size = New System.Drawing.Size(474, 100)
         Me.APP_LABEL.TabIndex = 15
         Me.APP_LABEL.Text = "JUANCHO'S VARIETY SHOP INVENTORY SYSTEM"
         Me.APP_LABEL.TextAlign = System.Drawing.ContentAlignment.BottomLeft

@@ -130,7 +130,18 @@
 
     '=[DASHBOARD]=======================================================================================================================
 
+    Private Sub HOME_BTN_ADDITEM_Click(sender As Object, e As EventArgs) Handles HOME_BTN_ADDITEM.Click
 
+        Try
+            Dim Modal As New Form_Item
+            Form_Item.FORM_LABEL.Text = "ADD NEW ITEM"
+            Form_Item.ShowDialog()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
 
     '===================================================================================================================================
 

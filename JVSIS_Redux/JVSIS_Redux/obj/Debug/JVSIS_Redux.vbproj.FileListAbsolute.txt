@@ -13,3 +13,4 @@ C:\Users\Shane Ivan Fallar\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\
 C:\Users\Shane Ivan Fallar\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.exe
 C:\Users\Shane Ivan Fallar\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.xml
 C:\Users\Shane Ivan Fallar\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.pdb
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.Form_Item.resources

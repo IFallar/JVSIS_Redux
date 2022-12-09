@@ -81,6 +81,12 @@
       <DependentUpon>Dashboard.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_Item.Designer.vb">
+      <DependentUpon>Form_Item.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Item.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ISFunctions.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -101,6 +107,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Item.resx">
+      <DependentUpon>Form_Item.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
