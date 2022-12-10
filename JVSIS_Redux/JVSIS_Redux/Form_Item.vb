@@ -33,6 +33,75 @@
 
     End Sub
 
+    Public Sub ItemControl()
+
+        Dim StockStat As String = ""
+        Dim x As String = ""
+
+        If FI_NUD_ITM_STOCK.Value >= FI_NUD_ITM_THRESHOLD.Value Then
+            x = "Normal"
+        ElseIf FI_NUD_ITM_STOCK.Value = 0 Then
+            x = "Out Of Stock"
+        Else
+            x = "Low Stock"
+        End If
+
+        StockStat = x
+
+        Dim StockDate = Date.Now()
+        Dim StockDate_F = StockDate.ToString("yyyy\-MM\-dd")
+
+        Try
+
+            strconnection()
+
+            cmd.Connection = strconn
+            strconn.Open()
+
+            cmd.Parameters.Clear()
+
+            cmd.Parameters.AddWithValue("@item", FI_TBX_ITM_NAME.Text)
+            cmd.Parameters.AddWithValue("@cat", cat_id)
+            cmd.Parameters.AddWithValue("@brand", brand_id)
+            cmd.Parameters.AddWithValue("@var", var_id)
+            cmd.Parameters.AddWithValue("@supp", supp_id)
+
+            cmd.Parameters.AddWithValue("@pcost", FI_TBX_ITEM_COST.Text)
+            cmd.Parameters.AddWithValue("@mincost", FI_TBX_L_PRICE.Text)
+            cmd.Parameters.AddWithValue("@maxcost", FI_TBX_M_PRICE.Text)
+
+            cmd.Parameters.AddWithValue("@qty", FI_NUD_ITM_STOCK.Value)
+            cmd.Parameters.AddWithValue("@trh", FI_NUD_ITM_THRESHOLD.Value)
+
+            cmd.Parameters.AddWithValue("@sts", StockStat)
+            cmd.Parameters.AddWithValue("@dat", StockDate_F)
+
+            cmd.Parameters.AddWithValue("@hold", HoldStat)
+            cmd.Parameters.AddWithValue("@tpy", FI_TBX_ITEM_TOPAY.Text)
+
+            If Query = 0 Then
+                cmd.CommandText = "INSERT INTO `products`(`item_id`, `item_name`, `item_category`, `item_brand`, `item_variant`, `item_supplier`, `item_p_cost`, `item_s_cost_min`, `item_s_cost_max`, `item_qty`, `item_threshold`, `item_stock_status`, `item_last_restock`, `item_warn_date`, `item_hld_stat`, `item_to_pay`) VALUES (DEFAULT, @item, @cat, @brand, @var, @supp, @pcost, @mincost, @maxcost, @qty, @trh, @sts, @dat, @dat, @hold, @tpy)"
+            ElseIf Query = 1 Then
+                cmd.CommandText = ""
+            End If
+
+            cmd.ExecuteNonQuery()
+
+            strconn.Close()
+
+            MsgBox(Confirm_string, MsgBoxStyle.OkOnly, "Success!")
+
+        Catch ex As Exception
+
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+
+        End Try
+
+        Reset()
+        Me.Close()
+
+    End Sub
+
     Private Sub Form_Item_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         If FORM_LABEL.Text = "ADD NEW ITEM" Then
@@ -235,13 +304,12 @@
     '=[BUTTON FUNCTIONS]=======================================================================================================================
 
     Dim HoldStat As String = ""
+    Dim cat_id As Integer
+    Dim brand_id As Integer
+    Dim var_id As Integer
+    Dim supp_id As Integer
 
     Private Sub FI_BTN_SAVE_Click(sender As Object, e As EventArgs) Handles FI_BTN_SAVE.Click
-
-        Dim cat_id As Integer
-        Dim brand_id As Integer
-        Dim var_id As Integer
-        Dim supp_id As Integer
 
         Try
 
@@ -275,90 +343,56 @@
 
         '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-        Dim dupcheck As Boolean
+        Dim dupcheck = Nothing
 
-        opencon()
+        If Query = 0 Then
 
-        cmd.Connection = con
-        cmd.CommandText = "SELECT product_id from products"
-        cmd.Prepare()
+            Try
 
-        cmdreader = cmd.ExecuteReader
+                opencon()
 
-        While cmdreader.Read
-            dupcheck = cmdreader.IsDBNull(0)
-        End While
+                cmd.Connection = con
+                cmd.Parameters.Clear()
+                cmd.Parameters.AddWithValue("@item", FI_TBX_ITM_NAME.Text)
+                cmd.Parameters.AddWithValue("@cat", cat_id)
+                cmd.Parameters.AddWithValue("@brand", brand_id)
+                cmd.Parameters.AddWithValue("@var", var_id)
+                cmd.Parameters.AddWithValue("@supp", supp_id)
+                cmd.CommandText = "SELECT item_id from products WHERE item_name = @item AND item_category = @cat AND item_brand = @brand AND item_variant = @var AND item_supplier = @supp"
+                cmd.Prepare()
 
-        'WORKING ON DUPLICATE RECORD CHECKING - YOU ARE HERE!
+                cmdreader = cmd.ExecuteReader
 
-        cmd.Parameters.Clear()
+                While cmdreader.Read
+                    dupcheck = cmdreader.GetValue(0)
+                End While
 
-        cmdreader.Close()
-        con.Close()
+                cmd.Parameters.Clear()
 
-        '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                cmdreader.Close()
+                con.Close()
 
-        Dim StockStat As String = ""
-        Dim x As String = ""
+            Catch ex As Exception
 
-        If FI_NUD_ITM_STOCK.Value >= FI_NUD_ITM_THRESHOLD.Value Then
-            x = "NORMAL"
-        ElseIf FI_NUD_ITM_STOCK.Value = 0 Then
-            x = "OUT OF STOCK"
-        Else
-            x = "LOW STOCK"
+                MessageBox.Show(String.Format("Error: {0}", ex.Message))
+
+            End Try
+
         End If
 
-        StockStat = x
+        If dupcheck = Nothing Then
 
-        Dim StockDate = Date.Now()
-        Dim StockDate_F = StockDate.ToString("yyyy\-MM\-dd")
+            '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-        Try
+            ItemControl()
 
-            strconnection()
+        Else
 
-            cmd.Connection = strconn
-            strconn.Open()
+            MsgBox("That Item Already Exists on Record!", MsgBoxStyle.OkOnly, "Duplicate Entry")
 
-            cmd.Parameters.AddWithValue("@item", FI_TBX_ITM_NAME.Text)
-            cmd.Parameters.AddWithValue("@cat", cat_id)
-            cmd.Parameters.AddWithValue("@brand", brand_id)
-            cmd.Parameters.AddWithValue("@var", var_id)
-            cmd.Parameters.AddWithValue("@supp", supp_id)
+        End If
 
-            cmd.Parameters.AddWithValue("@pcost", FI_TBX_ITEM_COST.Text)
-            cmd.Parameters.AddWithValue("@mincost", FI_TBX_L_PRICE.Text)
-            cmd.Parameters.AddWithValue("@maxcost", FI_TBX_M_PRICE.Text)
-
-            cmd.Parameters.AddWithValue("@qty", FI_NUD_ITM_STOCK.Value)
-            cmd.Parameters.AddWithValue("@trh", FI_NUD_ITM_THRESHOLD.Value)
-
-            cmd.Parameters.AddWithValue("@sts", StockStat)
-            cmd.Parameters.AddWithValue("@dat", StockDate_F)
-
-            cmd.Parameters.AddWithValue("@hold", HoldStat)
-            cmd.Parameters.AddWithValue("@tpy", FI_TBX_ITEM_TOPAY.Text)
-
-            If Query = 0 Then
-                cmd.CommandText = "INSERT INTO `products`(`item_id`, `item_name`, `item_category`, `item_brand`, `item_variant`, `item_supplier`, `item_p_cost`, `item_s_cost_min`, `item_s_cost_max`, `item_qty`, `item_threshold`, `item_stock_status`, `item_last_restock`, `item_warn_date`, `item_rpr_stat`, `item_hld_stat`, `item_to_pay`) VALUES (DEFAULT, @item, @cat, @brand, @var, @supp, @pcost, @mincost, @maxcost, @qty, @trh, @sts, @dat, @dat, 'NORMAL', @hold, @tpy)"
-            ElseIf Query = 1 Then
-                cmd.CommandText = ""
-            End If
-
-            cmd.ExecuteNonQuery()
-
-            cmd.Parameters.Clear()
-            strconn.Close()
-
-        Catch ex As Exception
-
-            MessageBox.Show(String.Format("Error: {0}", ex.Message))
-
-        End Try
-
-        Reset()
-        Me.Close()
+        LoadDashDetails()
 
     End Sub
 
@@ -380,4 +414,5 @@
         Reset()
 
     End Sub
+
 End Class

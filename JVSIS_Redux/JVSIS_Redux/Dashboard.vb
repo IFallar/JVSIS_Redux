@@ -21,9 +21,11 @@
 
     End Class
 
+
+
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-
+        LoadDashDetails()
 
     End Sub
 

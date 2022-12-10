@@ -62,6 +62,28 @@ Module ISFunctions
 
     End Sub
 
+    Public Sub LoadDashDetails()
 
+        opencon()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT (SELECT SUM(item_qty * item_p_cost) FROM products WHERE 1) AS 'Inventory Value',(SELECT COUNT(item_id) FROM products WHERE 1) as 'Item Count', (SELECT COUNT(item_id) FROM products WHERE item_stock_status = 'Low Stock' OR item_stock_status = 'Out of Stock') AS 'Low Stock', (SELECT (SELECT SUM((SELECT item_p_cost FROM products WHERE item_id = item) * (c_qty * -1))) AS 'VALUE' FROM `transaction_log` WHERE `type` = 'Stock Out' AND l_date >= DATE(NOW() - INTERVAL 7 DAY)) AS 'Week Out'"
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+        While cmdreader.Read
+            Dashboard.TLB_INVENTORY_VALUE_BTN.Text = "P" + String.Format("{0:n}", cmdreader.GetValue(0))
+            Dashboard.TLB_ITEMQTY_BTN.Text = cmdreader.GetValue(1)
+            Dashboard.TLB_LOWSTOCK_BTN.Text = cmdreader.GetValue(2)
+
+            Dim OutVal As Double = cmdreader.GetValue(3)
+            Dashboard.TLB_VALUEOUT_BTN.Text = "P" + String.Format("{0:n}", OutVal)
+        End While
+
+        cmdreader.Close()
+        con.Close()
+
+    End Sub
 
 End Module
