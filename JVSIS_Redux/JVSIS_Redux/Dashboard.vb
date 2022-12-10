@@ -26,6 +26,7 @@
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         LoadDashDetails()
+        LoadMain()
 
     End Sub
 
@@ -145,6 +146,30 @@
 
     End Sub
 
+    '===================================================================================================================================
+
+    '=[ITEM SCREEN]=====================================================================================================================
+
+    'TABLE FORMATTING
+
+    Private Sub Item_Table_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles Item_Table.DataBindingComplete
+
+        Item_Table.RowTemplate.Resizable = False
+        Item_Table.Columns(0).Visible = False
+        Item_Table.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+
+        Item_Table.Columns(5).ValueType = GetType(Double)
+        Item_Table.Columns(5).DefaultCellStyle.Format = "N2"
+        Item_Table.Columns(6).ValueType = GetType(Double)
+        Item_Table.Columns(6).DefaultCellStyle.Format = "N2"
+        Item_Table.Columns(7).ValueType = GetType(Double)
+        Item_Table.Columns(7).DefaultCellStyle.Format = "N2"
+        Item_Table.Columns(9).ValueType = GetType(Double)
+        Item_Table.Columns(9).DefaultCellStyle.Format = "N2"
+
+        Item_Table.RowTemplate.MinimumHeight = 50
+
+    End Sub
     '===================================================================================================================================
 
 End Class

@@ -35,6 +35,9 @@
 
     Public Sub ItemControl()
 
+        strconn.Close()
+        con.Close()
+
         Dim StockStat As String = ""
         Dim x As String = ""
 
@@ -341,6 +344,9 @@
 
         End Try
 
+
+        strconn.Close()
+        con.Close()
         '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         Dim dupcheck = Nothing
@@ -377,6 +383,9 @@
                 MessageBox.Show(String.Format("Error: {0}", ex.Message))
 
             End Try
+
+            strconn.Close()
+            con.Close()
 
         End If
 

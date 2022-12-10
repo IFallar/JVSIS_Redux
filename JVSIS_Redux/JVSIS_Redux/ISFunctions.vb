@@ -86,4 +86,11 @@ Module ISFunctions
 
     End Sub
 
+    Public Sub LoadMain()
+
+        tableload("SELECT `item_id`, `item_name` AS 'Product Name', (SELECT brand_name FROM brands WHERE brand_id = `item_brand`) AS 'Brand', (SELECT variant_name FROM variants WHERE variant_id = `item_variant` ) AS 'Variant', (SELECT category_name FROM category WHERE category_id = `item_category` ) AS 'Category', `item_p_cost` AS 'Cost', `item_s_cost_min` AS 'Min Price', `item_s_cost_max` AS 'Max Price', `item_qty` AS 'Quantity', (item_p_cost * item_qty) AS 'Total',`item_stock_status` AS 'Stock Level', `item_last_restock` AS 'Last Restock',  (SELECT supplier_name FROM supplier WHERE supplier_id = `item_supplier` ) as 'Supplier' FROM `products`", Dashboard.Item_Table)
+        strconn.Close()
+
+    End Sub
+
 End Module

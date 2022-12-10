@@ -22,6 +22,8 @@ Partial Class Dashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
         Me.Panel_Sidebar = New System.Windows.Forms.Panel()
         Me.BTN_Side_Settings = New System.Windows.Forms.Button()
@@ -29,6 +31,14 @@ Partial Class Dashboard
         Me.BTN_Side_Items = New System.Windows.Forms.Button()
         Me.BTN_Side_Home = New System.Windows.Forms.Button()
         Me.Panel_Main = New System.Windows.Forms.Panel()
+        Me.Panel_Items = New System.Windows.Forms.Panel()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Item_Table = New System.Windows.Forms.DataGridView()
+        Me.Panel_History = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel_Settings = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel_Home = New System.Windows.Forms.Panel()
         Me.APP_LABEL = New System.Windows.Forms.Label()
         Me.GroupBox_INFO = New System.Windows.Forms.GroupBox()
@@ -54,14 +64,17 @@ Partial Class Dashboard
         Me.HOME_BTN_IN = New System.Windows.Forms.Button()
         Me.HOME_BTN_ADDITEM = New System.Windows.Forms.Button()
         Me.HOME_BTN_REPORTS = New System.Windows.Forms.Button()
-        Me.Panel_Items = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Panel_History = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Panel_Settings = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel_Sidebar.SuspendLayout()
         Me.Panel_Main.SuspendLayout()
+        Me.Panel_Items.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        CType(Me.Item_Table, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel_History.SuspendLayout()
+        Me.Panel_Settings.SuspendLayout()
         Me.Panel_Home.SuspendLayout()
         Me.GroupBox_INFO.SuspendLayout()
         Me.TLB_QuickInfo.SuspendLayout()
@@ -73,9 +86,6 @@ Partial Class Dashboard
         Me.Panel_DV_Top.SuspendLayout()
         Me.GBX_Dashboard_Controls.SuspendLayout()
         Me.TLP_Home_BTN.SuspendLayout()
-        Me.Panel_Items.SuspendLayout()
-        Me.Panel_History.SuspendLayout()
-        Me.Panel_Settings.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel_Sidebar
@@ -162,15 +172,130 @@ Partial Class Dashboard
         '
         'Panel_Main
         '
-        Me.Panel_Main.Controls.Add(Me.Panel_Home)
         Me.Panel_Main.Controls.Add(Me.Panel_Items)
         Me.Panel_Main.Controls.Add(Me.Panel_History)
         Me.Panel_Main.Controls.Add(Me.Panel_Settings)
+        Me.Panel_Main.Controls.Add(Me.Panel_Home)
         Me.Panel_Main.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel_Main.Location = New System.Drawing.Point(220, 0)
         Me.Panel_Main.Name = "Panel_Main"
         Me.Panel_Main.Size = New System.Drawing.Size(884, 661)
         Me.Panel_Main.TabIndex = 1
+        '
+        'Panel_Items
+        '
+        Me.Panel_Items.AutoScroll = True
+        Me.Panel_Items.BackColor = System.Drawing.Color.White
+        Me.Panel_Items.Controls.Add(Me.TableLayoutPanel1)
+        Me.Panel_Items.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel_Items.Location = New System.Drawing.Point(0, 0)
+        Me.Panel_Items.Name = "Panel_Items"
+        Me.Panel_Items.Size = New System.Drawing.Size(884, 661)
+        Me.Panel_Items.TabIndex = 2
+        Me.Panel_Items.Visible = False
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel1.ColumnCount = 1
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Item_Table, 0, 1)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(22, 68)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 3
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(838, 573)
+        Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Location = New System.Drawing.Point(3, 3)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(832, 57)
+        Me.Panel1.TabIndex = 0
+        '
+        'Item_Table
+        '
+        Me.Item_Table.AllowUserToAddRows = False
+        Me.Item_Table.AllowUserToDeleteRows = False
+        Me.Item_Table.AllowUserToResizeRows = False
+        Me.Item_Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
+        Me.Item_Table.BackgroundColor = System.Drawing.Color.White
+        Me.Item_Table.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.Item_Table.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Padding = New System.Windows.Forms.Padding(0, 10, 0, 10)
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Item_Table.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        Me.Item_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Leelawadee UI Semilight", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlDark
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Item_Table.DefaultCellStyle = DataGridViewCellStyle6
+        Me.Item_Table.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Item_Table.EnableHeadersVisualStyles = False
+        Me.Item_Table.Location = New System.Drawing.Point(3, 66)
+        Me.Item_Table.Name = "Item_Table"
+        Me.Item_Table.ReadOnly = True
+        Me.Item_Table.RowHeadersVisible = False
+        Me.Item_Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.Item_Table.Size = New System.Drawing.Size(832, 429)
+        Me.Item_Table.TabIndex = 1
+        '
+        'Panel_History
+        '
+        Me.Panel_History.Controls.Add(Me.Label2)
+        Me.Panel_History.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel_History.Location = New System.Drawing.Point(0, 0)
+        Me.Panel_History.Name = "Panel_History"
+        Me.Panel_History.Size = New System.Drawing.Size(884, 661)
+        Me.Panel_History.TabIndex = 1
+        Me.Panel_History.Visible = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(15, 14)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(55, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "HISTORY"
+        '
+        'Panel_Settings
+        '
+        Me.Panel_Settings.Controls.Add(Me.Label1)
+        Me.Panel_Settings.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel_Settings.Location = New System.Drawing.Point(0, 0)
+        Me.Panel_Settings.Name = "Panel_Settings"
+        Me.Panel_Settings.Size = New System.Drawing.Size(884, 661)
+        Me.Panel_Settings.TabIndex = 0
+        Me.Panel_Settings.Visible = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(19, 14)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(61, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "SETTINGS"
         '
         'Panel_Home
         '
@@ -564,62 +689,31 @@ Partial Class Dashboard
         Me.HOME_BTN_REPORTS.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HOME_BTN_REPORTS.UseVisualStyleBackColor = True
         '
-        'Panel_Items
+        'Button1
         '
-        Me.Panel_Items.Controls.Add(Me.Label3)
-        Me.Panel_Items.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel_Items.Location = New System.Drawing.Point(0, 0)
-        Me.Panel_Items.Name = "Panel_Items"
-        Me.Panel_Items.Size = New System.Drawing.Size(884, 661)
-        Me.Panel_Items.TabIndex = 2
-        Me.Panel_Items.Visible = False
+        Me.Button1.Location = New System.Drawing.Point(-1, 19)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(88, 32)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
-        'Label3
+        'Button2
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(15, 16)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(40, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "ITEMS"
+        Me.Button2.Location = New System.Drawing.Point(93, 19)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(88, 32)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
         '
-        'Panel_History
+        'TextBox1
         '
-        Me.Panel_History.Controls.Add(Me.Label2)
-        Me.Panel_History.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel_History.Location = New System.Drawing.Point(0, 0)
-        Me.Panel_History.Name = "Panel_History"
-        Me.Panel_History.Size = New System.Drawing.Size(884, 661)
-        Me.Panel_History.TabIndex = 1
-        Me.Panel_History.Visible = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(15, 14)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(55, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "HISTORY"
-        '
-        'Panel_Settings
-        '
-        Me.Panel_Settings.Controls.Add(Me.Label1)
-        Me.Panel_Settings.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel_Settings.Location = New System.Drawing.Point(0, 0)
-        Me.Panel_Settings.Name = "Panel_Settings"
-        Me.Panel_Settings.Size = New System.Drawing.Size(884, 661)
-        Me.Panel_Settings.TabIndex = 0
-        Me.Panel_Settings.Visible = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(19, 14)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(61, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "SETTINGS"
+        Me.TextBox1.Font = New System.Drawing.Font("Leelawadee UI", 14.25!)
+        Me.TextBox1.Location = New System.Drawing.Point(187, 19)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(310, 33)
+        Me.TextBox1.TabIndex = 2
         '
         'Dashboard
         '
@@ -634,6 +728,15 @@ Partial Class Dashboard
         Me.Text = "Form1"
         Me.Panel_Sidebar.ResumeLayout(False)
         Me.Panel_Main.ResumeLayout(False)
+        Me.Panel_Items.ResumeLayout(False)
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.Item_Table, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel_History.ResumeLayout(False)
+        Me.Panel_History.PerformLayout()
+        Me.Panel_Settings.ResumeLayout(False)
+        Me.Panel_Settings.PerformLayout()
         Me.Panel_Home.ResumeLayout(False)
         Me.Panel_Home.PerformLayout()
         Me.GroupBox_INFO.ResumeLayout(False)
@@ -646,12 +749,6 @@ Partial Class Dashboard
         Me.Panel_DV_Top.ResumeLayout(False)
         Me.GBX_Dashboard_Controls.ResumeLayout(False)
         Me.TLP_Home_BTN.ResumeLayout(False)
-        Me.Panel_Items.ResumeLayout(False)
-        Me.Panel_Items.PerformLayout()
-        Me.Panel_History.ResumeLayout(False)
-        Me.Panel_History.PerformLayout()
-        Me.Panel_Settings.ResumeLayout(False)
-        Me.Panel_Settings.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -659,7 +756,6 @@ Partial Class Dashboard
     Friend WithEvents Panel_Sidebar As Panel
     Friend WithEvents Panel_Main As Panel
     Friend WithEvents Panel_Items As Panel
-    Friend WithEvents Label3 As Label
     Friend WithEvents Panel_History As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel_Settings As Panel
@@ -693,4 +789,10 @@ Partial Class Dashboard
     Friend WithEvents HOME_BTN_IN As Button
     Friend WithEvents HOME_BTN_ADDITEM As Button
     Friend WithEvents HOME_BTN_REPORTS As Button
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Item_Table As DataGridView
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
 End Class
