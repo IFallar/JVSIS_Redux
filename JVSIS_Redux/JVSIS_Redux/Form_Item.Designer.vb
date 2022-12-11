@@ -446,7 +446,7 @@ Partial Class Form_Item
         Me.FI_CBX_ITM_VARIANT.FormattingEnabled = True
         Me.FI_CBX_ITM_VARIANT.Location = New System.Drawing.Point(410, 60)
         Me.FI_CBX_ITM_VARIANT.Name = "FI_CBX_ITM_VARIANT"
-        Me.FI_CBX_ITM_VARIANT.Size = New System.Drawing.Size(200, 28)
+        Me.FI_CBX_ITM_VARIANT.Size = New System.Drawing.Size(204, 28)
         Me.FI_CBX_ITM_VARIANT.TabIndex = 4
         '
         'FI_CBX_ITM_BRAND
@@ -464,7 +464,7 @@ Partial Class Form_Item
         Me.FI_CBX_ITM_CAT.FormattingEnabled = True
         Me.FI_CBX_ITM_CAT.Location = New System.Drawing.Point(483, 18)
         Me.FI_CBX_ITM_CAT.Name = "FI_CBX_ITM_CAT"
-        Me.FI_CBX_ITM_CAT.Size = New System.Drawing.Size(127, 28)
+        Me.FI_CBX_ITM_CAT.Size = New System.Drawing.Size(131, 28)
         Me.FI_CBX_ITM_CAT.TabIndex = 2
         '
         'Label4

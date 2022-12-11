@@ -23,8 +23,8 @@ Partial Class Dashboard
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel_Sidebar = New System.Windows.Forms.Panel()
         Me.BTN_Side_Settings = New System.Windows.Forms.Button()
         Me.BTN_Side_Logs = New System.Windows.Forms.Button()
@@ -231,8 +231,8 @@ Partial Class Dashboard
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(851, 568)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(851, 601)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'SplitContainer1
@@ -362,33 +362,33 @@ Partial Class Dashboard
         Me.Item_Table.BackgroundColor = System.Drawing.Color.White
         Me.Item_Table.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.Item_Table.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle13.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle13.Padding = New System.Windows.Forms.Padding(0, 10, 0, 10)
-        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Item_Table.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(0, 10, 0, 10)
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Item_Table.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.Item_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Leelawadee UI Semilight", 8.75!)
-        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Item_Table.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Leelawadee UI Semilight", 8.75!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Item_Table.DefaultCellStyle = DataGridViewCellStyle2
         Me.Item_Table.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Item_Table.EnableHeadersVisualStyles = False
-        Me.Item_Table.Location = New System.Drawing.Point(3, 109)
+        Me.Item_Table.Location = New System.Drawing.Point(3, 107)
         Me.Item_Table.MultiSelect = False
         Me.Item_Table.Name = "Item_Table"
         Me.Item_Table.ReadOnly = True
         Me.Item_Table.RowHeadersVisible = False
         Me.Item_Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.Item_Table.Size = New System.Drawing.Size(845, 410)
+        Me.Item_Table.Size = New System.Drawing.Size(845, 442)
         Me.Item_Table.TabIndex = 1
         '
         'TableLayoutPanel2
@@ -403,24 +403,26 @@ Partial Class Dashboard
         Me.TableLayoutPanel2.Controls.Add(Me.ITM_BTN_EDIT, 2, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.ITM_BTN_NEW, 3, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 525)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 555)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(845, 40)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(845, 43)
         Me.TableLayoutPanel2.TabIndex = 4
         '
         'VIEW_RETURN
         '
         Me.VIEW_RETURN.BackColor = System.Drawing.Color.Black
         Me.VIEW_RETURN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.VIEW_RETURN.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.VIEW_RETURN.FlatAppearance.BorderSize = 0
         Me.VIEW_RETURN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.VIEW_RETURN.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.VIEW_RETURN.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
         Me.VIEW_RETURN.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.VIEW_RETURN.Location = New System.Drawing.Point(3, 3)
         Me.VIEW_RETURN.Name = "VIEW_RETURN"
-        Me.VIEW_RETURN.Size = New System.Drawing.Size(144, 34)
+        Me.VIEW_RETURN.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        Me.VIEW_RETURN.Size = New System.Drawing.Size(144, 37)
         Me.VIEW_RETURN.TabIndex = 3
         Me.VIEW_RETURN.Text = "FLAGGED ITEMS"
         Me.VIEW_RETURN.UseVisualStyleBackColor = False
@@ -430,16 +432,20 @@ Partial Class Dashboard
         Me.ITM_BTN_DELETE.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ITM_BTN_DELETE.BackColor = System.Drawing.Color.Firebrick
+        Me.ITM_BTN_DELETE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ITM_BTN_DELETE.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_BTN_DELETE.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
         Me.ITM_BTN_DELETE.FlatAppearance.BorderSize = 0
         Me.ITM_BTN_DELETE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon
         Me.ITM_BTN_DELETE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_BTN_DELETE.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_BTN_DELETE.Font = New System.Drawing.Font("Leelawadee UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ITM_BTN_DELETE.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ITM_BTN_DELETE.Location = New System.Drawing.Point(559, 3)
+        Me.ITM_BTN_DELETE.Location = New System.Drawing.Point(527, 3)
         Me.ITM_BTN_DELETE.Name = "ITM_BTN_DELETE"
-        Me.ITM_BTN_DELETE.Size = New System.Drawing.Size(70, 34)
+        Me.ITM_BTN_DELETE.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        Me.ITM_BTN_DELETE.Size = New System.Drawing.Size(89, 37)
         Me.ITM_BTN_DELETE.TabIndex = 0
+        Me.ITM_BTN_DELETE.Text = "DELETE"
         Me.ITM_BTN_DELETE.UseVisualStyleBackColor = False
         '
         'ITM_BTN_EDIT
@@ -447,16 +453,20 @@ Partial Class Dashboard
         Me.ITM_BTN_EDIT.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ITM_BTN_EDIT.BackColor = System.Drawing.Color.Navy
+        Me.ITM_BTN_EDIT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ITM_BTN_EDIT.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_BTN_EDIT.FlatAppearance.BorderColor = System.Drawing.Color.Navy
         Me.ITM_BTN_EDIT.FlatAppearance.BorderSize = 0
         Me.ITM_BTN_EDIT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ITM_BTN_EDIT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_BTN_EDIT.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_BTN_EDIT.Font = New System.Drawing.Font("Leelawadee UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ITM_BTN_EDIT.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ITM_BTN_EDIT.Location = New System.Drawing.Point(635, 3)
+        Me.ITM_BTN_EDIT.Location = New System.Drawing.Point(622, 3)
         Me.ITM_BTN_EDIT.Name = "ITM_BTN_EDIT"
-        Me.ITM_BTN_EDIT.Size = New System.Drawing.Size(71, 34)
+        Me.ITM_BTN_EDIT.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        Me.ITM_BTN_EDIT.Size = New System.Drawing.Size(84, 37)
         Me.ITM_BTN_EDIT.TabIndex = 1
+        Me.ITM_BTN_EDIT.Text = "EDIT"
         Me.ITM_BTN_EDIT.UseVisualStyleBackColor = False
         '
         'ITM_BTN_NEW
@@ -465,14 +475,15 @@ Partial Class Dashboard
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ITM_BTN_NEW.BackColor = System.Drawing.Color.LimeGreen
         Me.ITM_BTN_NEW.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_BTN_NEW.FlatAppearance.BorderColor = System.Drawing.Color.LimeGreen
         Me.ITM_BTN_NEW.FlatAppearance.BorderSize = 0
         Me.ITM_BTN_NEW.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green
         Me.ITM_BTN_NEW.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_BTN_NEW.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_BTN_NEW.Font = New System.Drawing.Font("Leelawadee UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ITM_BTN_NEW.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ITM_BTN_NEW.Location = New System.Drawing.Point(712, 3)
         Me.ITM_BTN_NEW.Name = "ITM_BTN_NEW"
-        Me.ITM_BTN_NEW.Size = New System.Drawing.Size(130, 34)
+        Me.ITM_BTN_NEW.Size = New System.Drawing.Size(130, 37)
         Me.ITM_BTN_NEW.TabIndex = 2
         Me.ITM_BTN_NEW.Text = "NEW ITEM+"
         Me.ITM_BTN_NEW.UseVisualStyleBackColor = False
@@ -484,7 +495,7 @@ Partial Class Dashboard
         Me.Panel1.Controls.Add(Me.TableLayoutPanel4)
         Me.Panel1.Location = New System.Drawing.Point(3, 50)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(845, 53)
+        Me.Panel1.Size = New System.Drawing.Size(845, 51)
         Me.Panel1.TabIndex = 5
         '
         'TableLayoutPanel4
@@ -497,7 +508,7 @@ Partial Class Dashboard
         Me.TableLayoutPanel4.Controls.Add(Me.ITM_BTN_STOCKIN, 0, 0)
         Me.TableLayoutPanel4.Controls.Add(Me.ITM_BTN_STOCKOUT, 1, 0)
         Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(0, 13)
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(0, 11)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 1
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
@@ -509,7 +520,7 @@ Partial Class Dashboard
         Me.ITM_BTN_STOCKIN.BackColor = System.Drawing.Color.Green
         Me.ITM_BTN_STOCKIN.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ITM_BTN_STOCKIN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_BTN_STOCKIN.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_BTN_STOCKIN.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ITM_BTN_STOCKIN.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.ITM_BTN_STOCKIN.Location = New System.Drawing.Point(3, 3)
         Me.ITM_BTN_STOCKIN.Name = "ITM_BTN_STOCKIN"
@@ -523,7 +534,7 @@ Partial Class Dashboard
         Me.ITM_BTN_STOCKOUT.BackColor = System.Drawing.Color.Navy
         Me.ITM_BTN_STOCKOUT.Cursor = System.Windows.Forms.Cursors.Hand
         Me.ITM_BTN_STOCKOUT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_BTN_STOCKOUT.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_BTN_STOCKOUT.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ITM_BTN_STOCKOUT.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.ITM_BTN_STOCKOUT.Location = New System.Drawing.Point(160, 3)
         Me.ITM_BTN_STOCKOUT.Name = "ITM_BTN_STOCKOUT"

@@ -1,4 +1,6 @@
-﻿Public Class Form_Item
+﻿Imports System.ComponentModel
+
+Public Class Form_Item
 
     Dim Confirm_string = ""
     Dim Query As Integer
@@ -85,7 +87,7 @@
             If Query = 0 Then
                 cmd.CommandText = "INSERT INTO `products`(`item_id`, `item_name`, `item_category`, `item_brand`, `item_variant`, `item_supplier`, `item_p_cost`, `item_s_cost_min`, `item_s_cost_max`, `item_qty`, `item_threshold`, `item_stock_status`, `item_last_restock`, `item_warn_date`, `item_hld_stat`, `item_to_pay`) VALUES (DEFAULT, @item, @cat, @brand, @var, @supp, @pcost, @mincost, @maxcost, @qty, @trh, @sts, @dat, @dat, @hold, @tpy)"
             ElseIf Query = 1 Then
-                cmd.CommandText = ""
+                cmd.CommandText = "UPDATE `products` SET `item_name`= @item,`item_category`= @cat,`item_brand` =@brand,`item_variant`= @var,`item_supplier`= @supp,`item_p_cost`= @pcost,`item_s_cost_min`= @mincost,`item_s_cost_max`= @maxcost,`item_qty`= @qty,`item_threshold`= @trh,`item_stock_status`= @sts,`item_hld_stat`= @hold,`item_to_pay`= @tpy WHERE item_id = '" & Dashboard.GlobalVariables.Selected_Item & "'"
             End If
 
             cmd.ExecuteNonQuery()
@@ -94,14 +96,81 @@
 
             MsgBox(Confirm_string, MsgBoxStyle.OkOnly, "Success!")
 
+            LoadDashDetails()
+            Dashboard.LoadMain()
+
         Catch ex As Exception
 
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
             MsgBox("Please Enter All Details Properly", MsgBoxStyle.OkOnly, "Warning!")
 
         End Try
 
         Reset()
         Me.Close()
+
+    End Sub
+
+    Public Sub GetDetails()
+
+        Dim Holding As String = ""
+        Dim PPrice = 0
+        Dim LPrice = 0
+        Dim MPrice = 0
+
+        Confirm_string = "ITEM SUCCESSFULY UPDATED"
+        Query = 1
+
+        Try
+
+            opencon()
+
+            cmd.Connection = con
+            cmd.CommandText = "SELECT `item_name`, (SELECT category_name FROM category WHERE category_id = `item_category`), (SELECT brand_name FROM brands WHERE brand_id = `item_brand`), (SELECT variant_name FROM variants WHERE variant_id = `item_variant`) , (SELECT supplier_name FROM supplier WHERE supplier_id = `item_supplier`), `item_p_cost`, `item_s_cost_min`, `item_s_cost_max`, `item_qty`, `item_threshold`, `item_hld_stat`, `item_to_pay` FROM `products` WHERE item_id = '" & Dashboard.GlobalVariables.Selected_Item & "'"
+            cmd.Prepare()
+
+            cmdreader = cmd.ExecuteReader
+
+            While cmdreader.Read
+                FI_TBX_ITM_NAME.Text = cmdreader.GetString(0)
+                FI_CBX_ITM_CAT.Text = cmdreader.GetString(1)
+                FI_CBX_ITM_BRAND.Text = cmdreader.GetString(2)
+                FI_CBX_ITM_VARIANT.Text = cmdreader.GetString(3)
+                FI_CBX_ITEM_SUPP.Text = cmdreader.GetString(4)
+
+                FI_TBX_ITEM_COST.Text = cmdreader.GetString(5)
+                FI_TBX_L_PRICE.Text = cmdreader.GetString(6)
+                FI_TBX_M_PRICE.Text = cmdreader.GetString(7)
+
+                PPrice = cmdreader.GetString(5)
+                LPrice = cmdreader.GetString(6)
+                MPrice = cmdreader.GetString(7)
+
+                FI_NUD_ITM_STOCK.Text = cmdreader.GetString(8)
+                FI_NUD_ITM_THRESHOLD.Text = cmdreader.GetString(9)
+                Holding = cmdreader.GetString(10)
+                FI_TBX_ITEM_TOPAY.Text = cmdreader.GetString(11)
+            End While
+
+            cmdreader.Close()
+            con.Close()
+
+            If Holding = "Owned" Then
+                RB_OWNED.Checked = True
+            ElseIf Holding = "Consigned" Then
+                RB_CONSIGNED.Checked = True
+            Else
+                RB_LOANED.Checked = True
+            End If
+
+            Dim LowerPercent As Integer = ((LPrice - PPrice) / PPrice) * 100
+            FI_TBX_L_PERCENT.Text = LowerPercent
+            Dim UpperPercent As Integer = ((MPrice - PPrice) / PPrice) * 100
+            FI_TBX_U_PERCENT.Text = UpperPercent
+
+        Catch ex As Exception
+
+        End Try
 
     End Sub
 
@@ -112,80 +181,95 @@
             Confirm_string = "ITEM SUCCESSFULY ADDED"
             Query = 0
 
+            Panel3.Enabled = True
+            FI_NUD_ITM_STOCK.Enabled = True
+            FI_CBX_ITEM_SUPP.Enabled = True
+
+            '++++++++++++++++ ADD COMBO BOX VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+            FI_CBX_ITM_BRAND.Items.Clear()
+            FI_CBX_ITM_CAT.Items.Clear()
+            FI_CBX_ITM_VARIANT.Items.Clear()
+            FI_CBX_ITEM_SUPP.Items.Clear()
+
+            opencon()
+
+            cmd.Connection = con
+            cmd.CommandText = "SELECT BRAND_NAME FROM (brands)"
+            cmd.Prepare()
+
+            cmdreader = cmd.ExecuteReader
+
+            While cmdreader.Read
+                Dim list_brands = cmdreader.GetString("brand_name")
+                FI_CBX_ITM_BRAND.Items.Add(list_brands)
+            End While
+
+            cmdreader.Close()
+            con.Close()
+
+            opencon()
+
+            cmd.Connection = con
+            cmd.CommandText = "SELECT variant_name FROM variants"
+            cmd.Prepare()
+
+            cmdreader = cmd.ExecuteReader
+
+            While cmdreader.Read
+                Dim list_variants = cmdreader.GetString("variant_name")
+                FI_CBX_ITM_VARIANT.Items.Add(list_variants)
+            End While
+
+            cmdreader.Close()
+            con.Close()
+
+            opencon()
+
+            cmd.Connection = con
+            cmd.CommandText = "SELECT category_name FROM category"
+            cmd.Prepare()
+
+            cmdreader = cmd.ExecuteReader
+
+            While cmdreader.Read
+                Dim list_categories = cmdreader.GetString("category_name")
+                FI_CBX_ITM_CAT.Items.Add(list_categories)
+            End While
+
+            cmdreader.Close()
+            con.Close()
+
+            opencon()
+
+            cmd.Connection = con
+            cmd.CommandText = "SELECT `supplier_name` FROM `supplier` WHERE 1"
+            cmd.Prepare()
+
+            cmdreader = cmd.ExecuteReader
+
+            While cmdreader.Read
+                Dim list_supp = cmdreader.GetString("supplier_name")
+                FI_CBX_ITEM_SUPP.Items.Add(list_supp)
+            End While
+
+            cmdreader.Close()
+            con.Close()
+
+        ElseIf FORM_LABEL.Text = "UPDATE ITEM DETAILS" Then
+
+            Panel3.Enabled = False
+            FI_NUD_ITM_STOCK.Enabled = False
+            FI_CBX_ITEM_SUPP.Enabled = False
+
+            GetDetails()
+
         End If
 
-        '++++++++++++++++ ADD COMBO BOX VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    End Sub
 
-        FI_CBX_ITM_BRAND.Items.Clear()
-        FI_CBX_ITM_CAT.Items.Clear()
-        FI_CBX_ITM_VARIANT.Items.Clear()
-        FI_CBX_ITEM_SUPP.Items.Clear()
-
-        opencon()
-
-        cmd.Connection = con
-        cmd.CommandText = "SELECT BRAND_NAME FROM (brands)"
-        cmd.Prepare()
-
-        cmdreader = cmd.ExecuteReader
-
-        While cmdreader.Read
-            Dim list_brands = cmdreader.GetString("brand_name")
-            FI_CBX_ITM_BRAND.Items.Add(list_brands)
-        End While
-
-        cmdreader.Close()
-        con.Close()
-
-        opencon()
-
-        cmd.Connection = con
-        cmd.CommandText = "SELECT variant_name FROM variants"
-        cmd.Prepare()
-
-        cmdreader = cmd.ExecuteReader
-
-        While cmdreader.Read
-            Dim list_variants = cmdreader.GetString("variant_name")
-            FI_CBX_ITM_VARIANT.Items.Add(list_variants)
-        End While
-
-        cmdreader.Close()
-        con.Close()
-
-        opencon()
-
-        cmd.Connection = con
-        cmd.CommandText = "SELECT category_name FROM category"
-        cmd.Prepare()
-
-        cmdreader = cmd.ExecuteReader
-
-        While cmdreader.Read
-            Dim list_categories = cmdreader.GetString("category_name")
-            FI_CBX_ITM_CAT.Items.Add(list_categories)
-        End While
-
-        cmdreader.Close()
-        con.Close()
-
-        opencon()
-
-        cmd.Connection = con
-        cmd.CommandText = "SELECT `supplier_name` FROM `supplier` WHERE 1"
-        cmd.Prepare()
-
-        cmdreader = cmd.ExecuteReader
-
-        While cmdreader.Read
-            Dim list_supp = cmdreader.GetString("supplier_name")
-            FI_CBX_ITEM_SUPP.Items.Add(list_supp)
-        End While
-
-        cmdreader.Close()
-        con.Close()
-
-
+    Private Sub Form_Item_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Reset()
     End Sub
 
     '=[VALIDATORS]=======================================================================================================================
@@ -419,9 +503,12 @@
 
     Private Sub FI_BTN_RESET_Click(sender As Object, e As EventArgs) Handles FI_BTN_RESET.Click
 
-        Reset()
+        If FORM_LABEL.Text = "ADD NEW ITEM" Then
+            Reset()
+        ElseIf FORM_LABEL.Text = "UPDATE ITEM DETAILS" Then
+            GetDetails()
+        End If
 
     End Sub
-
 
 End Class

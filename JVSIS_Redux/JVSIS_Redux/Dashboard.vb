@@ -187,6 +187,49 @@
 
     End Sub
 
+    Private Sub ITM_BTN_DELETE_Click(sender As Object, e As EventArgs) Handles ITM_BTN_DELETE.Click
+
+        Try
+
+            Dim delete = MsgBox("Are you sure you want delete the selected item?", MsgBoxStyle.YesNo, "Delete Item")
+
+            If delete = MsgBoxResult.Yes Then
+
+                strconnection()
+
+                cmd.Connection = strconn
+                strconn.Open()
+
+                cmd.CommandText = "DELETE FROM `products` WHERE item_id = '" & Dashboard.GlobalVariables.Selected_Item & "'"
+                cmd.ExecuteNonQuery()
+                strconn.Close()
+
+                LoadDashDetails()
+                LoadMain()
+
+            ElseIf delete = MsgBoxResult.No Then
+
+            End If
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub ITM_BTN_EDIT_Click(sender As Object, e As EventArgs) Handles ITM_BTN_EDIT.Click
+
+        Try
+            Dim Modal As New Form_Item
+            Form_Item.FORM_LABEL.Text = "UPDATE ITEM DETAILS"
+            Form_Item.ShowDialog()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
     Private Sub HOME_BTN_IN_Click(sender As Object, e As EventArgs) Handles HOME_BTN_IN.Click
 
         Try
@@ -264,6 +307,8 @@
 
     Private Sub Item_Table_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles Item_Table.DataBindingComplete
 
+        Item_Table.ClearSelection()
+
         Item_Table.RowTemplate.Resizable = False
         Item_Table.Columns(0).Visible = False
         Item_Table.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
@@ -301,9 +346,10 @@
 
         Try
             GlobalVariables.Selected_Item = Item_Table.CurrentRow.Cells(0).Value
+
         Catch ex As NullReferenceException
 
-            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+            GlobalVariables.Selected_Item = 1
 
         End Try
 
@@ -424,6 +470,10 @@
         cmd.Parameters.Clear()
 
     End Sub
+
+
+
+
 
     '===================================================================================================================================
 
