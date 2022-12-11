@@ -156,7 +156,9 @@
 
         Item_Table.RowTemplate.Resizable = False
         Item_Table.Columns(0).Visible = False
-        Item_Table.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        Item_Table.Columns(0).Frozen = True
+        Item_Table.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Item_Table.Columns(1).MinimumWidth = 130
 
         Item_Table.Columns(5).ValueType = GetType(Double)
         Item_Table.Columns(5).DefaultCellStyle.Format = "N2"
@@ -170,6 +172,93 @@
         Item_Table.RowTemplate.MinimumHeight = 50
 
     End Sub
+
+    'FILTER SETTING
+
+    Private Sub FILTER_CAT_SelectedIndexChanged(sender As Object, e As EventArgs) Handles FILTER_CAT.SelectedIndexChanged
+
+        FILTER_VAL.Items.Clear()
+        FILTER_VAL.Text = "All"
+
+        If FILTER_CAT.SelectedIndex = 0 Then
+
+            FILTER_PANEL.Width = 150
+
+        ElseIf FILTER_CAT.SelectedIndex = 1 Then
+
+            FILTER_PANEL.Width = 300
+
+            opencon()
+
+            cmd.Connection = con
+            cmd.CommandText = "SELECT brand_name FROM (brands)"
+            cmd.Prepare()
+
+            cmdreader = cmd.ExecuteReader
+
+            While cmdreader.Read
+                Dim filter_list = cmdreader.GetString("brand_name")
+                FILTER_VAL.Items.Add(filter_list)
+            End While
+
+            cmdreader.Close()
+            con.Close()
+
+        ElseIf FILTER_CAT.SelectedIndex = 2 Then
+
+            FILTER_PANEL.Width = 300
+
+            opencon()
+
+            cmd.Connection = con
+            cmd.CommandText = "SELECT category_name FROM category"
+            cmd.Prepare()
+
+            cmdreader = cmd.ExecuteReader
+
+            While cmdreader.Read
+                Dim filter_list = cmdreader.GetString("category_name")
+                FILTER_VAL.Items.Add(filter_list)
+            End While
+
+            cmdreader.Close()
+            con.Close()
+
+        ElseIf FILTER_CAT.SelectedIndex = 3 Then
+
+            FILTER_PANEL.Width = 300
+
+            opencon()
+
+            cmd.Connection = con
+            cmd.CommandText = "SELECT supplier_name FROM suppliers"
+            cmd.Prepare()
+
+            cmdreader = cmd.ExecuteReader
+
+            While cmdreader.Read
+                Dim filter_list = cmdreader.GetString("supplier_name")
+                FILTER_VAL.Items.Add(filter_list)
+            End While
+
+            cmdreader.Close()
+            con.Close()
+
+        ElseIf FILTER_CAT.SelectedIndex = 4 Then
+
+            FILTER_PANEL.Width = 300
+
+            FILTER_VAL.Items.Add("Normal")
+            FILTER_VAL.Items.Add("Low Stock")
+            FILTER_VAL.Items.Add("Out of Stock")
+
+        End If
+
+    End Sub
+
+
     '===================================================================================================================================
+
+
 
 End Class
