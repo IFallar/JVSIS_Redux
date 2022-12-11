@@ -22,7 +22,7 @@ Partial Class Form_Stock_DB
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.FS_RS_TBX = New System.Windows.Forms.TextBox()
         Me.DTG_SUGGEST = New System.Windows.Forms.Panel()
@@ -48,6 +48,7 @@ Partial Class Form_Stock_DB
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.FORM_LABEL = New System.Windows.Forms.Label()
         Me.Panel_Num_Controls = New System.Windows.Forms.Panel()
+        Me.Stock_Mode = New System.Windows.Forms.Label()
         Me.Panel3.SuspendLayout()
         Me.DTG_SUGGEST.SuspendLayout()
         CType(Me.DTG_ITM_RECC, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -104,14 +105,14 @@ Partial Class Form_Stock_DB
         Me.DTG_ITM_RECC.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DTG_ITM_RECC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DTG_ITM_RECC.ColumnHeadersVisible = False
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DTG_ITM_RECC.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DTG_ITM_RECC.DefaultCellStyle = DataGridViewCellStyle1
         Me.DTG_ITM_RECC.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DTG_ITM_RECC.Location = New System.Drawing.Point(0, 0)
         Me.DTG_ITM_RECC.MultiSelect = False
@@ -326,6 +327,7 @@ Partial Class Form_Stock_DB
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel5.Controls.Add(Me.Stock_Mode)
         Me.Panel5.Controls.Add(Me.FORM_LABEL)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel5.Location = New System.Drawing.Point(0, 0)
@@ -357,6 +359,19 @@ Partial Class Form_Stock_DB
         Me.Panel_Num_Controls.Size = New System.Drawing.Size(216, 39)
         Me.Panel_Num_Controls.TabIndex = 47
         '
+        'Stock_Mode
+        '
+        Me.Stock_Mode.AutoSize = True
+        Me.Stock_Mode.BackColor = System.Drawing.Color.Transparent
+        Me.Stock_Mode.Font = New System.Drawing.Font("Leelawadee UI", 10.25!)
+        Me.Stock_Mode.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Stock_Mode.Location = New System.Drawing.Point(426, 17)
+        Me.Stock_Mode.Name = "Stock_Mode"
+        Me.Stock_Mode.Size = New System.Drawing.Size(96, 19)
+        Me.Stock_Mode.TabIndex = 17
+        Me.Stock_Mode.Text = "STOCK MODE"
+        Me.Stock_Mode.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'Form_Stock_DB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -380,6 +395,7 @@ Partial Class Form_Stock_DB
         Me.DTG_SUGGEST.ResumeLayout(False)
         CType(Me.DTG_ITM_RECC, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
         Me.Panel_Num_Controls.ResumeLayout(False)
         Me.Panel_Num_Controls.PerformLayout()
         Me.ResumeLayout(False)
@@ -411,4 +427,5 @@ Partial Class Form_Stock_DB
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel_Num_Controls As Panel
+    Friend WithEvents Stock_Mode As Label
 End Class

@@ -4,78 +4,7 @@ Public Class Form_Stock_DB
 
     Dim Query As String = "CONCAT(item_name, ' | ', (SELECT brand_name FROM brands WHERE brand_id = item_brand),' | ',   (SELECT variant_name FROM variants WHERE variant_id = item_variant), ' | ' ,  (SELECT supplier_name FROM supplier WHERE supplier_id = item_supplier))"
 
-
-    Private Sub Form_Stock_DB_Load(sender As Object, e As EventArgs) Handles Me.Load
-
-        Cur_Stock.Text = ""
-        Cur_Stock.BackColor = Color.White
-        New_QTY.Text = ""
-        New_QTY.BackColor = Color.White
-        Panel_Num_Controls.Enabled = False
-        QTY_HOLDER.Text = 0
-
-    End Sub
-
-    Private Sub Form_Stock_DB_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
-
-        FS_RS_TBX.Text = ""
-        FS_RS_BRAND.Text = ""
-        FS_RS_VAR.Text = ""
-        FS_RS_SUPP.Text = ""
-        Cur_Stock.Text = ""
-        Cur_Stock.BackColor = Color.White
-        New_QTY.Text = ""
-        New_QTY.BackColor = Color.White
-        Panel_Num_Controls.Enabled = False
-        QTY_HOLDER.Text = 0
-
-        DTG_SUGGEST.Visible = False
-        DTG_SUGGEST.Height = 10
-
-        LoadDashDetails()
-
-    End Sub
-
-    Private Sub FS_RS_TBX_TextChanged(sender As Object, e As EventArgs) Handles FS_RS_TBX.TextChanged
-
-        DTG_SUGGEST.Height = 117
-        DTG_SUGGEST.Visible = True
-
-        cmd.Parameters.AddWithValue("@searchpara", FS_RS_TBX.Text)
-        tableload("SELECT item_id," + Query + " AS 'Details' FROM products WHERE " + Query + " LIKE CONCAT('%',@searchpara,'%')", DTG_ITM_RECC)
-        strconn.Close()
-        cmd.Parameters.Clear()
-
-        If FS_RS_TBX.Text = "" Then
-            Cur_Stock.Text = ""
-            Cur_Stock.BackColor = Color.White
-            New_QTY.Text = ""
-            New_QTY.BackColor = Color.White
-            Panel_Num_Controls.Enabled = False
-            QTY_HOLDER.Text = 0
-            DTG_SUGGEST.Visible = False
-            DTG_SUGGEST.Height = 10
-        End If
-
-    End Sub
-
-    'ITEM SELECTION
-
-    Dim CS As Integer
-    Dim TH As Integer
-    Dim NQ As Integer
-    Dim SS As String = ""
-    Dim Current As Boolean = False
-
-    Private Sub Item_Table_SelectionChanged(sender As Object, e As EventArgs) Handles DTG_ITM_RECC.CellClick
-
-        Try
-            Dashboard.GlobalVariables.Selected_Item = DTG_ITM_RECC.CurrentRow.Cells(0).Value
-        Catch ex As NullReferenceException
-
-            Dashboard.GlobalVariables.Selected_Item = 1
-
-        End Try
+    Public Sub StockSelect()
 
         opencon()
 
@@ -120,6 +49,90 @@ Public Class Form_Stock_DB
 
         QTY_HOLDER.Text = 0
         Panel_Num_Controls.Enabled = True
+
+    End Sub
+
+    Private Sub Form_Stock_DB_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        If Stock_Mode.Text = "Item Screen" Then
+            StockSelect()
+            FS_RS_TBX.ReadOnly = True
+        Else
+            FS_RS_TBX.ReadOnly = False
+        End If
+
+
+
+    End Sub
+
+    Private Sub Form_Stock_DB_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+
+        FS_RS_TBX.Text = ""
+        FS_RS_BRAND.Text = ""
+        FS_RS_VAR.Text = ""
+        FS_RS_SUPP.Text = ""
+        Cur_Stock.Text = ""
+        Cur_Stock.BackColor = Color.White
+        New_QTY.Text = ""
+        New_QTY.BackColor = Color.White
+        Panel_Num_Controls.Enabled = False
+        QTY_HOLDER.Text = 0
+
+        DTG_SUGGEST.Visible = False
+        DTG_SUGGEST.Height = 10
+
+        LoadDashDetails()
+
+    End Sub
+
+    Private Sub FS_RS_TBX_TextChanged(sender As Object, e As EventArgs) Handles FS_RS_TBX.TextChanged
+
+        If Stock_Mode.Text = "Dashboard" Then
+
+            DTG_SUGGEST.Height = 117
+            DTG_SUGGEST.Visible = True
+
+            cmd.Parameters.AddWithValue("@searchpara", FS_RS_TBX.Text)
+            tableload("SELECT item_id," + Query + " AS 'Details' FROM products WHERE " + Query + " LIKE CONCAT('%',@searchpara,'%')", DTG_ITM_RECC)
+            strconn.Close()
+            cmd.Parameters.Clear()
+
+            If FS_RS_TBX.Text = "" Then
+                Cur_Stock.Text = ""
+                Cur_Stock.BackColor = Color.White
+                New_QTY.Text = ""
+                New_QTY.BackColor = Color.White
+                Panel_Num_Controls.Enabled = False
+                QTY_HOLDER.Text = 0
+                DTG_SUGGEST.Visible = False
+                DTG_SUGGEST.Height = 10
+            End If
+
+        End If
+
+    End Sub
+
+    'ITEM SELECTION
+
+    Dim CS As Integer
+    Dim TH As Integer
+    Dim NQ As Integer
+    Dim SS As String = ""
+    Dim Current As Boolean = False
+
+    Private Sub Item_Table_SelectionChanged(sender As Object, e As EventArgs) Handles DTG_ITM_RECC.CellClick
+
+        Try
+
+            Dashboard.GlobalVariables.Selected_Item = DTG_ITM_RECC.CurrentRow.Cells(0).Value
+
+        Catch ex As NullReferenceException
+
+            Dashboard.GlobalVariables.Selected_Item = 1
+
+        End Try
+
+        StockSelect()
 
     End Sub
 

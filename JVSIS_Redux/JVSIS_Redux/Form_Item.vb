@@ -397,8 +397,6 @@
 
         Else
 
-
-
         End If
 
         LoadDashDetails()

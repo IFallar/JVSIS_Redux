@@ -192,6 +192,7 @@
         Try
             Dim Modal As New Form_Stock_DB
             Form_Stock_DB.FORM_LABEL.Text = "RESTOCK ITEM"
+            Form_Stock_DB.Stock_Mode.Text = "Dashboard"
             Form_Stock_DB.ShowDialog()
 
         Catch ex As Exception
@@ -205,6 +206,7 @@
         Try
             Dim Modal As New Form_Stock_DB
             Form_Stock_DB.FORM_LABEL.Text = "STOCK OUT"
+            Form_Stock_DB.Stock_Mode.Text = "Dashboard"
             Form_Stock_DB.ShowDialog()
 
         Catch ex As Exception
@@ -217,15 +219,53 @@
 
     '=[ITEM SCREEN]=====================================================================================================================
 
+    Private Sub ITM_BTN_NEW_Click(sender As Object, e As EventArgs) Handles ITM_BTN_NEW.Click
+
+        Try
+            Dim Modal As New Form_Item
+            Form_Item.FORM_LABEL.Text = "ADD NEW ITEM"
+            Form_Item.ShowDialog()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub ITM_BTN_STOCKIN_Click(sender As Object, e As EventArgs) Handles ITM_BTN_STOCKIN.Click
+
+        Try
+            Dim Modal As New Form_Stock_DB
+            Form_Stock_DB.FORM_LABEL.Text = "RESTOCK ITEM"
+            Form_Stock_DB.Stock_Mode.Text = "Item Screen"
+            Form_Stock_DB.ShowDialog()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub ITM_BTN_STOCKOUT_Click(sender As Object, e As EventArgs) Handles ITM_BTN_STOCKOUT.Click
+
+        Try
+            Dim Modal As New Form_Stock_DB
+            Form_Stock_DB.FORM_LABEL.Text = "STOCK OUT"
+            Form_Stock_DB.Stock_Mode.Text = "Item Screen"
+            Form_Stock_DB.ShowDialog()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
     'TABLE FORMATTING
 
     Private Sub Item_Table_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles Item_Table.DataBindingComplete
 
-        Item_Table.ClearSelection()
-
         Item_Table.RowTemplate.Resizable = False
         Item_Table.Columns(0).Visible = False
-        Item_Table.Columns(0).Frozen = True
         Item_Table.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         Item_Table.Columns(1).MinimumWidth = 130
 
@@ -263,7 +303,7 @@
             GlobalVariables.Selected_Item = Item_Table.CurrentRow.Cells(0).Value
         Catch ex As NullReferenceException
 
-            GlobalVariables.Selected_Item = 1
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
 
         End Try
 
@@ -384,13 +424,6 @@
         cmd.Parameters.Clear()
 
     End Sub
-
-
-
-
-
-
-
 
     '===================================================================================================================================
 
