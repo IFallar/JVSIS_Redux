@@ -32,6 +32,8 @@ Public Class Form_Stock_DB
         DTG_SUGGEST.Visible = False
         DTG_SUGGEST.Height = 10
 
+        LoadDashDetails()
+
     End Sub
 
     Private Sub FS_RS_TBX_TextChanged(sender As Object, e As EventArgs) Handles FS_RS_TBX.TextChanged
@@ -104,6 +106,7 @@ Public Class Form_Stock_DB
         If CS >= TH And CS > 0 Then
             Cur_Stock.BackColor = Color.Green
             New_QTY.BackColor = Color.Green
+            Current = True
         ElseIf CS = 0 Then
             Cur_Stock.BackColor = Color.Red
             New_QTY.BackColor = Color.Red
@@ -194,7 +197,6 @@ Public Class Form_Stock_DB
                 End If
 
                 New_Quantity = NQ + To_Stock
-                Current = True
 
             ElseIf FORM_LABEL.Text = "STOCK OUT" Then
 
@@ -207,7 +209,6 @@ Public Class Form_Stock_DB
 
                 If (NQ - To_Stock) >= TH And (NQ + To_Stock) > 0 Then
                     New_QTY.BackColor = Color.Green
-                    Current = True
                     New_Status = "Normal"
                 ElseIf (NQ - To_Stock) = 0 Then
                     New_QTY.BackColor = Color.Red
@@ -248,29 +249,59 @@ Public Class Form_Stock_DB
 
     Private Sub FI_BTN_SAVE_Click(sender As Object, e As EventArgs) Handles FI_BTN_SAVE.Click
 
-        strconnection()
+        Try
 
-        cmd.Connection = strconn
-        strconn.Open()
+            strconnection()
 
-        cmd.Parameters.Clear()
+            cmd.Connection = strconn
+            strconn.Open()
 
-        cmd.Parameters.AddWithValue("@qty", New_Quantity)
-        cmd.Parameters.AddWithValue("@stat", New_Quantity)
-        cmd.Parameters.AddWithValue("@dat", New_Quantity)
-        cmd.Parameters.AddWithValue("@qty", New_Quantity)
+            cmd.Parameters.Clear()
 
-        If Query = 0 Then
+            cmd.Parameters.AddWithValue("@qty", New_Quantity)
+            cmd.Parameters.AddWithValue("@stat", New_Status)
+            cmd.Parameters.AddWithValue("@dat", RS_Date_F)
+
             cmd.CommandText = "UPDATE `products` SET `item_qty`= @qty, `item_stock_status`= @stat,`item_last_restock`= @dat WHERE item_id = '" & Dashboard.GlobalVariables.Selected_Item & "'"
-        ElseIf Query = 1 Then
-            cmd.CommandText = ""
+
+            cmd.ExecuteNonQuery()
+
+            strconn.Close()
+
+            MsgBox("Quantity Updated", MsgBoxStyle.OkOnly, "Success!")
+
+        Catch ex As Exception
+
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+
+        End Try
+
+        If Current = True And New_Quantity < TH Then
+
+            Try
+
+                strconnection()
+
+                cmd.Connection = strconn
+                strconn.Open()
+
+                cmd.Parameters.Clear()
+                cmd.Parameters.AddWithValue("@dat", RS_Date_F)
+                cmd.CommandText = "UPDATE `products` SET `item_warn_date`= @dat WHERE item_id = '" & Dashboard.GlobalVariables.Selected_Item & "'"
+                cmd.ExecuteNonQuery()
+                strconn.Close()
+
+                MsgBox("Item Added to Low Stock List", MsgBoxStyle.OkOnly, "Success!")
+
+            Catch ex As Exception
+
+                MessageBox.Show(String.Format("Error: {0}", ex.Message))
+
+            End Try
+
         End If
 
-        cmd.ExecuteNonQuery()
-
-        strconn.Close()
-
-        MsgBox("Quantity Updated", MsgBoxStyle.OkOnly, "Success!")
+        LoadDashDetails()
 
     End Sub
 

@@ -415,6 +415,7 @@
         End Try
 
         Reset()
+        LoadDashDetails()
 
     End Sub
 
