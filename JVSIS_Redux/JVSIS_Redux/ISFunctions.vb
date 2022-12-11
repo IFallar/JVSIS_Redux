@@ -113,6 +113,62 @@ Module ISFunctions
 
     End Sub
 
+    Public Sub Stock_Function(Quantity, NewStatus, StockDate, Threshold, Current)
 
+        Try
+
+            strconnection()
+
+            cmd.Connection = strconn
+            strconn.Open()
+
+            cmd.Parameters.Clear()
+
+            cmd.Parameters.AddWithValue("@qty", Quantity)
+            cmd.Parameters.AddWithValue("@stat", NewStatus)
+            cmd.Parameters.AddWithValue("@dat", StockDate)
+
+            cmd.CommandText = "UPDATE `products` SET `item_qty`= @qty, `item_stock_status`= @stat,`item_last_restock`= @dat WHERE item_id = '" & Dashboard.GlobalVariables.Selected_Item & "'"
+
+            cmd.ExecuteNonQuery()
+
+            strconn.Close()
+
+            MsgBox("Quantity Updated", MsgBoxStyle.OkOnly, "Success!")
+
+        Catch ex As Exception
+
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+
+        End Try
+
+        If Current = True And Quantity < Threshold Then
+
+            Try
+
+                strconnection()
+
+                cmd.Connection = strconn
+                strconn.Open()
+
+                cmd.Parameters.Clear()
+                cmd.Parameters.AddWithValue("@dat", StockDate)
+                cmd.CommandText = "UPDATE `products` SET `item_warn_date`= @dat WHERE item_id = '" & Dashboard.GlobalVariables.Selected_Item & "'"
+                cmd.ExecuteNonQuery()
+                strconn.Close()
+
+                MsgBox("Item Added to Low Stock List", MsgBoxStyle.OkOnly, "Success!")
+
+            Catch ex As Exception
+
+                MessageBox.Show(String.Format("Error: {0}", ex.Message))
+
+            End Try
+
+        End If
+
+        LoadDashDetails()
+
+    End Sub
 
 End Module

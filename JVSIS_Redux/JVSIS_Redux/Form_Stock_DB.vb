@@ -249,60 +249,10 @@ Public Class Form_Stock_DB
 
     Private Sub FI_BTN_SAVE_Click(sender As Object, e As EventArgs) Handles FI_BTN_SAVE.Click
 
-        Try
-
-            strconnection()
-
-            cmd.Connection = strconn
-            strconn.Open()
-
-            cmd.Parameters.Clear()
-
-            cmd.Parameters.AddWithValue("@qty", New_Quantity)
-            cmd.Parameters.AddWithValue("@stat", New_Status)
-            cmd.Parameters.AddWithValue("@dat", RS_Date_F)
-
-            cmd.CommandText = "UPDATE `products` SET `item_qty`= @qty, `item_stock_status`= @stat,`item_last_restock`= @dat WHERE item_id = '" & Dashboard.GlobalVariables.Selected_Item & "'"
-
-            cmd.ExecuteNonQuery()
-
-            strconn.Close()
-
-            MsgBox("Quantity Updated", MsgBoxStyle.OkOnly, "Success!")
-
-        Catch ex As Exception
-
-            MessageBox.Show(String.Format("Error: {0}", ex.Message))
-
-        End Try
-
-        If Current = True And New_Quantity < TH Then
-
-            Try
-
-                strconnection()
-
-                cmd.Connection = strconn
-                strconn.Open()
-
-                cmd.Parameters.Clear()
-                cmd.Parameters.AddWithValue("@dat", RS_Date_F)
-                cmd.CommandText = "UPDATE `products` SET `item_warn_date`= @dat WHERE item_id = '" & Dashboard.GlobalVariables.Selected_Item & "'"
-                cmd.ExecuteNonQuery()
-                strconn.Close()
-
-                MsgBox("Item Added to Low Stock List", MsgBoxStyle.OkOnly, "Success!")
-
-            Catch ex As Exception
-
-                MessageBox.Show(String.Format("Error: {0}", ex.Message))
-
-            End Try
-
-        End If
-
-        LoadDashDetails()
+        Stock_Function(New_Quantity, New_Status, RS_Date_F, TH, Current)
 
     End Sub
+
+
 
 End Class
