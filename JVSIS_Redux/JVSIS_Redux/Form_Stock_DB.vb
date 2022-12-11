@@ -104,7 +104,6 @@ Public Class Form_Stock_DB
         If CS >= TH And CS > 0 Then
             Cur_Stock.BackColor = Color.Green
             New_QTY.BackColor = Color.Green
-            Current = True
         ElseIf CS = 0 Then
             Cur_Stock.BackColor = Color.Red
             New_QTY.BackColor = Color.Red
@@ -141,6 +140,9 @@ Public Class Form_Stock_DB
 
     Dim To_Stock As Integer
     Dim New_Quantity As Integer
+    Dim New_Status As String
+    Dim RS_Date As Date = Date.Now()
+    Dim RS_Date_F As String = RS_Date.ToString("yyyy\-MM\-dd")
 
     Private Sub FSHS_ADD_BTN_Click(sender As Object, e As EventArgs) Handles FSHS_ADD_BTN.Click
 
@@ -182,14 +184,17 @@ Public Class Form_Stock_DB
 
                 If (NQ + To_Stock) >= TH And (NQ + To_Stock) > 0 Then
                     New_QTY.BackColor = Color.Green
-                    Current = True
+                    New_Status = "Normal"
                 ElseIf (NQ + To_Stock) = 0 Then
                     New_QTY.BackColor = Color.Red
+                    New_Status = "Out of Stock"
                 Else
                     New_QTY.BackColor = Color.Orange
+                    New_Status = "Low Stock"
                 End If
 
                 New_Quantity = NQ + To_Stock
+                Current = True
 
             ElseIf FORM_LABEL.Text = "STOCK OUT" Then
 
@@ -203,11 +208,16 @@ Public Class Form_Stock_DB
                 If (NQ - To_Stock) >= TH And (NQ + To_Stock) > 0 Then
                     New_QTY.BackColor = Color.Green
                     Current = True
+                    New_Status = "Normal"
                 ElseIf (NQ - To_Stock) = 0 Then
                     New_QTY.BackColor = Color.Red
+                    New_Status = "Out of Stock"
                 Else
                     New_QTY.BackColor = Color.Orange
+                    New_Status = "Low Stock"
                 End If
+
+                New_Quantity = NQ - To_Stock
 
             End If
 
@@ -233,6 +243,34 @@ Public Class Form_Stock_DB
         Catch ex As Exception
 
         End Try
+
+    End Sub
+
+    Private Sub FI_BTN_SAVE_Click(sender As Object, e As EventArgs) Handles FI_BTN_SAVE.Click
+
+        strconnection()
+
+        cmd.Connection = strconn
+        strconn.Open()
+
+        cmd.Parameters.Clear()
+
+        cmd.Parameters.AddWithValue("@qty", New_Quantity)
+        cmd.Parameters.AddWithValue("@stat", New_Quantity)
+        cmd.Parameters.AddWithValue("@dat", New_Quantity)
+        cmd.Parameters.AddWithValue("@qty", New_Quantity)
+
+        If Query = 0 Then
+            cmd.CommandText = "UPDATE `products` SET `item_qty`= @qty, `item_stock_status`= @stat,`item_last_restock`= @dat WHERE item_id = '" & Dashboard.GlobalVariables.Selected_Item & "'"
+        ElseIf Query = 1 Then
+            cmd.CommandText = ""
+        End If
+
+        cmd.ExecuteNonQuery()
+
+        strconn.Close()
+
+        MsgBox("Quantity Updated", MsgBoxStyle.OkOnly, "Success!")
 
     End Sub
 
