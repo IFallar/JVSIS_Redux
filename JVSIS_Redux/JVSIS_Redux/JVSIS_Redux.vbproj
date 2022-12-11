@@ -87,6 +87,12 @@
     <Compile Include="Form_Item.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_Stock_DB.Designer.vb">
+      <DependentUpon>Form_Stock_DB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Stock_DB.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ISFunctions.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Item.resx">
       <DependentUpon>Form_Item.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Stock_DB.resx">
+      <DependentUpon>Form_Stock_DB.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

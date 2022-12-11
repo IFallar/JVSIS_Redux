@@ -177,7 +177,7 @@ Partial Class Form_Item
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.White
         Me.Label7.Font = New System.Drawing.Font("Leelawadee UI", 10.25!)
-        Me.Label7.Location = New System.Drawing.Point(38, 12)
+        Me.Label7.Location = New System.Drawing.Point(38, 15)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(54, 19)
         Me.Label7.TabIndex = 24

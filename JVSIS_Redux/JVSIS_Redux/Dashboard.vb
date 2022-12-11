@@ -21,12 +21,51 @@
 
     End Class
 
+    Dim TableQuery As String = "SELECT `item_id`, `item_name` AS 'Product Name', (SELECT brand_name FROM brands WHERE brand_id = `item_brand`) AS 'Brand', (SELECT variant_name FROM variants WHERE variant_id = `item_variant` ) AS 'Variant', (SELECT category_name FROM category WHERE category_id = `item_category` ) AS 'Category', `item_p_cost` AS 'Cost', `item_s_cost_min` AS 'Min Price', `item_s_cost_max` AS 'Max Price', `item_qty` AS 'Quantity',`item_stock_status` AS 'Stock Level', (item_p_cost * item_qty) AS 'Total',  (SELECT supplier_name FROM supplier WHERE supplier_id = `item_supplier` ) as 'Supplier', `item_last_restock` AS 'Last Restock' FROM `products`"
 
+    Public Sub LoadMain()
+
+
+        Dim Query1 As String = ""
+        Dim Query2 As String = ""
+
+        If FILTER_CAT.SelectedIndex = 1 Then
+
+            Query1 = "SELECT brand_id FROM brands WHERE brand_name = @filval"
+            Query2 = TableQuery + "WHERE item_brand"
+
+            GetSingleParam(Query1, Query2)
+
+        ElseIf FILTER_CAT.SelectedIndex = 2 Then
+
+            Query1 = "SELECT category_id FROM category WHERE category_name = @filval"
+            Query2 = TableQuery + "WHERE item_category"
+
+            GetSingleParam(Query1, Query2)
+
+        ElseIf FILTER_CAT.SelectedIndex = 3 Then
+
+            Query1 = "SELECT supplier_id FROM supplier WHERE supplier_name = @filval"
+            Query2 = TableQuery + "WHERE item_supplier"
+
+            GetSingleParam(Query1, Query2)
+
+        ElseIf FILTER_CAT.SelectedIndex = 4 Then
+
+            tableload(TableQuery + "WHERE item_stock_status  = '" & FILTER_VAL.Text & "'", Item_Table)
+            strconn.Close()
+
+        Else
+            tableload(TableQuery, Item_Table)
+            strconn.Close()
+        End If
+
+
+    End Sub
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         LoadDashDetails()
-        LoadMain()
 
     End Sub
 
@@ -77,6 +116,8 @@
         BTN_Side_Items.FlatAppearance.MouseOverBackColor = Color.White
         BTN_Side_Logs.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
         BTN_Side_Settings.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
+
+        LoadMain()
 
     End Sub
 
@@ -146,6 +187,32 @@
 
     End Sub
 
+    Private Sub HOME_BTN_IN_Click(sender As Object, e As EventArgs) Handles HOME_BTN_IN.Click
+
+        Try
+            Dim Modal As New Form_Stock_DB
+            Form_Stock_DB.FORM_LABEL.Text = "RESTOCK ITEM"
+            Form_Stock_DB.ShowDialog()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub HOME_BTN_OUT_Click(sender As Object, e As EventArgs) Handles HOME_BTN_OUT.Click
+
+        Try
+            Dim Modal As New Form_Stock_DB
+            Form_Stock_DB.FORM_LABEL.Text = "STOCK OUT"
+            Form_Stock_DB.ShowDialog()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
     '===================================================================================================================================
 
     '=[ITEM SCREEN]=====================================================================================================================
@@ -153,6 +220,8 @@
     'TABLE FORMATTING
 
     Private Sub Item_Table_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles Item_Table.DataBindingComplete
+
+        Item_Table.ClearSelection()
 
         Item_Table.RowTemplate.Resizable = False
         Item_Table.Columns(0).Visible = False
@@ -166,10 +235,37 @@
         Item_Table.Columns(6).DefaultCellStyle.Format = "N2"
         Item_Table.Columns(7).ValueType = GetType(Double)
         Item_Table.Columns(7).DefaultCellStyle.Format = "N2"
-        Item_Table.Columns(9).ValueType = GetType(Double)
-        Item_Table.Columns(9).DefaultCellStyle.Format = "N2"
+        Item_Table.Columns(10).ValueType = GetType(Double)
+        Item_Table.Columns(10).DefaultCellStyle.Format = "N2"
 
         Item_Table.RowTemplate.MinimumHeight = 50
+
+    End Sub
+
+    Private Sub Item_Table_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles Item_Table.CellFormatting
+
+        If e.ColumnIndex = 9 And e.Value IsNot Nothing Then
+            Dim content As String = e.Value
+            If content = "Low Stock" Then
+                e.CellStyle.BackColor = Color.Orange
+            ElseIf content = "Out of Stock" Then
+                e.CellStyle.BackColor = Color.Red
+            Else
+                e.CellStyle.BackColor = Color.Green
+            End If
+        End If
+
+    End Sub
+
+    Private Sub Item_Table_SelectionChanged(sender As Object, e As EventArgs) Handles Item_Table.SelectionChanged
+
+        Try
+            GlobalVariables.Selected_Item = Item_Table.CurrentRow.Cells(0).Value
+        Catch ex As NullReferenceException
+
+            GlobalVariables.Selected_Item = 1
+
+        End Try
 
     End Sub
 
@@ -231,7 +327,7 @@
             opencon()
 
             cmd.Connection = con
-            cmd.CommandText = "SELECT supplier_name FROM suppliers"
+            cmd.CommandText = "SELECT supplier_name FROM supplier"
             cmd.Prepare()
 
             cmdreader = cmd.ExecuteReader
@@ -255,6 +351,45 @@
         End If
 
     End Sub
+
+    Private Sub FILTER_VAL_SelectedIndexChanged(sender As Object, e As EventArgs) Handles FILTER_VAL.SelectedIndexChanged
+
+        LoadMain()
+
+    End Sub
+
+    Private Sub ITM_FLTR_BTN_Click(sender As Object, e As EventArgs) Handles ITM_FLTR_BTN.Click
+
+        FILTER_CAT.SelectedIndex = 0
+        FILTER_CAT.Text = "All"
+        FILTER_VAL.Text = "All"
+        FILTER_VAL.Items.Clear()
+
+        LoadMain()
+
+    End Sub
+
+    Private Sub ITM_SEARCH_TextChanged(sender As Object, e As EventArgs) Handles ITM_SEARCH.TextChanged
+
+        FILTER_CAT.SelectedIndex = 0
+        FILTER_CAT.Text = "All"
+        FILTER_VAL.Text = "All"
+        FILTER_VAL.Items.Clear()
+
+        cmd.Parameters.AddWithValue("@search", ITM_SEARCH.Text)
+
+        tableload(TableQuery + "WHERE CONCAT(item_name, ' ', (SELECT brand_name FROM brands WHERE brand_id = item_brand),' ',   (SELECT variant_name FROM variants WHERE variant_id = item_variant),' ',  (SELECT supplier_name FROM supplier WHERE supplier_id = item_supplier)) LIKE CONCAT('%',@search,'%')", Item_Table)
+        strconn.Close()
+
+        cmd.Parameters.Clear()
+
+    End Sub
+
+
+
+
+
+
 
 
     '===================================================================================================================================

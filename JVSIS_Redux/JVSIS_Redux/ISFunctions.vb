@@ -86,11 +86,33 @@ Module ISFunctions
 
     End Sub
 
-    Public Sub LoadMain()
+    Public Sub GetSingleParam(Query1, Query2)
 
-        tableload("SELECT `item_id`, `item_name` AS 'Product Name', (SELECT brand_name FROM brands WHERE brand_id = `item_brand`) AS 'Brand', (SELECT variant_name FROM variants WHERE variant_id = `item_variant` ) AS 'Variant', (SELECT category_name FROM category WHERE category_id = `item_category` ) AS 'Category', `item_p_cost` AS 'Cost', `item_s_cost_min` AS 'Min Price', `item_s_cost_max` AS 'Max Price', `item_qty` AS 'Quantity', (item_p_cost * item_qty) AS 'Total',`item_stock_status` AS 'Stock Level',  (SELECT supplier_name FROM supplier WHERE supplier_id = `item_supplier` ) as 'Supplier', `item_last_restock` AS 'Last Restock' FROM `products`", Dashboard.Item_Table)
+        Dim FilterVal As String = ""
+
+        opencon()
+
+        cmd.Connection = con
+        cmd.Parameters.AddWithValue("@filval", Dashboard.FILTER_VAL.Text)
+        cmd.CommandText = Query1
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+        While cmdreader.Read
+            FilterVal = cmdreader.GetValue(0)
+        End While
+
+        cmd.Parameters.Clear()
+
+        cmdreader.Close()
+        con.Close()
+
+        tableload(Query2 + " = '" & FilterVal & "'", Dashboard.Item_Table)
         strconn.Close()
 
     End Sub
+
+
 
 End Module

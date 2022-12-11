@@ -96,7 +96,7 @@
 
         Catch ex As Exception
 
-            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+            MsgBox("Please Enter All Details Properly", MsgBoxStyle.OkOnly, "Warning!")
 
         End Try
 
@@ -397,7 +397,7 @@
 
         Else
 
-            MsgBox("That Item Already Exists on Record!", MsgBoxStyle.OkOnly, "Duplicate Entry")
+
 
         End If
 
@@ -423,5 +423,6 @@
         Reset()
 
     End Sub
+
 
 End Class
