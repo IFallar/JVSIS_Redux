@@ -99,7 +99,7 @@ Public Class Form_Item
             LoadDashDetails()
 
             Dim LogItemName As String = FI_TBX_ITM_NAME.Text + " | " + FI_CBX_ITM_BRAND.Text + " | " + FI_CBX_ITM_VARIANT.Text + " | " + FI_CBX_ITEM_SUPP.Text
-            Log_entry(1, FI_NUD_ITM_STOCK.Value, FI_TBX_ITM_NAME.Text)
+            Log_entry(1, FI_NUD_ITM_STOCK.Value, LogItemName, FI_NUD_ITM_STOCK.Value * FI_TBX_ITEM_COST.Text)
             Dashboard.LoadMain()
 
         Catch ex As Exception

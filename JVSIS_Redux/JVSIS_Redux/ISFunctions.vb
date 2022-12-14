@@ -67,7 +67,7 @@ Module ISFunctions
         opencon()
 
         cmd.Connection = con
-        cmd.CommandText = "SELECT (SELECT SUM(item_qty * item_p_cost) FROM products WHERE 1) AS 'Inventory Value',(SELECT COUNT(item_id) FROM products WHERE 1) as 'Item Count', (SELECT COUNT(item_id) FROM products WHERE item_stock_status = 'Low Stock' OR item_stock_status = 'Out of Stock') AS 'Low Stock', (SELECT (SELECT SUM((SELECT item_p_cost FROM products WHERE item_id = item) * (c_qty * -1))) AS 'VALUE' FROM `transaction_log` WHERE `type` = 'Stock Out' AND l_date >= DATE(NOW() - INTERVAL 7 DAY)) AS 'Week Out'"
+        cmd.CommandText = "SELECT COALESCE((SELECT SUM(item_qty * item_p_cost) FROM products WHERE 1),0) AS 'Inventory Value' , COALESCE((SELECT COUNT(item_id) FROM products WHERE 1),0)  as 'Item Count', COALESCE((SELECT COUNT(item_id) FROM products WHERE item_stock_status = 'Low Stock' OR item_stock_status = 'Out of Stock'),0)  AS 'Low Stock', COALESCE((SELECT SUM(l_value) AS 'VALUE' FROM `transaction_log` WHERE `type` = 'Stock Out' AND l_date >= DATE(NOW() - INTERVAL 7 DAY)), 0) AS 'Week Out'"
         cmd.Prepare()
 
         cmdreader = cmd.ExecuteReader
@@ -79,6 +79,30 @@ Module ISFunctions
 
             Dim OutVal As Double = cmdreader.GetValue(3)
             Dashboard.TLB_VALUEOUT_BTN.Text = "P" + String.Format("{0:n}", OutVal)
+        End While
+
+        cmdreader.Close()
+        con.Close()
+
+    End Sub
+
+    Public Sub LoadLogDash()
+
+        opencon()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT COALESCE((SELECT COUNT(log_id) FROM transaction_log WHERE type = 'New Item') ,0), COALESCE((SELECT COUNT(log_id) FROM transaction_log WHERE type = 'Restock') ,0), COALESCE((SELECT COUNT(log_id) FROM transaction_log WHERE type = 'Stock Out') ,0), COALESCE((SELECT SUM(l_value) FROM transaction_log WHERE type = 'Stock Out') ,0)"
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+        While cmdreader.Read
+            Dashboard.LogDash_NI.Text = cmdreader.GetValue(0)
+            Dashboard.LogDash_SI.Text = cmdreader.GetValue(1)
+            Dashboard.LogDash_SO.Text = cmdreader.GetValue(2)
+
+            Dim OutVal As Double = cmdreader.GetValue(3)
+            Dashboard.LogDash_VO.Text = "P" + String.Format("{0:n}", OutVal)
         End While
 
         cmdreader.Close()
@@ -171,9 +195,11 @@ Module ISFunctions
 
     End Sub
 
-    Public Sub Log_entry(Entry_Token, Change, Item_Name)
+    Public Sub Log_entry(Entry_Token, Change, Item_Name, Value)
 
         '++++++++++++++++ VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        Dim LValue As Decimal = Value
 
         Dim acc_id_log As Integer = Dashboard.GlobalVariables.UserID
         Dim item_log_name As String = Item_Name
@@ -232,7 +258,8 @@ Module ISFunctions
             cmd.Parameters.AddWithValue("@change", in_out + transaction_qty)
             cmd.Parameters.AddWithValue("@time", transaction_time)
             cmd.Parameters.AddWithValue("@date", transaction_date)
-            cmd.CommandText = "INSERT INTO `transaction_log`(`log_id`, `acc_id`, `item`, `type`, `c_qty`, `l_time`, `l_date`) VALUES (DEFAULT, @user, @item, @type, @change, @time, @date)"
+            cmd.Parameters.AddWithValue("@val", LValue)
+            cmd.CommandText = "INSERT INTO `transaction_log`(`log_id`, `acc_id`, `item`, `type`, `c_qty`, `l_time`, `l_date`, l_value) VALUES (DEFAULT, @user, @item, @type, @change, @time, @date, @val)"
             cmd.ExecuteNonQuery()
 
             strconn.Close()

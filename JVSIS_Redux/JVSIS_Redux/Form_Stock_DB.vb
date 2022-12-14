@@ -264,8 +264,30 @@ Public Class Form_Stock_DB
 
         Dim Log_Token As Integer
         Dim LogItemName As String = FS_RS_TBX.Text + " | " + FS_RS_BRAND.Text + " | " + FS_RS_VAR.Text + " | " + FS_RS_SUPP.Text
+        Dim PreValue As Double
+
+
+        opencon()
+
+        cmd.Connection = con
+        cmd.CommandText = "Select item_p_cost FROM products WHERE item_id = '" & Dashboard.GlobalVariables.Selected_Item & "'"
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+        While cmdreader.Read
+            PreValue = cmdreader.GetValue(0)
+        End While
+
+        cmd.Parameters.Clear()
+
+        cmdreader.Close()
+        con.Close()
+
 
         Stock_Function(New_Quantity, New_Status, RS_Date_F, TH, Current)
+
+        Dim LogValue As Double = To_Stock * PreValue
 
         If FORM_LABEL.Text = "RESTOCK ITEM" Then
             Log_Token = 2
@@ -273,7 +295,7 @@ Public Class Form_Stock_DB
             Log_Token = 3
         End If
 
-        Log_entry(Log_Token, To_Stock, LogItemName)
+        Log_entry(Log_Token, To_Stock, LogItemName, LogValue)
 
     End Sub
 

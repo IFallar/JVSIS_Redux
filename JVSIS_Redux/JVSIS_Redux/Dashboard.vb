@@ -143,6 +143,10 @@
         BTN_Side_Logs.FlatAppearance.MouseOverBackColor = Color.White
         BTN_Side_Settings.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
 
+        tableload(LogQuery, Log_View_Grid)
+        LoadLogDash()
+        strconn.Close()
+
     End Sub
 
     Private Sub BTN_Side_Settings_Click(sender As Object, e As EventArgs) Handles BTN_Side_Settings.Click
@@ -491,13 +495,66 @@
 
     End Sub
 
+    Dim LogQuery As String = "SELECT `log_id`, (SELECT user_name FROM account WHERE account_id = acc_id) AS 'User', `item` AS 'Item', `type` AS 'Action', `c_qty` AS 'Change', `l_time` AS 'Time', `l_date` AS 'Date' FROM `transaction_log`"
+
+
     Private Sub Log_Search_TextChanged(sender As Object, e As EventArgs) Handles Log_Search.TextChanged
 
-        Dim Query As String = ""
+
+        Dim Date_Upper As String = UpperDate.Value.ToString("yyyy\-MM\-dd")
+        Dim Date_Lower As String = LowerDate.Value.ToString("yyyy\-MM\-dd")
+
+        cmd.Parameters.Clear()
+
+        cmd.Parameters.AddWithValue("@search", Log_Search.Text)
+        cmd.Parameters.AddWithValue("@update", Date_Upper)
+        cmd.Parameters.AddWithValue("@lodate", Date_Lower)
 
         If Log_Search.Text = "" Then
 
+            If Range_CBX.Text = "All:" Then
 
+                tableload(LogQuery + "WHERE (SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%')", Log_View_Grid)
+                strconn.Close()
+
+                cmd.Parameters.Clear()
+
+            ElseIf Range_CBX.Text = "7 Days" Then
+
+                tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 7 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                strconn.Close()
+
+                cmd.Parameters.Clear()
+
+            ElseIf Range_CBX.Text = "14 Days" Then
+
+                tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 14 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                strconn.Close()
+
+                cmd.Parameters.Clear()
+
+            ElseIf Range_CBX.Text = "30 Days" Then
+
+                tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 30 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                strconn.Close()
+
+                cmd.Parameters.Clear()
+
+            ElseIf Range_CBX.Text = "6 Months" Then
+
+                tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 180 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                strconn.Close()
+
+                cmd.Parameters.Clear()
+
+            ElseIf Range_CBX.Text = "1 Year" Then
+
+                tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 365 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                strconn.Close()
+
+                cmd.Parameters.Clear()
+
+            End If
 
         Else
 
@@ -505,23 +562,51 @@
 
                 If Range_CBX.Text = "All:" Then
 
+                    tableload(LogQuery + "WHERE (SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%')", Log_View_Grid)
+                    strconn.Close()
+
+                    cmd.Parameters.Clear()
+
                 ElseIf Range_CBX.Text = "7 Days" Then
+
+                    tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 7 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                    strconn.Close()
+
+                    cmd.Parameters.Clear()
 
                 ElseIf Range_CBX.Text = "14 Days" Then
 
+                    tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 14 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                    strconn.Close()
+
+                    cmd.Parameters.Clear()
+
                 ElseIf Range_CBX.Text = "30 Days" Then
+
+                    tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 30 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                    strconn.Close()
+
+                    cmd.Parameters.Clear()
 
                 ElseIf Range_CBX.Text = "6 Months" Then
 
+                    tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 180 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                    strconn.Close()
+
+                    cmd.Parameters.Clear()
+
                 ElseIf Range_CBX.Text = "1 Year" Then
+
+                    tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 365 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                    strconn.Close()
+
+                    cmd.Parameters.Clear()
 
                 End If
 
             ElseIf RangeSetButton.Text = "<" Then
 
-                cmd.Parameters.AddWithValue("@search", ITM_SEARCH.Text)
-
-                tableload(Query + "WHERE  LIKE CONCAT('%',@search,'%')", Log_View_Grid)
+                tableload(LogQuery + "WHERE l_date between @lodate and @update AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
                 strconn.Close()
 
                 cmd.Parameters.Clear()
@@ -530,9 +615,219 @@
 
         End If
 
+    End Sub
 
+    Private Sub Range_CBX_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Range_CBX.SelectedIndexChanged
+
+        Dim Date_Upper As String = UpperDate.Value.ToString("yyyy\-MM\-dd")
+        Dim Date_Lower As String = LowerDate.Value.ToString("yyyy\-MM\-dd")
+
+        cmd.Parameters.Clear()
+
+        cmd.Parameters.AddWithValue("@search", Log_Search.Text)
+        cmd.Parameters.AddWithValue("@update", Date_Upper)
+        cmd.Parameters.AddWithValue("@lodate", Date_Lower)
+
+        If Log_Search.Text = "" Then
+
+            If Range_CBX.Text = "All:" Then
+
+                tableload(LogQuery + "WHERE (SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%')", Log_View_Grid)
+                strconn.Close()
+
+                cmd.Parameters.Clear()
+
+            ElseIf Range_CBX.Text = "7 Days" Then
+
+                tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 7 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                strconn.Close()
+
+                cmd.Parameters.Clear()
+
+            ElseIf Range_CBX.Text = "14 Days" Then
+
+                tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 14 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                strconn.Close()
+
+                cmd.Parameters.Clear()
+
+            ElseIf Range_CBX.Text = "30 Days" Then
+
+                tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 30 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                strconn.Close()
+
+                cmd.Parameters.Clear()
+
+            ElseIf Range_CBX.Text = "6 Months" Then
+
+                tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 180 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                strconn.Close()
+
+                cmd.Parameters.Clear()
+
+            ElseIf Range_CBX.Text = "1 Year" Then
+
+                tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 365 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                strconn.Close()
+
+                cmd.Parameters.Clear()
+
+            End If
+
+        Else
+
+            If RangeSetButton.Text = ">" Then
+
+                If Range_CBX.Text = "All:" Then
+
+                    tableload(LogQuery + "WHERE (SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%')", Log_View_Grid)
+                    strconn.Close()
+
+                    cmd.Parameters.Clear()
+
+                ElseIf Range_CBX.Text = "7 Days" Then
+
+                    tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 7 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                    strconn.Close()
+
+                    cmd.Parameters.Clear()
+
+                ElseIf Range_CBX.Text = "14 Days" Then
+
+                    tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 14 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                    strconn.Close()
+
+                    cmd.Parameters.Clear()
+
+                ElseIf Range_CBX.Text = "30 Days" Then
+
+                    tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 30 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                    strconn.Close()
+
+                    cmd.Parameters.Clear()
+
+                ElseIf Range_CBX.Text = "6 Months" Then
+
+                    tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 180 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                    strconn.Close()
+
+                    cmd.Parameters.Clear()
+
+                ElseIf Range_CBX.Text = "1 Year" Then
+
+                    tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 365 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                    strconn.Close()
+
+                    cmd.Parameters.Clear()
+
+                End If
+
+            ElseIf RangeSetButton.Text = "<" Then
+
+                tableload(LogQuery + "WHERE l_date between @lodate and @update AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                strconn.Close()
+
+                cmd.Parameters.Clear()
+
+            End If
+
+        End If
 
     End Sub
+
+    Private Sub UpperDate_ValueChanged(sender As Object, e As EventArgs) Handles UpperDate.ValueChanged, LowerDate.ValueChanged
+
+        Dim Date_Upper As String = UpperDate.Value.ToString("yyyy\-MM\-dd")
+        Dim Date_Lower As String = LowerDate.Value.ToString("yyyy\-MM\-dd")
+
+        cmd.Parameters.Clear()
+
+        cmd.Parameters.AddWithValue("@search", Log_Search.Text)
+        cmd.Parameters.AddWithValue("@update", Date_Upper)
+        cmd.Parameters.AddWithValue("@lodate", Date_Lower)
+
+        If Log_Search.Text = "" Then
+
+            tableload(LogQuery + "WHERE l_date between @lodate and @update AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+            strconn.Close()
+
+            cmd.Parameters.Clear()
+
+        Else
+
+            If RangeSetButton.Text = ">" Then
+
+                If Range_CBX.Text = "All:" Then
+
+                    tableload(LogQuery + "WHERE (SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%')", Log_View_Grid)
+                    strconn.Close()
+
+                    cmd.Parameters.Clear()
+
+                ElseIf Range_CBX.Text = "7 Days" Then
+
+                    tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 7 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                    strconn.Close()
+
+                    cmd.Parameters.Clear()
+
+                ElseIf Range_CBX.Text = "14 Days" Then
+
+                    tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 14 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                    strconn.Close()
+
+                    cmd.Parameters.Clear()
+
+                ElseIf Range_CBX.Text = "30 Days" Then
+
+                    tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 30 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                    strconn.Close()
+
+                    cmd.Parameters.Clear()
+
+                ElseIf Range_CBX.Text = "6 Months" Then
+
+                    tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 180 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                    strconn.Close()
+
+                    cmd.Parameters.Clear()
+
+                ElseIf Range_CBX.Text = "1 Year" Then
+
+                    tableload(LogQuery + "WHERE l_date >= DATE(NOW() - INTERVAL 365 DAY) AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                    strconn.Close()
+
+                    cmd.Parameters.Clear()
+
+                End If
+
+            ElseIf RangeSetButton.Text = "<" Then
+
+                tableload(LogQuery + "WHERE l_date between @lodate and @update AND ((SELECT user_name FROM account WHERE account_id = acc_id) LIKE CONCAT('%',@search,'%') OR item LIKE CONCAT('%',@search,'%') OR type LIKE CONCAT('%',@search,'%'))", Log_View_Grid)
+                strconn.Close()
+
+                cmd.Parameters.Clear()
+
+            End If
+
+        End If
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        Range_CBX.Text = "All:"
+        Log_Search.Text = ""
+        UpperDate.Value = Date.Now()
+        LowerDate.Value = Date.Now()
+
+        tableload(LogQuery, Log_View_Grid)
+        strconn.Close()
+
+    End Sub
+
+
+
 
     '===================================================================================================================================
 
