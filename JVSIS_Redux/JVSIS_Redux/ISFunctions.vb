@@ -157,7 +157,7 @@ Module ISFunctions
                 cmd.ExecuteNonQuery()
                 strconn.Close()
 
-                MsgBox("Item Added to Low Stock List", MsgBoxStyle.OkOnly, "Success!")
+                MsgBox("Item Added to Low Stock List", MsgBoxStyle.OkOnly, "Attention!")
 
             Catch ex As Exception
 
@@ -168,6 +168,83 @@ Module ISFunctions
         End If
 
         LoadDashDetails()
+
+    End Sub
+
+    Public Sub Log_entry(Entry_Token, Change, Item_Name)
+
+        '++++++++++++++++ VALUES ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        Dim acc_id_log As Integer = Dashboard.GlobalVariables.UserID
+        Dim item_log_name As String = Item_Name
+
+        Dim transaction_type As String = ""
+        Dim transaction_qty As String = Change
+
+        Dim log_date As Date = Date.Now()
+        Dim transaction_date = log_date.ToString("yyyy\-MM\-dd")
+        Dim transaction_time As String = TimeOfDay.ToString("HH:mm:ss tt")
+
+        Dim in_out As String = ""
+
+        If Entry_Token = 1 Then
+
+            transaction_type = "New Item"
+
+        ElseIf Entry_Token = 2 Then
+
+            transaction_type = "Restock"
+            in_out = "+"
+
+        ElseIf Entry_Token = 3 Then
+
+            transaction_type = "Stock Out"
+            in_out = "-"
+
+        ElseIf Entry_Token = 4 Then
+
+            transaction_type = "Edited Info"
+            transaction_qty = "---"
+
+        ElseIf Entry_Token = 5 Then
+
+            transaction_type = "Item Deleted"
+            transaction_qty = "---"
+
+        ElseIf Entry_Token = 6 Then
+
+            transaction_type = "Flagged"
+
+        End If
+
+        Try
+
+            strconnection()
+
+            cmd.Connection = strconn
+            strconn.Open()
+
+            cmd.Parameters.Clear()
+
+            cmd.Parameters.AddWithValue("@user", acc_id_log)
+            cmd.Parameters.AddWithValue("@item", item_log_name)
+            cmd.Parameters.AddWithValue("@type", transaction_type)
+            cmd.Parameters.AddWithValue("@change", in_out + transaction_qty)
+            cmd.Parameters.AddWithValue("@time", transaction_time)
+            cmd.Parameters.AddWithValue("@date", transaction_date)
+            cmd.CommandText = "INSERT INTO `transaction_log`(`log_id`, `acc_id`, `item`, `type`, `c_qty`, `l_time`, `l_date`) VALUES (DEFAULT, @user, @item, @type, @change, @time, @date)"
+            cmd.ExecuteNonQuery()
+
+            strconn.Close()
+
+        Catch ex As Exception
+
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+            strconn.Close()
+
+        End Try
+
+
 
     End Sub
 

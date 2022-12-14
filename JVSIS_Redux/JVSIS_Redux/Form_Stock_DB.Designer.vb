@@ -46,9 +46,9 @@ Partial Class Form_Stock_DB
         Me.QTY_HOLDER = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Stock_Mode = New System.Windows.Forms.Label()
         Me.FORM_LABEL = New System.Windows.Forms.Label()
         Me.Panel_Num_Controls = New System.Windows.Forms.Panel()
-        Me.Stock_Mode = New System.Windows.Forms.Label()
         Me.Panel3.SuspendLayout()
         Me.DTG_SUGGEST.SuspendLayout()
         CType(Me.DTG_ITM_RECC, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -335,6 +335,19 @@ Partial Class Form_Stock_DB
         Me.Panel5.Size = New System.Drawing.Size(534, 44)
         Me.Panel5.TabIndex = 46
         '
+        'Stock_Mode
+        '
+        Me.Stock_Mode.AutoSize = True
+        Me.Stock_Mode.BackColor = System.Drawing.Color.Transparent
+        Me.Stock_Mode.Font = New System.Drawing.Font("Leelawadee UI", 10.25!)
+        Me.Stock_Mode.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Stock_Mode.Location = New System.Drawing.Point(426, 17)
+        Me.Stock_Mode.Name = "Stock_Mode"
+        Me.Stock_Mode.Size = New System.Drawing.Size(96, 19)
+        Me.Stock_Mode.TabIndex = 17
+        Me.Stock_Mode.Text = "STOCK MODE"
+        Me.Stock_Mode.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'FORM_LABEL
         '
         Me.FORM_LABEL.BackColor = System.Drawing.Color.Transparent
@@ -358,19 +371,6 @@ Partial Class Form_Stock_DB
         Me.Panel_Num_Controls.Name = "Panel_Num_Controls"
         Me.Panel_Num_Controls.Size = New System.Drawing.Size(216, 39)
         Me.Panel_Num_Controls.TabIndex = 47
-        '
-        'Stock_Mode
-        '
-        Me.Stock_Mode.AutoSize = True
-        Me.Stock_Mode.BackColor = System.Drawing.Color.Transparent
-        Me.Stock_Mode.Font = New System.Drawing.Font("Leelawadee UI", 10.25!)
-        Me.Stock_Mode.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.Stock_Mode.Location = New System.Drawing.Point(426, 17)
-        Me.Stock_Mode.Name = "Stock_Mode"
-        Me.Stock_Mode.Size = New System.Drawing.Size(96, 19)
-        Me.Stock_Mode.TabIndex = 17
-        Me.Stock_Mode.Text = "STOCK MODE"
-        Me.Stock_Mode.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Form_Stock_DB
         '

@@ -12,9 +12,9 @@
 
         '=[USER RELATED]=============================
 
-        Public Shared UserID As Integer
+        Public Shared UserID As Integer = 1
         Public Shared logged_priv As Integer
-        Public Shared logged As Integer = 0
+        Public Shared logged As Integer = 1
 
         '=[MODE RELATED]=============================
 
@@ -471,9 +471,68 @@
 
     End Sub
 
+    '=[HISTORY SCREEN]=====================================================================================================================
+
+    Private Sub RangeSetButton_Click(sender As Object, e As EventArgs) Handles RangeSetButton.Click
+
+        If RangeSetButton.Text = ">" Then
+
+            RangeSetButton.Text = "<"
+            DateRangeHolder.Width = 324
+            Range_Box.Width = 0
+
+        ElseIf RangeSetButton.Text = "<" Then
+
+            RangeSetButton.Text = ">"
+            DateRangeHolder.Width = 26
+            Range_Box.Width = 155
+
+        End If
+
+    End Sub
+
+    Private Sub Log_Search_TextChanged(sender As Object, e As EventArgs) Handles Log_Search.TextChanged
+
+        Dim Query As String = ""
+
+        If Log_Search.Text = "" Then
 
 
 
+        Else
+
+            If RangeSetButton.Text = ">" Then
+
+                If Range_CBX.Text = "All:" Then
+
+                ElseIf Range_CBX.Text = "7 Days" Then
+
+                ElseIf Range_CBX.Text = "14 Days" Then
+
+                ElseIf Range_CBX.Text = "30 Days" Then
+
+                ElseIf Range_CBX.Text = "6 Months" Then
+
+                ElseIf Range_CBX.Text = "1 Year" Then
+
+                End If
+
+            ElseIf RangeSetButton.Text = "<" Then
+
+                cmd.Parameters.AddWithValue("@search", ITM_SEARCH.Text)
+
+                tableload(Query + "WHERE  LIKE CONCAT('%',@search,'%')", Log_View_Grid)
+                strconn.Close()
+
+                cmd.Parameters.Clear()
+
+            End If
+
+        End If
+
+
+
+    End Sub
 
     '===================================================================================================================================
 

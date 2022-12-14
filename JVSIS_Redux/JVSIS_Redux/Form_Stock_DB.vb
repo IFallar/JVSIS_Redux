@@ -262,10 +262,19 @@ Public Class Form_Stock_DB
 
     Private Sub FI_BTN_SAVE_Click(sender As Object, e As EventArgs) Handles FI_BTN_SAVE.Click
 
+        Dim Log_Token As Integer
+        Dim LogItemName As String = FS_RS_TBX.Text + " | " + FS_RS_BRAND.Text + " | " + FS_RS_VAR.Text + " | " + FS_RS_SUPP.Text
+
         Stock_Function(New_Quantity, New_Status, RS_Date_F, TH, Current)
 
+        If FORM_LABEL.Text = "RESTOCK ITEM" Then
+            Log_Token = 2
+        ElseIf FORM_LABEL.Text = "STOCK OUT" Then
+            Log_Token = 3
+        End If
+
+        Log_entry(Log_Token, To_Stock, LogItemName)
+
     End Sub
-
-
 
 End Class

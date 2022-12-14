@@ -97,6 +97,9 @@ Public Class Form_Item
             MsgBox(Confirm_string, MsgBoxStyle.OkOnly, "Success!")
 
             LoadDashDetails()
+
+            Dim LogItemName As String = FI_TBX_ITM_NAME.Text + " | " + FI_CBX_ITM_BRAND.Text + " | " + FI_CBX_ITM_VARIANT.Text + " | " + FI_CBX_ITEM_SUPP.Text
+            Log_entry(1, FI_NUD_ITM_STOCK.Value, FI_TBX_ITM_NAME.Text)
             Dashboard.LoadMain()
 
         Catch ex As Exception
@@ -480,6 +483,8 @@ Public Class Form_Item
             ItemControl()
 
         Else
+
+            MsgBox("That Item is Already in the Inventory!", MsgBoxStyle.OkOnly, "Warning!")
 
         End If
 
