@@ -91,7 +91,8 @@ Module ISFunctions
         opencon()
 
         cmd.Connection = con
-        cmd.CommandText = "SELECT COALESCE((SELECT COUNT(log_id) FROM transaction_log WHERE type = 'New Item') ,0), COALESCE((SELECT COUNT(log_id) FROM transaction_log WHERE type = 'Restock') ,0), COALESCE((SELECT COUNT(log_id) FROM transaction_log WHERE type = 'Stock Out') ,0), COALESCE((SELECT SUM(l_value) FROM transaction_log WHERE type = 'Stock Out') ,0)"
+        cmd.CommandText = "SELECT COALESCE((SELECT COUNT(log_id) FROM transaction_log WHERE type = 'New Item' AND l_date >= DATE(NOW() - INTERVAL 30 DAY)) ,0), COALESCE((SELECT SUM(SUBSTRING(c_qty,2, LENGTH(c_qty) -1)) FROM transaction_log WHERE type = 'Restock' AND l_date >= DATE(NOW() - INTERVAL 30 DAY)), 0), COALESCE((SELECT SUM(SUBSTRING(c_qty,2, LENGTH(c_qty) -1)) FROM transaction_log WHERE type = 'Stock Out' AND l_date >= DATE(NOW() - INTERVAL 30 DAY)), 0), COALESCE((SELECT SUM(l_value) FROM transaction_log WHERE type = 'Stock Out' AND l_date >= DATE(NOW() - INTERVAL 30 DAY)) ,0)"
+
         cmd.Prepare()
 
         cmdreader = cmd.ExecuteReader

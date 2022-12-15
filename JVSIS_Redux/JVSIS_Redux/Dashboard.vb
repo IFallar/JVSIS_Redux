@@ -1,4 +1,6 @@
-﻿Public Class Dashboard
+﻿Imports System.ComponentModel
+
+Public Class Dashboard
 
     Public Class GlobalVariables
 
@@ -495,7 +497,7 @@
 
     End Sub
 
-    Dim LogQuery As String = "SELECT `log_id`, (SELECT user_name FROM account WHERE account_id = acc_id) AS 'User', `item` AS 'Item', `type` AS 'Action', `c_qty` AS 'Change', `l_time` AS 'Time', `l_date` AS 'Date' FROM `transaction_log`"
+    Dim LogQuery As String = "SELECT `log_id`, (SELECT user_name FROM account WHERE account_id = acc_id) AS 'User', `item` AS 'Item', `type` AS 'Action', `c_qty` AS 'Change', (SELECT TIME_FORMAT(l_time, '%h:%i %p')) AS 'Time', `l_date` AS 'Date' FROM `transaction_log`"
 
 
     Private Sub Log_Search_TextChanged(sender As Object, e As EventArgs) Handles Log_Search.TextChanged
@@ -826,7 +828,20 @@
 
     End Sub
 
+    Private Sub Log_View_Grid_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles Log_View_Grid.DataBindingComplete
 
+        Log_View_Grid.ClearSelection()
+
+        Log_View_Grid.RowTemplate.Resizable = False
+        Log_View_Grid.Columns(0).Visible = False
+        Log_View_Grid.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Log_View_Grid.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+
+        Log_View_Grid.RowTemplate.MinimumHeight = 40
+
+        Log_View_Grid.Sort(Log_View_Grid.Columns(0), ListSortDirection.Descending)
+
+    End Sub
 
 
     '===================================================================================================================================
