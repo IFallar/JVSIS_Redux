@@ -207,6 +207,30 @@ Public Class Dashboard
 
             If delete = MsgBoxResult.Yes Then
 
+                Dim Item_Name As String = ""
+                Dim Value As String = ""
+
+                opencon()
+
+                cmd.Connection = con
+                cmd.Parameters.Clear()
+                cmd.CommandText = "SELECT CONCAT(`item_name`, ' | ', (SELECT brand_name FROM brands WHERE brand_id = item_brand),' | ', (SELECT variant_name FROM variants WHERE variant_id = item_variant),' | ',(SELECT supplier_name FROM supplier WHERE supplier_id = item_supplier)),  `item_p_cost` * `item_qty` FROM `products` WHERE item_id = '" & Dashboard.GlobalVariables.Selected_Item & "'"
+                cmd.Prepare()
+
+                cmdreader = cmd.ExecuteReader
+
+                While cmdreader.Read
+                    Item_Name = cmdreader.GetValue(0)
+                    Value = cmdreader.GetValue(1)
+                End While
+
+                cmd.Parameters.Clear()
+
+                cmdreader.Close()
+                con.Close()
+
+                Log_entry(5, "", Item_Name, Value)
+
                 strconnection()
 
                 cmd.Connection = strconn
@@ -219,13 +243,21 @@ Public Class Dashboard
                 LoadDashDetails()
                 LoadMain()
 
+                MsgBox("Entry Sucessfully Deleted", MsgBoxStyle.OkOnly, "Delete Item")
+
             ElseIf delete = MsgBoxResult.No Then
+
+
 
             End If
 
         Catch ex As Exception
 
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+
         End Try
+
+
 
     End Sub
 
@@ -267,6 +299,34 @@ Public Class Dashboard
         Catch ex As Exception
 
         End Try
+
+    End Sub
+
+    Private Sub HOME_BTN_LOGS_Click(sender As Object, e As EventArgs) Handles HOME_BTN_LOGS.Click
+
+        Panel_Home.Visible = False
+        Panel_Items.Visible = False
+        Panel_History.Visible = True
+        Panel_Settings.Visible = False
+
+        BTN_Side_Home.BackColor = System.Drawing.Color.Transparent
+        BTN_Side_Items.BackColor = System.Drawing.Color.Transparent
+        BTN_Side_Logs.BackColor = System.Drawing.Color.White
+        BTN_Side_Settings.BackColor = System.Drawing.Color.Transparent
+
+        BTN_Side_Home.ForeColor = System.Drawing.Color.White
+        BTN_Side_Items.ForeColor = System.Drawing.Color.White
+        BTN_Side_Logs.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64)
+        BTN_Side_Settings.ForeColor = System.Drawing.Color.White
+
+        BTN_Side_Home.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
+        BTN_Side_Items.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
+        BTN_Side_Logs.FlatAppearance.MouseOverBackColor = Color.White
+        BTN_Side_Settings.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
+
+        tableload(LogQuery, Log_View_Grid)
+        LoadLogDash()
+        strconn.Close()
 
     End Sub
 
@@ -1181,6 +1241,19 @@ Public Class Dashboard
 
         Load_BVS()
 
+        Supplier_Name.Clear()
+        Supplier_Number.Clear()
+        Supplier_Email.Clear()
+        Supplier_Media.Clear()
+
+        TBX_NBrand.Clear()
+        TBX_NVariant.Clear()
+        TBX_NCategory.Clear()
+
+        BVS_ADD.Text = "Add+"
+        BVS_CANCEL.Visible = False
+        BVS_DELETE.Visible = False
+
     End Sub
 
     Private Sub BVS_Gridview_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles BVS_Gridview.DataBindingComplete
@@ -1194,6 +1267,479 @@ Public Class Dashboard
         Acc_List_Grid.RowTemplate.MinimumHeight = 40
 
     End Sub
+
+    Public Sub InsertBVS(InsertQuery, Insertvalue)
+
+        Try
+
+            strconnection()
+
+            cmd.Connection = strconn
+            strconn.Open()
+
+            cmd.Parameters.Clear()
+
+            cmd.Parameters.AddWithValue("@value", Insertvalue)
+            cmd.CommandText = InsertQuery
+            cmd.ExecuteNonQuery()
+
+            strconn.Close()
+
+        Catch ex As Exception
+
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+            strconn.Close()
+
+        End Try
+
+    End Sub
+
+    Dim dupcheck As String = ""
+
+    Public Sub DupCheckerVBS(CheckQuery, Checkvalue)
+
+        Try
+
+            opencon()
+
+            cmd.Connection = con
+            cmd.Parameters.Clear()
+            cmd.Parameters.AddWithValue("@chval", Checkvalue)
+            cmd.CommandText = CheckQuery
+            cmd.Prepare()
+
+            cmdreader = cmd.ExecuteReader
+
+            While cmdreader.Read
+                dupcheck = cmdreader.GetValue(0)
+            End While
+
+            cmdreader.Close()
+            con.Close()
+
+        Catch ex As Exception
+
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+
+        End Try
+
+        strconn.Close()
+        con.Close()
+
+    End Sub
+
+    Private Sub BVS_ADD_Click(sender As Object, e As EventArgs) Handles BVS_ADD.Click
+
+        If BVS_ADD.Text = "Add+" Then
+            If BVS_TAB.SelectedIndex = 0 Then
+
+                Dim CQ As String = "SELECT brand_name FROM brands WHERE brand_name = @chval"
+                DupCheckerVBS(CQ, TBX_NBrand.Text)
+
+                If dupcheck = Nothing And TBX_NBrand.Text IsNot "" Then
+
+                    Try
+
+                        Dim InsertQuery As String = "INSERT INTO `brands`(`brand_id`, `brand_name`) VALUES (DEFAULT, @value)"
+                        InsertBVS(InsertQuery, TBX_NBrand.Text)
+
+                        Load_BVS()
+                        TBX_NVariant.Clear()
+
+                        MsgBox("Brand Information Added", MsgBoxStyle.OkOnly, "Success!")
+
+                    Catch ex As NullReferenceException
+
+                        MsgBox("Input Field is Empty!", MsgBoxStyle.OkOnly, "Warning!")
+
+                    End Try
+
+                ElseIf TBX_NBrand.Text = "" Then
+
+                    MsgBox("Input Field is Empty!", MsgBoxStyle.OkOnly, "Warning!")
+
+                Else
+
+                    MsgBox("That Supplier is already in the Records", MsgBoxStyle.OkOnly, "Warning!")
+
+                End If
+
+            ElseIf BVS_TAB.SelectedIndex = 1 Then
+
+                Dim CQ As String = "SELECT variant_name FROM variants WHERE variant_name = @chval"
+                DupCheckerVBS(CQ, TBX_NVariant.Text)
+
+                If dupcheck = Nothing And TBX_NVariant.Text IsNot "" Then
+
+                    Try
+
+                        Dim InsertQuery As String = "INSERT INTO `variants`(`variant_id`, `variant_name`) VALUES (DEFAULT, @value)"
+                        InsertBVS(InsertQuery, TBX_NVariant.Text)
+
+                        Load_BVS()
+                        TBX_NVariant.Clear()
+
+                        MsgBox("Variant Information Added", MsgBoxStyle.OkOnly, "Success!")
+
+                    Catch ex As NullReferenceException
+
+                        MsgBox("Input Field is Empty!", MsgBoxStyle.OkOnly, "Warning!")
+
+                    End Try
+
+                ElseIf TBX_NVariant.Text = "" Then
+
+                    MsgBox("Input Field is Empty!", MsgBoxStyle.OkOnly, "Warning!")
+
+                Else
+
+                    MsgBox("That Supplier is already in the Records", MsgBoxStyle.OkOnly, "Warning!")
+
+                End If
+
+
+            ElseIf BVS_TAB.SelectedIndex = 2 Then
+
+                Dim CQ As String = "SELECT category_name FROM category WHERE category_name = @chval"
+                DupCheckerVBS(CQ, TBX_NCategory.Text)
+
+                If dupcheck = Nothing And TBX_NCategory.Text IsNot "" Then
+
+                    Try
+
+                        Dim InsertQuery As String = "INSERT INTO `category`(`category_id`, `category_name`) VALUES (DEFAULT, @value)"
+                        InsertBVS(InsertQuery, TBX_NCategory.Text)
+
+                        Load_BVS()
+                        TBX_NCategory.Clear()
+
+                        MsgBox("Category Information Added", MsgBoxStyle.OkOnly, "Success!")
+
+                    Catch ex As NullReferenceException
+
+                        MsgBox("Input Field is Empty!", MsgBoxStyle.OkOnly, "Warning!")
+
+                    End Try
+
+                ElseIf TBX_NCategory.Text = "" Then
+
+                    MsgBox("Input Field is Empty!", MsgBoxStyle.OkOnly, "Warning!")
+
+                Else
+
+                    MsgBox("That Supplier is already in the Records", MsgBoxStyle.OkOnly, "Warning!")
+
+                End If
+
+            ElseIf BVS_TAB.SelectedIndex = 3 Then
+
+                Dim CQ As String = "SELECT supplier_name FROM supplier WHERE supplier_name = @chval"
+                DupCheckerVBS(CQ, Supplier_Name.Text)
+
+                If dupcheck = Nothing And Supplier_Name.Text IsNot "" And Supplier_Number.Text IsNot "" And Supplier_Email.Text IsNot "" And Supplier_Media.Text IsNot "" Then
+
+                    Try
+
+                        strconnection()
+
+                        cmd.Connection = strconn
+                        strconn.Open()
+
+                        cmd.Parameters.Clear()
+
+                        cmd.Parameters.AddWithValue("@suppname", Supplier_Name.Text)
+                        cmd.Parameters.AddWithValue("@suppnum", Supplier_Number.Text)
+                        cmd.Parameters.AddWithValue("@suppmail", Supplier_Email.Text)
+                        cmd.Parameters.AddWithValue("@suppmed", Supplier_Media.Text)
+                        cmd.CommandText = "INSERT INTO `supplier`(`supplier_id`, `supplier_name`, `supplier_number`, `supplier_email`, `supplier_socmed`) VALUES (DEFAULT, @suppname, @suppnum, @suppmail, @suppmed)"
+                        cmd.ExecuteNonQuery()
+
+                        strconn.Close()
+
+                        Load_BVS()
+
+                        MsgBox("Supplier Information Added", MsgBoxStyle.OkOnly, "Success!")
+
+                        Supplier_Name.Clear()
+                        Supplier_Number.Clear()
+                        Supplier_Email.Clear()
+                        Supplier_Media.Clear()
+
+                    Catch ex As NullReferenceException
+
+                        MsgBox("Input Field is Empty!", MsgBoxStyle.OkOnly, "Warning!")
+
+                    End Try
+
+                ElseIf Supplier_Name.Text = "" Or Supplier_Number.Text = "" Or Supplier_Email.Text = "" Or Supplier_Media.Text = "" Then
+
+                    MsgBox("Please Provide all Necessary Details!", MsgBoxStyle.OkOnly, "Warning!")
+
+                Else
+
+                    MsgBox("That Supplier is already in the Records", MsgBoxStyle.OkOnly, "Warning!")
+
+                End If
+
+            End If
+
+            dupcheck = ""
+
+            BVS_CANCEL.Visible = False
+            BVS_DELETE.Visible = False
+
+        Else BVS_ADD.Text = "Update"
+
+            If dupcheck = Nothing And Supplier_Name.Text IsNot "" And Supplier_Number.Text IsNot "" And Supplier_Email.Text IsNot "" And Supplier_Media.Text IsNot "" Then
+
+                Try
+
+                    strconnection()
+
+                    cmd.Connection = strconn
+                    strconn.Open()
+
+                    cmd.Parameters.Clear()
+
+                    cmd.Parameters.AddWithValue("@suppname", Supplier_Name.Text)
+                    cmd.Parameters.AddWithValue("@suppnum", Supplier_Number.Text)
+                    cmd.Parameters.AddWithValue("@suppmail", Supplier_Email.Text)
+                    cmd.Parameters.AddWithValue("@suppmed", Supplier_Media.Text)
+                    cmd.CommandText = "UPDATE `supplier` SET `supplier_name`= @suppname,`supplier_number`= @suppnum,`supplier_email`= @suppmail,`supplier_socmed`= @suppmed WHERE `supplier_id`='" & SelectedBVS & "'"
+                    cmd.ExecuteNonQuery()
+
+                    strconn.Close()
+
+                    Load_BVS()
+
+                    MsgBox("Supplier Information Updated", MsgBoxStyle.OkOnly, "Success!")
+
+                Catch ex As NullReferenceException
+
+                    MsgBox("Input Field is Empty!", MsgBoxStyle.OkOnly, "Warning!")
+
+                End Try
+
+            ElseIf Supplier_Name.Text = "" Or Supplier_Number.Text = "" Or Supplier_Email.Text = "" Or Supplier_Media.Text = "" Then
+
+                MsgBox("Please Provide all Necessary Details!", MsgBoxStyle.OkOnly, "Warning!")
+
+            End If
+
+        End If
+
+
+
+    End Sub
+
+    Dim SelectedBVS As Integer
+
+    Private Sub BVS_Gridview_SelectionChanged(sender As Object, e As EventArgs) Handles BVS_Gridview.CellClick
+
+        Try
+            SelectedBVS = BVS_Gridview.CurrentRow.Cells(0).Value
+
+        Catch ex As NullReferenceException
+
+            SelectedBVS = 1
+
+        End Try
+
+        Dim SelectQuery As String
+
+        If BVS_TAB.SelectedIndex = 3 Then
+
+            opencon()
+
+            cmd.Connection = con
+            cmd.CommandText = "SELECT `supplier_name`, `supplier_number`, `supplier_email`, `supplier_socmed` FROM `supplier` WHERE `supplier_id` = '" & SelectedBVS & "'"
+            cmd.Prepare()
+
+            cmdreader = cmd.ExecuteReader
+
+            While cmdreader.Read
+                Supplier_Name.Text = cmdreader(0)
+                Supplier_Number.Text = cmdreader(1)
+                Supplier_Email.Text = cmdreader(2)
+                Supplier_Media.Text = cmdreader(3)
+            End While
+
+            cmd.Parameters.Clear()
+
+            cmdreader.Close()
+            con.Close()
+
+            BVS_ADD.Text = "Update"
+            BVS_CANCEL.Visible = True
+            BVS_DELETE.Visible = True
+
+        Else
+
+            If BVS_TAB.SelectedIndex = 0 Then
+
+                SelectQuery = "SELECT `brand_name` FROM `brands` WHERE `brand_id` = '" & SelectedBVS & "'"
+
+                opencon()
+
+                cmd.Connection = con
+                cmd.CommandText = SelectQuery
+                cmd.Prepare()
+
+                cmdreader = cmd.ExecuteReader
+
+                While cmdreader.Read
+                    TBX_NBrand.Text = cmdreader.GetValue(0)
+                End While
+
+                cmd.Parameters.Clear()
+
+                cmdreader.Close()
+                con.Close()
+
+            ElseIf BVS_TAB.SelectedIndex = 1 Then
+
+                SelectQuery = "SELECT `variant_name` FROM `variants` WHERE `variant_id` = '" & SelectedBVS & "'"
+
+                opencon()
+
+                cmd.Connection = con
+                cmd.CommandText = SelectQuery
+                cmd.Prepare()
+
+                cmdreader = cmd.ExecuteReader
+
+                While cmdreader.Read
+                    TBX_NVariant.Text = cmdreader.GetValue(0)
+                End While
+
+                cmd.Parameters.Clear()
+
+                cmdreader.Close()
+                con.Close()
+
+            ElseIf BVS_TAB.SelectedIndex = 2 Then
+
+                SelectQuery = "SELECT `category_name` FROM `category` WHERE `category_id` = '" & SelectedBVS & "'"
+
+                opencon()
+
+                cmd.Connection = con
+                cmd.CommandText = SelectQuery
+                cmd.Prepare()
+
+                cmdreader = cmd.ExecuteReader
+
+                While cmdreader.Read
+                    TBX_NCategory.Text = cmdreader.GetValue(0)
+                End While
+
+                cmd.Parameters.Clear()
+
+                cmdreader.Close()
+                con.Close()
+
+            End If
+
+            BVS_DELETE.Visible = True
+
+        End If
+
+    End Sub
+
+    Private Sub TBX_NBrand_TextChanged(sender As Object, e As EventArgs) Handles TBX_NBrand.TextChanged, TBX_NVariant.TextChanged, TBX_NCategory.TextChanged
+
+        If TBX_NBrand.Text = "" Then
+            BVS_DELETE.Visible = False
+
+        ElseIf TBX_NVariant.Text = "" Then
+            BVS_DELETE.Visible = False
+
+        ElseIf TBX_NCategory.Text = "" Then
+            BVS_DELETE.Visible = False
+
+        End If
+
+    End Sub
+
+    Private Sub BVS_CANCEL_Click(sender As Object, e As EventArgs) Handles BVS_CANCEL.Click
+
+        Supplier_Name.Clear()
+        Supplier_Number.Clear()
+        Supplier_Email.Clear()
+        Supplier_Media.Clear()
+
+        BVS_ADD.Text = "Add+"
+        BVS_CANCEL.Visible = False
+        BVS_DELETE.Visible = False
+
+    End Sub
+
+    Private Sub BVS_DELETE_Click(sender As Object, e As EventArgs) Handles BVS_DELETE.Click
+
+        Dim DeleteQuery As String = ""
+
+        Try
+
+            If BVS_TAB.SelectedIndex = 0 Then
+
+                DeleteQuery = "DELETE FROM `brand` WHERE brand_id"
+
+            ElseIf BVS_TAB.SelectedIndex = 1 Then
+
+                DeleteQuery = "DELETE FROM `variants` WHERE variant_id"
+
+            ElseIf BVS_TAB.SelectedIndex = 2 Then
+
+                DeleteQuery = "DELETE FROM `category` WHERE category_id"
+
+            ElseIf BVS_TAB.SelectedIndex = 3 Then
+
+                DeleteQuery = "DELETE FROM `supplier` WHERE supplier_id"
+
+            End If
+
+            Try
+
+                Dim delete = MsgBox("Are you sure you want delete the selected item?", MsgBoxStyle.YesNo, "Delete Item")
+
+                If delete = MsgBoxResult.Yes Then
+
+                    strconnection()
+
+                    cmd.Connection = strconn
+                    strconn.Open()
+
+                    cmd.CommandText = DeleteQuery + "= '" & SelectedBVS & "'"
+                    cmd.ExecuteNonQuery()
+                    strconn.Close()
+
+                    LoadDashDetails()
+                    LoadMain()
+
+                    MsgBox("Entry Sucessfully Deleted", MsgBoxStyle.OkOnly, "Delete Info")
+
+                ElseIf delete = MsgBoxResult.No Then
+
+                End If
+
+            Catch ex As Exception
+
+                MsgBox("CANNOT DELETE!" & Environment.NewLine & "" & Environment.NewLine & "The Information you are trying to delete is in use in other records!", MsgBoxStyle.OkOnly, "Information In Use")
+
+            End Try
+
+        Catch ex As Exception
+
+        End Try
+
+        Load_BVS()
+
+    End Sub
+
+
+
+
+
 
 
 
