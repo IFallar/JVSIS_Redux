@@ -342,6 +342,11 @@ Module ISFunctions
 
     End Sub
 
+    Public Sub DayLog()
 
+        tableload("SELECT `log_id`, `item` AS 'Item', `c_qty` AS 'Change', (SELECT TIME_FORMAT(l_time, '%h:%i %p')) AS 'Time' FROM `transaction_log`", Dashboard.Day_GridView)
+        strconn.Close()
+
+    End Sub
 
 End Module

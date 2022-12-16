@@ -68,6 +68,7 @@ Public Class Dashboard
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         LoadDashDetails()
+        DayLog()
 
         tableload("SELECT account_id, user_name, acc_level FROM account", Acc_List_Grid)
         strconn.Close()
@@ -327,6 +328,23 @@ Public Class Dashboard
         tableload(LogQuery, Log_View_Grid)
         LoadLogDash()
         strconn.Close()
+
+    End Sub
+
+    Private Sub Day_GridView_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles Day_GridView.DataBindingComplete
+
+        Day_GridView.ClearSelection()
+
+        Day_GridView.RowTemplate.MinimumHeight = 30
+        Day_GridView.RowTemplate.Resizable = False
+        Day_GridView.Columns(0).Visible = False
+        Day_GridView.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Day_GridView.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
+        Day_GridView.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Day_GridView.Columns(1).MinimumWidth = 200
+        Day_GridView.Columns(3).MinimumWidth = 70
+
+        Day_GridView.Sort(Day_GridView.Columns(0), ListSortDirection.Descending)
 
     End Sub
 
