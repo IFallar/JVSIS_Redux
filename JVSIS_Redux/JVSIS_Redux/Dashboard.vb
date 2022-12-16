@@ -850,6 +850,25 @@ Public Class Dashboard
 
     '=[SETTINGS SCREEN]=====================================================================================================================
 
+    'ACCOUNT SETTINGS SHOW =================================================================================================================
+
+    Private Sub Account_Set_BTN_Click(sender As Object, e As EventArgs) Handles Account_Set_BTN.Click
+
+        If Account_Set_BTN.Text = "Show Settings" Then
+            Account_Set_BTN.Text = "Hide Settings"
+            Account_Panel.Height = 315
+        ElseIf Account_Set_BTN.Text = "Hide Settings" Then
+            Account_Set_BTN.Text = "Show Settings"
+            Account_Panel.Height = 50
+        End If
+
+        tableload("SELECT account_id, user_name, acc_level FROM account", Acc_List_Grid)
+        strconn.Close()
+
+    End Sub
+
+    'ACCOUNT LIST
+
     Private Sub Acc_List_Grid_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles Acc_List_Grid.DataBindingComplete
 
         Acc_List_Grid.ClearSelection()
@@ -864,6 +883,8 @@ Public Class Dashboard
     End Sub
 
     Dim SelectedAcc As Integer
+
+    'ACCOUNT SELECT
 
     Private Sub Acc_List_Grid_SelectionChanged(sender As Object, e As EventArgs) Handles Acc_List_Grid.CellClick
 
@@ -890,20 +911,7 @@ Public Class Dashboard
 
     End Sub
 
-    Private Sub Account_Set_BTN_Click(sender As Object, e As EventArgs) Handles Account_Set_BTN.Click
-
-        If Account_Set_BTN.Text = "Show Settings" Then
-            Account_Set_BTN.Text = "Hide Settings"
-            Account_Panel.Height = 315
-        ElseIf Account_Set_BTN.Text = "Hide Settings" Then
-            Account_Set_BTN.Text = "Show Settings"
-            Account_Panel.Height = 50
-        End If
-
-        tableload("SELECT account_id, user_name, acc_level FROM account", Acc_List_Grid)
-        strconn.Close()
-
-    End Sub
+    'EDIT BUTTON
 
     Private Sub Account_Del_Click(sender As Object, e As EventArgs) Handles Account_Del.Click
 
@@ -934,6 +942,8 @@ Public Class Dashboard
 
     End Sub
 
+    'NEW ACCOUNT BUTTON
+
     Private Sub Account_Add_Click(sender As Object, e As EventArgs) Handles Account_Add.Click
 
         If GlobalVariables.logged_priv = 1 Then
@@ -961,6 +971,8 @@ Public Class Dashboard
         End If
 
     End Sub
+
+    'CANCEL AND DELETE BUTTON
 
     Private Sub Account_CNC_Click(sender As Object, e As EventArgs) Handles Account_CNC.Click
 
@@ -1020,6 +1032,8 @@ Public Class Dashboard
         strconn.Close()
 
     End Sub
+
+    'SAVE AND UPDATE BUTTON
 
     Private Sub Account_SV_Click(sender As Object, e As EventArgs) Handles Account_SV.Click
 
@@ -1117,6 +1131,8 @@ Public Class Dashboard
 
     End Sub
 
+    'RESET BUTTON
+
     Private Sub Account_RST_Click(sender As Object, e As EventArgs) Handles Account_RST.Click
 
         If Account_SV.Text = "Update" Then
@@ -1137,6 +1153,9 @@ Public Class Dashboard
 
     End Sub
 
+
+    'BRANDS AND VARIANTS SETTINGS SHOW =====================================================================================================
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles BVS_Set_btn.Click
 
         If BVS_Set_btn.Text = "Show Settings" Then
@@ -1148,18 +1167,6 @@ Public Class Dashboard
         End If
 
     End Sub
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

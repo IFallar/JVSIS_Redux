@@ -307,4 +307,26 @@ Module ISFunctions
 
     End Sub
 
+    Public Sub Load_BVS()
+
+        If Dashboard.BVS_TAB.SelectedIndex = 0 Then
+
+            tableload("", Dashboard.BVS_Gridview)
+
+        ElseIf Dashboard.BVS_TAB.SelectedIndex = 1 Then
+
+            tableload("", Dashboard.BVS_Gridview)
+
+        ElseIf Dashboard.BVS_TAB.SelectedIndex = 2 Then
+
+            tableload("", Dashboard.BVS_Gridview)
+
+        ElseIf Dashboard.BVS_TAB.SelectedIndex = 3 Then
+
+            tableload("", Dashboard.BVS_Gridview)
+
+        End If
+
+    End Sub
+
 End Module

@@ -22,12 +22,12 @@ Partial Class Dashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel_Sidebar = New System.Windows.Forms.Panel()
         Me.BTN_Side_Settings = New System.Windows.Forms.Button()
         Me.BTN_Side_Logs = New System.Windows.Forms.Button()
@@ -45,42 +45,29 @@ Partial Class Dashboard
         Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.BVS_Gridview = New System.Windows.Forms.DataGridView()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.BVS_ID = New System.Windows.Forms.TextBox()
+        Me.BVS_DELETE = New System.Windows.Forms.Button()
+        Me.BVS_TAB = New System.Windows.Forms.TabControl()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button15 = New System.Windows.Forms.Button()
-        Me.Button16 = New System.Windows.Forms.Button()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
         Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.Button17 = New System.Windows.Forms.Button()
-        Me.Button18 = New System.Windows.Forms.Button()
-        Me.Button19 = New System.Windows.Forms.Button()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
         Me.TabPage7 = New System.Windows.Forms.TabPage()
         Me.Panel12 = New System.Windows.Forms.Panel()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
-        Me.Button20 = New System.Windows.Forms.Button()
-        Me.Button21 = New System.Windows.Forms.Button()
-        Me.Button22 = New System.Windows.Forms.Button()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.TabPage8 = New System.Windows.Forms.TabPage()
         Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.BVS_ADD = New System.Windows.Forms.Button()
+        Me.BVS_CANCEL = New System.Windows.Forms.Button()
         Me.Account_Panel = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Account_Set_BTN = New System.Windows.Forms.Button()
@@ -103,6 +90,7 @@ Partial Class Dashboard
         Me.TBX_FNAME = New System.Windows.Forms.TextBox()
         Me.CBX_Type = New System.Windows.Forms.ComboBox()
         Me.TBX_Username = New System.Windows.Forms.TextBox()
+        Me.Account_RST = New System.Windows.Forms.Button()
         Me.Account_Del = New System.Windows.Forms.Button()
         Me.Account_CNC = New System.Windows.Forms.Button()
         Me.Account_SV = New System.Windows.Forms.Button()
@@ -186,7 +174,9 @@ Partial Class Dashboard
         Me.Label16 = New System.Windows.Forms.Label()
         Me.LogDash_NI = New System.Windows.Forms.Button()
         Me.Log_View_Grid = New System.Windows.Forms.DataGridView()
-        Me.Account_RST = New System.Windows.Forms.Button()
+        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel_Sidebar.SuspendLayout()
         Me.Panel_Main.SuspendLayout()
         Me.Panel_Settings.SuspendLayout()
@@ -197,7 +187,8 @@ Partial Class Dashboard
         Me.TableLayoutPanel7.SuspendLayout()
         Me.Panel5.SuspendLayout()
         CType(Me.BVS_Gridview, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabControl1.SuspendLayout()
+        Me.Panel8.SuspendLayout()
+        Me.BVS_TAB.SuspendLayout()
         Me.TabPage5.SuspendLayout()
         Me.TabPage6.SuspendLayout()
         Me.TabPage7.SuspendLayout()
@@ -456,17 +447,20 @@ Partial Class Dashboard
         Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.61446!))
         Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 474.0!))
         Me.TableLayoutPanel7.Controls.Add(Me.Panel5, 1, 0)
-        Me.TableLayoutPanel7.Controls.Add(Me.TabControl1, 0, 0)
+        Me.TableLayoutPanel7.Controls.Add(Me.Panel8, 0, 0)
         Me.TableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel7.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
         Me.TableLayoutPanel7.RowCount = 1
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 319.0!))
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 319.0!))
         Me.TableLayoutPanel7.Size = New System.Drawing.Size(825, 319)
         Me.TableLayoutPanel7.TabIndex = 0
         '
         'Panel5
         '
+        Me.Panel5.Controls.Add(Me.TextBox1)
         Me.Panel5.Controls.Add(Me.BVS_Gridview)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel5.Location = New System.Drawing.Point(354, 3)
@@ -480,38 +474,70 @@ Partial Class Dashboard
         Me.BVS_Gridview.AllowUserToDeleteRows = False
         Me.BVS_Gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.BVS_Gridview.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.BVS_Gridview.Location = New System.Drawing.Point(0, 25)
+        Me.BVS_Gridview.Location = New System.Drawing.Point(0, 33)
         Me.BVS_Gridview.Name = "BVS_Gridview"
         Me.BVS_Gridview.ReadOnly = True
-        Me.BVS_Gridview.Size = New System.Drawing.Size(468, 288)
+        Me.BVS_Gridview.Size = New System.Drawing.Size(468, 280)
         Me.BVS_Gridview.TabIndex = 0
         '
-        'TabControl1
+        'Panel8
         '
-        Me.TabControl1.Controls.Add(Me.TabPage5)
-        Me.TabControl1.Controls.Add(Me.TabPage6)
-        Me.TabControl1.Controls.Add(Me.TabPage7)
-        Me.TabControl1.Controls.Add(Me.TabPage8)
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl1.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
-        Me.TabControl1.Location = New System.Drawing.Point(3, 3)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(345, 313)
-        Me.TabControl1.TabIndex = 2
+        Me.Panel8.Controls.Add(Me.BVS_ID)
+        Me.Panel8.Controls.Add(Me.BVS_DELETE)
+        Me.Panel8.Controls.Add(Me.BVS_TAB)
+        Me.Panel8.Controls.Add(Me.BVS_ADD)
+        Me.Panel8.Controls.Add(Me.BVS_CANCEL)
+        Me.Panel8.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel8.Location = New System.Drawing.Point(3, 3)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(345, 313)
+        Me.Panel8.TabIndex = 2
+        '
+        'BVS_ID
+        '
+        Me.BVS_ID.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.BVS_ID.Location = New System.Drawing.Point(120, 274)
+        Me.BVS_ID.Name = "BVS_ID"
+        Me.BVS_ID.Size = New System.Drawing.Size(27, 27)
+        Me.BVS_ID.TabIndex = 32
+        Me.BVS_ID.Visible = False
+        '
+        'BVS_DELETE
+        '
+        Me.BVS_DELETE.BackColor = System.Drawing.Color.White
+        Me.BVS_DELETE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BVS_DELETE.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
+        Me.BVS_DELETE.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BVS_DELETE.Location = New System.Drawing.Point(153, 271)
+        Me.BVS_DELETE.Name = "BVS_DELETE"
+        Me.BVS_DELETE.Size = New System.Drawing.Size(89, 30)
+        Me.BVS_DELETE.TabIndex = 30
+        Me.BVS_DELETE.Text = "Delete"
+        Me.BVS_DELETE.UseVisualStyleBackColor = False
+        Me.BVS_DELETE.Visible = False
+        '
+        'BVS_TAB
+        '
+        Me.BVS_TAB.Controls.Add(Me.TabPage5)
+        Me.BVS_TAB.Controls.Add(Me.TabPage6)
+        Me.BVS_TAB.Controls.Add(Me.TabPage7)
+        Me.BVS_TAB.Controls.Add(Me.TabPage8)
+        Me.BVS_TAB.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BVS_TAB.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
+        Me.BVS_TAB.Location = New System.Drawing.Point(0, 0)
+        Me.BVS_TAB.Name = "BVS_TAB"
+        Me.BVS_TAB.SelectedIndex = 0
+        Me.BVS_TAB.Size = New System.Drawing.Size(345, 259)
+        Me.BVS_TAB.TabIndex = 2
         '
         'TabPage5
         '
         Me.TabPage5.Controls.Add(Me.Panel6)
         Me.TabPage5.Controls.Add(Me.TextBox12)
-        Me.TabPage5.Controls.Add(Me.Button11)
-        Me.TabPage5.Controls.Add(Me.Button15)
-        Me.TabPage5.Controls.Add(Me.Button16)
-        Me.TabPage5.Controls.Add(Me.TextBox13)
         Me.TabPage5.Location = New System.Drawing.Point(4, 29)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage5.Size = New System.Drawing.Size(337, 280)
+        Me.TabPage5.Size = New System.Drawing.Size(337, 226)
         Me.TabPage5.TabIndex = 0
         Me.TabPage5.Text = "Brands"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -519,78 +545,26 @@ Partial Class Dashboard
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.Black
-        Me.Panel6.Location = New System.Drawing.Point(7, 118)
+        Me.Panel6.Location = New System.Drawing.Point(7, 6)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(324, 3)
         Me.Panel6.TabIndex = 32
         '
         'TextBox12
         '
-        Me.TextBox12.Location = New System.Drawing.Point(7, 135)
+        Me.TextBox12.Location = New System.Drawing.Point(7, 23)
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.Size = New System.Drawing.Size(325, 27)
         Me.TextBox12.TabIndex = 27
-        '
-        'Button11
-        '
-        Me.Button11.BackColor = System.Drawing.Color.White
-        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
-        Me.Button11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button11.Location = New System.Drawing.Point(56, 168)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(89, 30)
-        Me.Button11.TabIndex = 31
-        Me.Button11.Text = "Cancel"
-        Me.Button11.UseVisualStyleBackColor = False
-        Me.Button11.Visible = False
-        '
-        'Button15
-        '
-        Me.Button15.BackColor = System.Drawing.Color.White
-        Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button15.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
-        Me.Button15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button15.Location = New System.Drawing.Point(150, 168)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(89, 30)
-        Me.Button15.TabIndex = 30
-        Me.Button15.Text = "Delete"
-        Me.Button15.UseVisualStyleBackColor = False
-        Me.Button15.Visible = False
-        '
-        'Button16
-        '
-        Me.Button16.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button16.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
-        Me.Button16.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button16.Location = New System.Drawing.Point(244, 168)
-        Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(89, 30)
-        Me.Button16.TabIndex = 29
-        Me.Button16.Text = "Add+"
-        Me.Button16.UseVisualStyleBackColor = False
-        '
-        'TextBox13
-        '
-        Me.TextBox13.Location = New System.Drawing.Point(6, 81)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(325, 27)
-        Me.TextBox13.TabIndex = 28
         '
         'TabPage6
         '
         Me.TabPage6.Controls.Add(Me.Panel11)
         Me.TabPage6.Controls.Add(Me.TextBox14)
-        Me.TabPage6.Controls.Add(Me.Button17)
-        Me.TabPage6.Controls.Add(Me.Button18)
-        Me.TabPage6.Controls.Add(Me.Button19)
-        Me.TabPage6.Controls.Add(Me.TextBox15)
         Me.TabPage6.Location = New System.Drawing.Point(4, 29)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(337, 280)
+        Me.TabPage6.Size = New System.Drawing.Size(337, 226)
         Me.TabPage6.TabIndex = 1
         Me.TabPage6.Text = "Variants"
         Me.TabPage6.UseVisualStyleBackColor = True
@@ -598,78 +572,19 @@ Partial Class Dashboard
         'Panel11
         '
         Me.Panel11.BackColor = System.Drawing.Color.Black
-        Me.Panel11.Location = New System.Drawing.Point(7, 118)
+        Me.Panel11.Location = New System.Drawing.Point(7, 6)
         Me.Panel11.Name = "Panel11"
         Me.Panel11.Size = New System.Drawing.Size(324, 3)
         Me.Panel11.TabIndex = 32
-        '
-        'TextBox14
-        '
-        Me.TextBox14.Location = New System.Drawing.Point(7, 135)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(325, 27)
-        Me.TextBox14.TabIndex = 27
-        '
-        'Button17
-        '
-        Me.Button17.BackColor = System.Drawing.Color.White
-        Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button17.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
-        Me.Button17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button17.Location = New System.Drawing.Point(56, 168)
-        Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(89, 30)
-        Me.Button17.TabIndex = 31
-        Me.Button17.Text = "Cancel"
-        Me.Button17.UseVisualStyleBackColor = False
-        Me.Button17.Visible = False
-        '
-        'Button18
-        '
-        Me.Button18.BackColor = System.Drawing.Color.White
-        Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button18.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
-        Me.Button18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button18.Location = New System.Drawing.Point(150, 168)
-        Me.Button18.Name = "Button18"
-        Me.Button18.Size = New System.Drawing.Size(89, 30)
-        Me.Button18.TabIndex = 30
-        Me.Button18.Text = "Delete"
-        Me.Button18.UseVisualStyleBackColor = False
-        Me.Button18.Visible = False
-        '
-        'Button19
-        '
-        Me.Button19.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button19.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
-        Me.Button19.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button19.Location = New System.Drawing.Point(244, 168)
-        Me.Button19.Name = "Button19"
-        Me.Button19.Size = New System.Drawing.Size(89, 30)
-        Me.Button19.TabIndex = 29
-        Me.Button19.Text = "Add+"
-        Me.Button19.UseVisualStyleBackColor = False
-        '
-        'TextBox15
-        '
-        Me.TextBox15.Location = New System.Drawing.Point(6, 81)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(325, 27)
-        Me.TextBox15.TabIndex = 28
         '
         'TabPage7
         '
         Me.TabPage7.Controls.Add(Me.Panel12)
         Me.TabPage7.Controls.Add(Me.TextBox16)
-        Me.TabPage7.Controls.Add(Me.Button20)
-        Me.TabPage7.Controls.Add(Me.Button21)
-        Me.TabPage7.Controls.Add(Me.Button22)
-        Me.TabPage7.Controls.Add(Me.TextBox17)
         Me.TabPage7.Location = New System.Drawing.Point(4, 29)
         Me.TabPage7.Name = "TabPage7"
         Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage7.Size = New System.Drawing.Size(337, 280)
+        Me.TabPage7.Size = New System.Drawing.Size(337, 226)
         Me.TabPage7.TabIndex = 2
         Me.TabPage7.Text = "Categories"
         Me.TabPage7.UseVisualStyleBackColor = True
@@ -677,85 +592,26 @@ Partial Class Dashboard
         'Panel12
         '
         Me.Panel12.BackColor = System.Drawing.Color.Black
-        Me.Panel12.Location = New System.Drawing.Point(7, 118)
+        Me.Panel12.Location = New System.Drawing.Point(7, 6)
         Me.Panel12.Name = "Panel12"
         Me.Panel12.Size = New System.Drawing.Size(324, 3)
         Me.Panel12.TabIndex = 32
         '
-        'TextBox16
-        '
-        Me.TextBox16.Location = New System.Drawing.Point(7, 135)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.Size = New System.Drawing.Size(325, 27)
-        Me.TextBox16.TabIndex = 27
-        '
-        'Button20
-        '
-        Me.Button20.BackColor = System.Drawing.Color.White
-        Me.Button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button20.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
-        Me.Button20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button20.Location = New System.Drawing.Point(56, 168)
-        Me.Button20.Name = "Button20"
-        Me.Button20.Size = New System.Drawing.Size(89, 30)
-        Me.Button20.TabIndex = 31
-        Me.Button20.Text = "Cancel"
-        Me.Button20.UseVisualStyleBackColor = False
-        Me.Button20.Visible = False
-        '
-        'Button21
-        '
-        Me.Button21.BackColor = System.Drawing.Color.White
-        Me.Button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button21.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
-        Me.Button21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button21.Location = New System.Drawing.Point(150, 168)
-        Me.Button21.Name = "Button21"
-        Me.Button21.Size = New System.Drawing.Size(89, 30)
-        Me.Button21.TabIndex = 30
-        Me.Button21.Text = "Delete"
-        Me.Button21.UseVisualStyleBackColor = False
-        Me.Button21.Visible = False
-        '
-        'Button22
-        '
-        Me.Button22.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button22.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
-        Me.Button22.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button22.Location = New System.Drawing.Point(244, 168)
-        Me.Button22.Name = "Button22"
-        Me.Button22.Size = New System.Drawing.Size(89, 30)
-        Me.Button22.TabIndex = 29
-        Me.Button22.Text = "Add+"
-        Me.Button22.UseVisualStyleBackColor = False
-        '
-        'TextBox17
-        '
-        Me.TextBox17.Location = New System.Drawing.Point(6, 81)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.Size = New System.Drawing.Size(325, 27)
-        Me.TextBox17.TabIndex = 28
-        '
         'TabPage8
         '
         Me.TabPage8.Controls.Add(Me.Panel7)
-        Me.TabPage8.Controls.Add(Me.TextBox6)
+        Me.TabPage8.Controls.Add(Me.TextBox7)
+        Me.TabPage8.Controls.Add(Me.TextBox8)
+        Me.TabPage8.Controls.Add(Me.TextBox9)
+        Me.TabPage8.Controls.Add(Me.TextBox10)
         Me.TabPage8.Controls.Add(Me.Label28)
         Me.TabPage8.Controls.Add(Me.Label29)
         Me.TabPage8.Controls.Add(Me.Label30)
         Me.TabPage8.Controls.Add(Me.Label31)
-        Me.TabPage8.Controls.Add(Me.TextBox7)
-        Me.TabPage8.Controls.Add(Me.TextBox8)
-        Me.TabPage8.Controls.Add(Me.TextBox9)
-        Me.TabPage8.Controls.Add(Me.Button5)
-        Me.TabPage8.Controls.Add(Me.Button6)
-        Me.TabPage8.Controls.Add(Me.Button7)
-        Me.TabPage8.Controls.Add(Me.TextBox10)
         Me.TabPage8.Location = New System.Drawing.Point(4, 29)
         Me.TabPage8.Name = "TabPage8"
         Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage8.Size = New System.Drawing.Size(337, 280)
+        Me.TabPage8.Size = New System.Drawing.Size(337, 226)
         Me.TabPage8.TabIndex = 3
         Me.TabPage8.Text = "Suppliers"
         Me.TabPage8.UseVisualStyleBackColor = True
@@ -763,23 +619,44 @@ Partial Class Dashboard
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.Black
-        Me.Panel7.Location = New System.Drawing.Point(8, 46)
+        Me.Panel7.Location = New System.Drawing.Point(7, 6)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(324, 3)
         Me.Panel7.TabIndex = 33
         '
-        'TextBox6
+        'TextBox7
         '
-        Me.TextBox6.Location = New System.Drawing.Point(7, 10)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(325, 27)
-        Me.TextBox6.TabIndex = 16
+        Me.TextBox7.Location = New System.Drawing.Point(7, 36)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(324, 27)
+        Me.TextBox7.TabIndex = 23
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(87, 71)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(244, 27)
+        Me.TextBox8.TabIndex = 22
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(87, 108)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(244, 27)
+        Me.TextBox9.TabIndex = 21
+        '
+        'TextBox10
+        '
+        Me.TextBox10.Location = New System.Drawing.Point(87, 143)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(244, 27)
+        Me.TextBox10.TabIndex = 17
         '
         'Label28
         '
         Me.Label28.AutoSize = True
         Me.Label28.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(7, 189)
+        Me.Label28.Location = New System.Drawing.Point(6, 149)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(77, 15)
         Me.Label28.TabIndex = 27
@@ -790,7 +667,7 @@ Partial Class Dashboard
         '
         Me.Label29.AutoSize = True
         Me.Label29.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(7, 155)
+        Me.Label29.Location = New System.Drawing.Point(6, 115)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(54, 15)
         Me.Label29.TabIndex = 26
@@ -801,7 +678,7 @@ Partial Class Dashboard
         '
         Me.Label30.AutoSize = True
         Me.Label30.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(9, 117)
+        Me.Label30.Location = New System.Drawing.Point(8, 77)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(39, 15)
         Me.Label30.TabIndex = 25
@@ -812,81 +689,39 @@ Partial Class Dashboard
         '
         Me.Label31.AutoSize = True
         Me.Label31.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(7, 57)
+        Me.Label31.Location = New System.Drawing.Point(6, 17)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(85, 15)
         Me.Label31.TabIndex = 24
         Me.Label31.Text = "Supplier Name"
         Me.Label31.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
-        'TextBox7
+        'BVS_ADD
         '
-        Me.TextBox7.Location = New System.Drawing.Point(8, 76)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(324, 27)
-        Me.TextBox7.TabIndex = 23
+        Me.BVS_ADD.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BVS_ADD.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BVS_ADD.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
+        Me.BVS_ADD.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BVS_ADD.Location = New System.Drawing.Point(247, 271)
+        Me.BVS_ADD.Name = "BVS_ADD"
+        Me.BVS_ADD.Size = New System.Drawing.Size(89, 30)
+        Me.BVS_ADD.TabIndex = 29
+        Me.BVS_ADD.Text = "Add+"
+        Me.BVS_ADD.UseVisualStyleBackColor = False
         '
-        'TextBox8
+        'BVS_CANCEL
         '
-        Me.TextBox8.Location = New System.Drawing.Point(88, 111)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(244, 27)
-        Me.TextBox8.TabIndex = 22
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Location = New System.Drawing.Point(88, 148)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(244, 27)
-        Me.TextBox9.TabIndex = 21
-        '
-        'Button5
-        '
-        Me.Button5.BackColor = System.Drawing.Color.White
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
-        Me.Button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button5.Location = New System.Drawing.Point(53, 227)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(89, 30)
-        Me.Button5.TabIndex = 20
-        Me.Button5.Text = "Cancel"
-        Me.Button5.UseVisualStyleBackColor = False
-        Me.Button5.Visible = False
-        '
-        'Button6
-        '
-        Me.Button6.BackColor = System.Drawing.Color.White
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
-        Me.Button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button6.Location = New System.Drawing.Point(147, 227)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(89, 30)
-        Me.Button6.TabIndex = 19
-        Me.Button6.Text = "Delete"
-        Me.Button6.UseVisualStyleBackColor = False
-        Me.Button6.Visible = False
-        '
-        'Button7
-        '
-        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
-        Me.Button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button7.Location = New System.Drawing.Point(241, 227)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(89, 30)
-        Me.Button7.TabIndex = 18
-        Me.Button7.Text = "Add+"
-        Me.Button7.UseVisualStyleBackColor = False
-        '
-        'TextBox10
-        '
-        Me.TextBox10.Location = New System.Drawing.Point(88, 183)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(244, 27)
-        Me.TextBox10.TabIndex = 17
+        Me.BVS_CANCEL.BackColor = System.Drawing.Color.White
+        Me.BVS_CANCEL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BVS_CANCEL.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
+        Me.BVS_CANCEL.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BVS_CANCEL.Location = New System.Drawing.Point(5, 271)
+        Me.BVS_CANCEL.Name = "BVS_CANCEL"
+        Me.BVS_CANCEL.Size = New System.Drawing.Size(89, 30)
+        Me.BVS_CANCEL.TabIndex = 31
+        Me.BVS_CANCEL.Text = "Cancel"
+        Me.BVS_CANCEL.UseVisualStyleBackColor = False
+        Me.BVS_CANCEL.Visible = False
         '
         'Account_Panel
         '
@@ -1146,6 +981,19 @@ Partial Class Dashboard
         Me.TBX_Username.Size = New System.Drawing.Size(235, 27)
         Me.TBX_Username.TabIndex = 0
         '
+        'Account_RST
+        '
+        Me.Account_RST.BackColor = System.Drawing.Color.White
+        Me.Account_RST.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Account_RST.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
+        Me.Account_RST.Location = New System.Drawing.Point(131, 7)
+        Me.Account_RST.Name = "Account_RST"
+        Me.Account_RST.Size = New System.Drawing.Size(116, 30)
+        Me.Account_RST.TabIndex = 3
+        Me.Account_RST.Text = "Reset"
+        Me.Account_RST.UseVisualStyleBackColor = False
+        Me.Account_RST.Visible = False
+        '
         'Account_Del
         '
         Me.Account_Del.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -1219,15 +1067,15 @@ Partial Class Dashboard
         Me.Acc_List_Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.Acc_List_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Acc_List_Grid.ColumnHeadersVisible = False
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.Padding = New System.Windows.Forms.Padding(0, 10, 0, 10)
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlDark
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Desktop
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Acc_List_Grid.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(0, 10, 0, 10)
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDark
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Desktop
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Acc_List_Grid.DefaultCellStyle = DataGridViewCellStyle1
         Me.Acc_List_Grid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Acc_List_Grid.Location = New System.Drawing.Point(0, 0)
         Me.Acc_List_Grid.Name = "Acc_List_Grid"
@@ -1834,24 +1682,24 @@ Partial Class Dashboard
         Me.Item_Table.BackgroundColor = System.Drawing.Color.White
         Me.Item_Table.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.Item_Table.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle7.Padding = New System.Windows.Forms.Padding(0, 10, 0, 10)
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Item_Table.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(0, 10, 0, 10)
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Item_Table.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.Item_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Leelawadee UI Semilight", 8.75!)
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Item_Table.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Leelawadee UI Semilight", 8.75!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Item_Table.DefaultCellStyle = DataGridViewCellStyle3
         Me.Item_Table.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Item_Table.EnableHeadersVisualStyles = False
         Me.Item_Table.Location = New System.Drawing.Point(3, 107)
@@ -2448,25 +2296,25 @@ Partial Class Dashboard
         Me.Log_View_Grid.BackgroundColor = System.Drawing.Color.White
         Me.Log_View_Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.Log_View_Grid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Leelawadee UI", 10.0!)
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Log_View_Grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Leelawadee UI", 10.0!)
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Log_View_Grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.Log_View_Grid.ColumnHeadersHeight = 30
         Me.Log_View_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Leelawadee UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle10.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Log_View_Grid.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Leelawadee UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Log_View_Grid.DefaultCellStyle = DataGridViewCellStyle5
         Me.Log_View_Grid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Log_View_Grid.EnableHeadersVisualStyles = False
         Me.Log_View_Grid.Location = New System.Drawing.Point(3, 196)
@@ -2477,17 +2325,27 @@ Partial Class Dashboard
         Me.Log_View_Grid.Size = New System.Drawing.Size(824, 415)
         Me.Log_View_Grid.TabIndex = 7
         '
-        'Account_RST
+        'TextBox16
         '
-        Me.Account_RST.BackColor = System.Drawing.Color.White
-        Me.Account_RST.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Account_RST.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
-        Me.Account_RST.Location = New System.Drawing.Point(131, 7)
-        Me.Account_RST.Name = "Account_RST"
-        Me.Account_RST.Size = New System.Drawing.Size(116, 30)
-        Me.Account_RST.TabIndex = 3
-        Me.Account_RST.Text = "Reset"
-        Me.Account_RST.UseVisualStyleBackColor = False
+        Me.TextBox16.Location = New System.Drawing.Point(7, 23)
+        Me.TextBox16.Name = "TextBox16"
+        Me.TextBox16.Size = New System.Drawing.Size(325, 27)
+        Me.TextBox16.TabIndex = 27
+        '
+        'TextBox14
+        '
+        Me.TextBox14.Location = New System.Drawing.Point(7, 23)
+        Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.Size = New System.Drawing.Size(325, 27)
+        Me.TextBox14.TabIndex = 27
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Leelawadee UI", 11.0!)
+        Me.TextBox1.Location = New System.Drawing.Point(3, 3)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(155, 27)
+        Me.TextBox1.TabIndex = 28
         '
         'Dashboard
         '
@@ -2511,8 +2369,11 @@ Partial Class Dashboard
         Me.Panel4.ResumeLayout(False)
         Me.TableLayoutPanel7.ResumeLayout(False)
         Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
         CType(Me.BVS_Gridview, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabControl1.ResumeLayout(False)
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel8.PerformLayout()
+        Me.BVS_TAB.ResumeLayout(False)
         Me.TabPage5.ResumeLayout(False)
         Me.TabPage5.PerformLayout()
         Me.TabPage6.ResumeLayout(False)
@@ -2699,43 +2560,7 @@ Partial Class Dashboard
     Friend WithEvents TableLayoutPanel7 As TableLayoutPanel
     Friend WithEvents Panel5 As Panel
     Friend WithEvents BVS_Gridview As DataGridView
-    Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents TabPage5 As TabPage
-    Friend WithEvents Panel6 As Panel
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents Button11 As Button
-    Friend WithEvents Button15 As Button
-    Friend WithEvents Button16 As Button
-    Friend WithEvents TextBox13 As TextBox
-    Friend WithEvents TabPage6 As TabPage
-    Friend WithEvents Panel11 As Panel
-    Friend WithEvents TextBox14 As TextBox
-    Friend WithEvents Button17 As Button
-    Friend WithEvents Button18 As Button
-    Friend WithEvents Button19 As Button
-    Friend WithEvents TextBox15 As TextBox
-    Friend WithEvents TabPage7 As TabPage
-    Friend WithEvents Panel12 As Panel
-    Friend WithEvents TextBox16 As TextBox
-    Friend WithEvents Button20 As Button
-    Friend WithEvents Button21 As Button
-    Friend WithEvents Button22 As Button
-    Friend WithEvents TextBox17 As TextBox
-    Friend WithEvents TabPage8 As TabPage
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel7 As Panel
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents Label28 As Label
-    Friend WithEvents Label29 As Label
-    Friend WithEvents Label30 As Label
-    Friend WithEvents Label31 As Label
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents TextBox10 As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label25 As Label
     Friend WithEvents Export_Panel As Panel
@@ -2743,4 +2568,30 @@ Partial Class Dashboard
     Friend WithEvents Label24 As Label
     Friend WithEvents ID_HOLD As TextBox
     Friend WithEvents Account_RST As Button
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents BVS_DELETE As Button
+    Friend WithEvents BVS_TAB As TabControl
+    Friend WithEvents TabPage5 As TabPage
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents TabPage6 As TabPage
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents TabPage7 As TabPage
+    Friend WithEvents Panel12 As Panel
+    Friend WithEvents TabPage8 As TabPage
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents Label30 As Label
+    Friend WithEvents Label31 As Label
+    Friend WithEvents BVS_ADD As Button
+    Friend WithEvents BVS_CANCEL As Button
+    Friend WithEvents BVS_ID As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox14 As TextBox
+    Friend WithEvents TextBox16 As TextBox
 End Class
