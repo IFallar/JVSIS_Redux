@@ -311,19 +311,32 @@ Module ISFunctions
 
         If Dashboard.BVS_TAB.SelectedIndex = 0 Then
 
-            tableload("", Dashboard.BVS_Gridview)
+            tableload("SELECT `brand_id`, `brand_name` as 'Inventory Brands' FROM `brands` WHERE brand_id > 1", Dashboard.BVS_Gridview)
+            strconn.Close()
+
+            Dashboard.BVS_Gridview.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
         ElseIf Dashboard.BVS_TAB.SelectedIndex = 1 Then
 
-            tableload("", Dashboard.BVS_Gridview)
+            tableload("SELECT `variant_id`, `variant_name` AS 'Available Variants' FROM `variants` WHERE `variant_id` > 1", Dashboard.BVS_Gridview)
+            strconn.Close()
+
+            Dashboard.BVS_Gridview.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
         ElseIf Dashboard.BVS_TAB.SelectedIndex = 2 Then
 
-            tableload("", Dashboard.BVS_Gridview)
+            tableload("SELECT `category_id`, `category_name` AS 'Product Categories' FROM `category` WHERE 1", Dashboard.BVS_Gridview)
+            strconn.Close()
+
+            Dashboard.BVS_Gridview.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
         ElseIf Dashboard.BVS_TAB.SelectedIndex = 3 Then
 
-            tableload("", Dashboard.BVS_Gridview)
+            tableload("SELECT `supplier_id`, `supplier_name` AS 'Supplier Name', `supplier_number` AS 'Contact Number', `supplier_email` AS 'Email', `supplier_socmed` AS 'Social Media 'FROM `supplier` WHERE 1", Dashboard.BVS_Gridview)
+            strconn.Close()
+
+            Dashboard.BVS_Gridview.Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+            Dashboard.BVS_Gridview.Columns(1).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft
 
         End If
 

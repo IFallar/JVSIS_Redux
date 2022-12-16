@@ -177,6 +177,7 @@ Public Class Dashboard
         BTN_Side_Settings.FlatAppearance.MouseOverBackColor = Color.White
 
         GetUserInfo(GlobalVariables.UserID)
+        Load_BVS()
 
     End Sub
 
@@ -1046,7 +1047,7 @@ Public Class Dashboard
             cmd.Connection = con
             cmd.Parameters.Clear()
             cmd.Parameters.AddWithValue("@username", TBX_Username.Text)
-            cmd.CommandText = "SELECT user_name from account WHERE user_name = @username"
+            cmd.CommandText = "SELECT user_name from account WHERE user_name = @username AND account_id != '" & ID_HOLD.Text & "'"
             cmd.Prepare()
 
             cmdreader = cmd.ExecuteReader
@@ -1126,6 +1127,14 @@ Public Class Dashboard
 
         End If
 
+        Account_Del.Text = "Edit"
+        Account_SV.Text = "Save"
+        Account_CNC.Visible = False
+        Account_SV.Visible = False
+        Account_RST.Visible = False
+
+        SplitContainer2.Panel1.Enabled = False
+
         tableload("SELECT account_id, user_name, acc_level FROM account", Acc_List_Grid)
         strconn.Close()
 
@@ -1165,6 +1174,24 @@ Public Class Dashboard
             BVS_Set_btn.Text = "Show Settings"
             BVS_Panel.Height = 49
         End If
+
+    End Sub
+
+    Private Sub BVS_TAB_TabIndexChanged(sender As Object, e As EventArgs) Handles BVS_TAB.SelectedIndexChanged
+
+        Load_BVS()
+
+    End Sub
+
+    Private Sub BVS_Gridview_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles BVS_Gridview.DataBindingComplete
+
+        BVS_Gridview.ClearSelection()
+
+        BVS_Gridview.RowTemplate.Resizable = False
+        BVS_Gridview.Columns(0).Visible = False
+
+
+        Acc_List_Grid.RowTemplate.MinimumHeight = 40
 
     End Sub
 
