@@ -276,4 +276,34 @@ Module ISFunctions
 
     End Sub
 
+    Public Sub GetUserInfo()
+
+        opencon()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT account_id, `first_name`, `last_name`, `user_name`, `acc_pass`, `acc_level`, `acc_email`, `acc_number` FROM `account` WHERE account_id = '" & Dashboard.GlobalVariables.UserID & "'"
+        cmd.Prepare()
+
+        cmdreader = cmd.ExecuteReader
+
+        While cmdreader.Read
+
+            Dashboard.TBX_FNAME.Text = cmdreader.GetString(1)
+            Dashboard.TBX_LNAME.Text = cmdreader.GetString(2)
+            Dashboard.TBX_Username.Text = cmdreader.GetString(3)
+            Dashboard.TBX_PASSWORD.Text = cmdreader.GetString(4)
+            Dashboard.CBX_Type.Text = cmdreader.GetString(5)
+            Dashboard.TBX_EMAIL.Text = cmdreader.GetString(6)
+            Dashboard.TBX_NUMBER.Text = cmdreader.GetString(7)
+
+        End While
+
+        cmdreader.Close()
+        con.Close()
+
+        tableload("SELECT account_id, user_name, acc_level FROM account", Dashboard.Acc_List_Grid)
+        strconn.Close()
+
+    End Sub
+
 End Module

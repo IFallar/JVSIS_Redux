@@ -15,7 +15,7 @@ Public Class Dashboard
         '=[USER RELATED]=============================
 
         Public Shared UserID As Integer = 1
-        Public Shared logged_priv As Integer
+        Public Shared logged_priv As Integer = 1
         Public Shared logged As Integer = 1
 
         '=[MODE RELATED]=============================
@@ -68,6 +68,9 @@ Public Class Dashboard
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         LoadDashDetails()
+
+        tableload("SELECT account_id, user_name, acc_level FROM account", Acc_List_Grid)
+        strconn.Close()
 
     End Sub
 
@@ -172,6 +175,8 @@ Public Class Dashboard
         BTN_Side_Items.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
         BTN_Side_Logs.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
         BTN_Side_Settings.FlatAppearance.MouseOverBackColor = Color.White
+
+        GetUserInfo()
 
     End Sub
 
@@ -842,6 +847,152 @@ Public Class Dashboard
         Log_View_Grid.Sort(Log_View_Grid.Columns(0), ListSortDirection.Descending)
 
     End Sub
+
+    '=[SETTINGS SCREEN]=====================================================================================================================
+
+    Private Sub Acc_List_Grid_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles Acc_List_Grid.DataBindingComplete
+
+        Acc_List_Grid.ClearSelection()
+
+        Acc_List_Grid.RowTemplate.Resizable = False
+        Acc_List_Grid.Columns(0).Visible = False
+        Acc_List_Grid.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Acc_List_Grid.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+
+        Acc_List_Grid.RowTemplate.MinimumHeight = 40
+
+    End Sub
+
+
+    Private Sub Account_Set_BTN_Click(sender As Object, e As EventArgs) Handles Account_Set_BTN.Click
+
+        If Account_Set_BTN.Text = "Show Settings" Then
+            Account_Set_BTN.Text = "Hide Settings"
+            Account_Panel.Height = 315
+        ElseIf Account_Set_BTN.Text = "Hide Settings" Then
+            Account_Set_BTN.Text = "Show Settings"
+            Account_Panel.Height = 50
+        End If
+
+        tableload("SELECT account_id, user_name, acc_level FROM account", Acc_List_Grid)
+        strconn.Close()
+
+    End Sub
+
+    Private Sub Account_Del_Click(sender As Object, e As EventArgs) Handles Account_Del.Click
+
+        If Account_Del.Text = "Edit" And GlobalVariables.logged_priv = 1 Then
+
+            Account_Del.Text = "Cancel"
+            Account_SV.Text = "Update"
+            Account_SV.Visible = True
+            Account_CNC.Visible = True
+
+            SplitContainer2.Panel1.Enabled = True
+
+        ElseIf Account_Del.Text = "Cancel" And GlobalVariables.logged_priv = 1 Then
+
+            Account_Del.Text = "Edit"
+            Account_SV.Text = "Save"
+            Account_CNC.Visible = False
+            Account_SV.Visible = False
+
+            SplitContainer2.Panel1.Enabled = False
+
+            tableload("SELECT account_id, user_name, acc_level FROM account", Acc_List_Grid)
+            strconn.Close()
+
+        End If
+
+    End Sub
+
+    Private Sub Account_Add_Click(sender As Object, e As EventArgs) Handles Account_Add.Click
+
+        If GlobalVariables.logged_priv = 1 Then
+
+            TBX_FNAME.Text = ""
+            TBX_LNAME.Text = ""
+            TBX_Username.Text = ""
+            TBX_PASSWORD.Text = ""
+            CBX_Type.Text = ""
+            TBX_EMAIL.Text = ""
+            TBX_NUMBER.Text = ""
+
+            Account_CNC.Text = "Cancel"
+            Account_SV.Text = "Add+"
+            Account_SV.Visible = True
+            Account_CNC.Visible = True
+            Account_Del.Visible = False
+
+            SplitContainer2.Panel1.Enabled = True
+
+            tableload("SELECT account_id, user_name, acc_level FROM account", Acc_List_Grid)
+            strconn.Close()
+
+        End If
+
+    End Sub
+
+    Private Sub Account_CNC_Click(sender As Object, e As EventArgs) Handles Account_CNC.Click
+
+        If Account_CNC.Text = "Delete" And GlobalVariables.logged_priv = 1 Then
+
+
+
+        ElseIf Account_CNC.Text = "Cancel" And GlobalVariables.logged_priv = 1 Then
+
+            Account_Del.Text = "Edit"
+            Account_CNC.Text = "Delete"
+            Account_SV.Text = "Save"
+            Account_SV.Visible = False
+            Account_Del.Visible = True
+            Account_CNC.Visible = False
+
+            SplitContainer2.Panel1.Enabled = False
+
+            GetUserInfo()
+
+        End If
+
+
+
+        tableload("SELECT account_id, user_name, acc_level FROM account", Acc_List_Grid)
+        strconn.Close()
+
+    End Sub
+
+    Private Sub Account_SV_Click(sender As Object, e As EventArgs) Handles Account_SV.Click
+
+        If Account_SV.Text = "Add+" And GlobalVariables.logged_priv = 1 Then
+
+        ElseIf Account_SV.Text = "Update" And GlobalVariables.logged_priv = 1 Then
+
+        End If
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles BVS_Set_btn.Click
+
+        If BVS_Set_btn.Text = "Show Settings" Then
+            BVS_Set_btn.Text = "Hide Settings"
+            BVS_Panel.Height = 365
+        ElseIf BVS_Set_btn.Text = "Hide Settings" Then
+            BVS_Set_btn.Text = "Show Settings"
+            BVS_Panel.Height = 49
+        End If
+
+    End Sub
+
+
+
+
+
+
+
+
+
+
+
 
 
     '===================================================================================================================================
