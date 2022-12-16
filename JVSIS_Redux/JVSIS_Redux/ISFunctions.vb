@@ -276,18 +276,19 @@ Module ISFunctions
 
     End Sub
 
-    Public Sub GetUserInfo()
+    Public Sub GetUserInfo(ID)
 
         opencon()
 
         cmd.Connection = con
-        cmd.CommandText = "SELECT account_id, `first_name`, `last_name`, `user_name`, `acc_pass`, `acc_level`, `acc_email`, `acc_number` FROM `account` WHERE account_id = '" & Dashboard.GlobalVariables.UserID & "'"
+        cmd.CommandText = "SELECT account_id, `first_name`, `last_name`, `user_name`, `acc_pass`, `acc_level`, `acc_email`, `acc_number` FROM `account` WHERE account_id = '" & ID & "'"
         cmd.Prepare()
 
         cmdreader = cmd.ExecuteReader
 
         While cmdreader.Read
 
+            Dashboard.ID_HOLD.Text = cmdreader.GetString(0)
             Dashboard.TBX_FNAME.Text = cmdreader.GetString(1)
             Dashboard.TBX_LNAME.Text = cmdreader.GetString(2)
             Dashboard.TBX_Username.Text = cmdreader.GetString(3)

@@ -176,7 +176,7 @@ Public Class Dashboard
         BTN_Side_Logs.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
         BTN_Side_Settings.FlatAppearance.MouseOverBackColor = Color.White
 
-        GetUserInfo()
+        GetUserInfo(GlobalVariables.UserID)
 
     End Sub
 
@@ -502,7 +502,7 @@ Public Class Dashboard
 
     End Sub
 
-    Dim LogQuery As String = "SELECT `log_id`, (SELECT user_name FROM account WHERE account_id = acc_id) AS 'User', `item` AS 'Item', `type` AS 'Action', `c_qty` AS 'Change', (SELECT TIME_FORMAT(l_time, '%h:%i %p')) AS 'Time', `l_date` AS 'Date' FROM `transaction_log`"
+    Dim LogQuery As String = "SELECT `log_id`, COALESCE((SELECT user_name FROM account WHERE account_id = acc_id), 0) AS 'User', `item` AS 'Item', `type` AS 'Action', `c_qty` AS 'Change', (SELECT TIME_FORMAT(l_time, '%h:%i %p')) AS 'Time', `l_date` AS 'Date' FROM `transaction_log`"
 
 
     Private Sub Log_Search_TextChanged(sender As Object, e As EventArgs) Handles Log_Search.TextChanged
@@ -863,6 +863,32 @@ Public Class Dashboard
 
     End Sub
 
+    Dim SelectedAcc As Integer
+
+    Private Sub Acc_List_Grid_SelectionChanged(sender As Object, e As EventArgs) Handles Acc_List_Grid.CellClick
+
+        Try
+            SelectedAcc = Acc_List_Grid.CurrentRow.Cells(0).Value
+
+        Catch ex As NullReferenceException
+
+            SelectedAcc = 1
+
+        End Try
+
+        GetUserInfo(SelectedAcc)
+
+        Account_Del.Text = "Edit"
+        Account_SV.Text = "Save"
+        Account_CNC.Visible = False
+        Account_SV.Visible = False
+
+        SplitContainer2.Panel1.Enabled = False
+
+        tableload("SELECT account_id, user_name, acc_level FROM account", Acc_List_Grid)
+        strconn.Close()
+
+    End Sub
 
     Private Sub Account_Set_BTN_Click(sender As Object, e As EventArgs) Handles Account_Set_BTN.Click
 
@@ -887,6 +913,7 @@ Public Class Dashboard
             Account_SV.Text = "Update"
             Account_SV.Visible = True
             Account_CNC.Visible = True
+            Account_RST.Visible = True
 
             SplitContainer2.Panel1.Enabled = True
 
@@ -896,6 +923,7 @@ Public Class Dashboard
             Account_SV.Text = "Save"
             Account_CNC.Visible = False
             Account_SV.Visible = False
+            Account_RST.Visible = False
 
             SplitContainer2.Panel1.Enabled = False
 
@@ -920,6 +948,7 @@ Public Class Dashboard
 
             Account_CNC.Text = "Cancel"
             Account_SV.Text = "Add+"
+            Account_RST.Visible = True
             Account_SV.Visible = True
             Account_CNC.Visible = True
             Account_Del.Visible = False
@@ -937,7 +966,39 @@ Public Class Dashboard
 
         If Account_CNC.Text = "Delete" And GlobalVariables.logged_priv = 1 Then
 
+            If ID_HOLD.Text = GlobalVariables.UserID Then
 
+                MsgBox("Cannot Delete currently in use account!", MsgBoxStyle.OkOnly, "Warning!")
+
+            Else
+
+                Try
+
+                    Dim delete = MsgBox("Deleting an Account will affect your invenotory's log!" & Environment.NewLine & "" & Environment.NewLine & "Are you Sure?", MsgBoxStyle.YesNo, "Delete Account")
+
+                    If delete = MsgBoxResult.Yes Then
+
+                        strconnection()
+
+                        cmd.Connection = strconn
+                        strconn.Open()
+
+                        cmd.CommandText = "DELETE FROM `account` WHERE account_id = '" & ID_HOLD.Text & "'"
+                        cmd.ExecuteNonQuery()
+                        strconn.Close()
+
+                        LoadDashDetails()
+                        LoadMain()
+
+                    ElseIf delete = MsgBoxResult.No Then
+
+                    End If
+
+                Catch ex As Exception
+
+                End Try
+
+            End If
 
         ElseIf Account_CNC.Text = "Cancel" And GlobalVariables.logged_priv = 1 Then
 
@@ -947,14 +1008,13 @@ Public Class Dashboard
             Account_SV.Visible = False
             Account_Del.Visible = True
             Account_CNC.Visible = False
+            Account_RST.Visible = False
 
             SplitContainer2.Panel1.Enabled = False
 
-            GetUserInfo()
+            GetUserInfo(GlobalVariables.UserID)
 
         End If
-
-
 
         tableload("SELECT account_id, user_name, acc_level FROM account", Acc_List_Grid)
         strconn.Close()
@@ -963,9 +1023,115 @@ Public Class Dashboard
 
     Private Sub Account_SV_Click(sender As Object, e As EventArgs) Handles Account_SV.Click
 
-        If Account_SV.Text = "Add+" And GlobalVariables.logged_priv = 1 Then
+        Dim dupcheck As String = ""
 
-        ElseIf Account_SV.Text = "Update" And GlobalVariables.logged_priv = 1 Then
+        Try
+
+            opencon()
+
+            cmd.Connection = con
+            cmd.Parameters.Clear()
+            cmd.Parameters.AddWithValue("@username", TBX_Username.Text)
+            cmd.CommandText = "SELECT user_name from account WHERE user_name = @username"
+            cmd.Prepare()
+
+            cmdreader = cmd.ExecuteReader
+
+            While cmdreader.Read
+                dupcheck = cmdreader.GetValue(0)
+            End While
+
+            cmd.Parameters.Clear()
+
+            cmdreader.Close()
+            con.Close()
+
+        Catch ex As Exception
+
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+
+        End Try
+
+        strconn.Close()
+        con.Close()
+
+        If dupcheck = Nothing And TBX_Username.Text IsNot "" Then
+
+            Try
+
+                strconnection()
+
+                cmd.Connection = strconn
+                strconn.Open()
+
+                cmd.Parameters.Clear()
+
+                cmd.Parameters.AddWithValue("@id", ID_HOLD.Text)
+                cmd.Parameters.AddWithValue("@username", TBX_Username.Text)
+                cmd.Parameters.AddWithValue("@fname", TBX_FNAME.Text)
+                cmd.Parameters.AddWithValue("@lname", TBX_LNAME.Text)
+                cmd.Parameters.AddWithValue("@type", CBX_Type.Text)
+                cmd.Parameters.AddWithValue("@email", TBX_EMAIL.Text)
+                cmd.Parameters.AddWithValue("@password", TBX_PASSWORD.Text)
+                cmd.Parameters.AddWithValue("@number", TBX_NUMBER.Text)
+
+                Dim StrMessage As String = ""
+
+                If Account_SV.Text = "Add+" And GlobalVariables.logged_priv = 1 Then
+
+                    cmd.CommandText = "INSERT INTO `account`(`account_id`, `first_name`, `last_name`, `user_name`, `acc_pass`, `acc_level`, `acc_email`, `acc_number`) VALUES (DEFAULT, @fname, @lname, @username, @password, @type, @email, @number)"
+                    StrMessage = "Account Added!"
+
+                ElseIf Account_SV.Text = "Update" And GlobalVariables.logged_priv = 1 Then
+
+                    cmd.CommandText = "UPDATE `account` SET `first_name`= @fname,`last_name`= @lname,`user_name`= @username,`acc_pass`= @password,`acc_level`= @type,`acc_email`= @email,`acc_number`= @number WHERE account_id = @id"
+                    StrMessage = "Account Updated!"
+
+                End If
+
+                cmd.ExecuteNonQuery()
+
+                strconn.Close()
+
+                MsgBox(StrMessage, MsgBoxStyle.OkOnly, "Success!")
+
+            Catch ex As Exception
+
+                MsgBox("Please Fill out all the Fields", MsgBoxStyle.OkOnly, "Missing Info!")
+                strconn.Close()
+
+            End Try
+
+        ElseIf TBX_Username.Text = "" Then
+
+            MsgBox("Please Enter Username", MsgBoxStyle.OkOnly, "Missing Info!")
+
+        Else
+
+            MsgBox("Please Select another Username", MsgBoxStyle.OkOnly, "Username is Taken!")
+
+        End If
+
+        tableload("SELECT account_id, user_name, acc_level FROM account", Acc_List_Grid)
+        strconn.Close()
+
+    End Sub
+
+    Private Sub Account_RST_Click(sender As Object, e As EventArgs) Handles Account_RST.Click
+
+        If Account_SV.Text = "Update" Then
+
+            GetUserInfo(SelectedAcc)
+
+        ElseIf Account_SV.Text = "Add+" Then
+
+            TBX_FNAME.Text = ""
+            TBX_LNAME.Text = ""
+            TBX_Username.Text = ""
+            TBX_PASSWORD.Text = ""
+            CBX_Type.Text = ""
+            TBX_EMAIL.Text = ""
+            TBX_NUMBER.Text = ""
 
         End If
 
@@ -982,6 +1148,8 @@ Public Class Dashboard
         End If
 
     End Sub
+
+
 
 
 
