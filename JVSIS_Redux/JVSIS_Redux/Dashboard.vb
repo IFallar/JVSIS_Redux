@@ -305,29 +305,13 @@ Public Class Dashboard
 
     Private Sub HOME_BTN_LOGS_Click(sender As Object, e As EventArgs) Handles HOME_BTN_LOGS.Click
 
-        Panel_Home.Visible = False
-        Panel_Items.Visible = False
-        Panel_History.Visible = True
-        Panel_Settings.Visible = False
+        Try
+            Dim Modal As New Form_Reports
+            Form_Reports.ShowDialog()
 
-        BTN_Side_Home.BackColor = System.Drawing.Color.Transparent
-        BTN_Side_Items.BackColor = System.Drawing.Color.Transparent
-        BTN_Side_Logs.BackColor = System.Drawing.Color.White
-        BTN_Side_Settings.BackColor = System.Drawing.Color.Transparent
+        Catch ex As Exception
 
-        BTN_Side_Home.ForeColor = System.Drawing.Color.White
-        BTN_Side_Items.ForeColor = System.Drawing.Color.White
-        BTN_Side_Logs.ForeColor = System.Drawing.Color.FromArgb(0, 0, 64)
-        BTN_Side_Settings.ForeColor = System.Drawing.Color.White
-
-        BTN_Side_Home.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
-        BTN_Side_Items.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
-        BTN_Side_Logs.FlatAppearance.MouseOverBackColor = Color.White
-        BTN_Side_Settings.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
-
-        tableload(LogQuery, Log_View_Grid)
-        LoadLogDash()
-        strconn.Close()
+        End Try
 
     End Sub
 
