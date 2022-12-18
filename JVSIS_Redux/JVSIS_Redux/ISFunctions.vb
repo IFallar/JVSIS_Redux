@@ -344,9 +344,12 @@ Module ISFunctions
 
     Public Sub DayLog()
 
-        tableload("SELECT `log_id`, `item` AS 'Item', `c_qty` AS 'Change', (SELECT TIME_FORMAT(l_time, '%h:%i %p')) AS 'Time' FROM `transaction_log`", Dashboard.Day_GridView)
+        Dim DayDate As String = Date.Now().ToString("yyyy\-MM\-dd")
+        tableload("SELECT `log_id`, `item` AS 'Item', `c_qty` AS 'Change', (SELECT TIME_FORMAT(l_time, '%h:%i %p')) AS 'Time' FROM `transaction_log` WHERE l_date = '" & DayDate & "'", Dashboard.Day_GridView)
         strconn.Close()
 
     End Sub
+
+
 
 End Module

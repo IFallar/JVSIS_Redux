@@ -22,90 +22,21 @@ Partial Class Dashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel_Sidebar = New System.Windows.Forms.Panel()
         Me.BTN_Side_Settings = New System.Windows.Forms.Button()
         Me.BTN_Side_Logs = New System.Windows.Forms.Button()
         Me.BTN_Side_Items = New System.Windows.Forms.Button()
         Me.BTN_Side_Home = New System.Windows.Forms.Button()
         Me.Panel_Main = New System.Windows.Forms.Panel()
-        Me.Panel_Settings = New System.Windows.Forms.Panel()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Settings_Panel = New System.Windows.Forms.TableLayoutPanel()
-        Me.BVS_Panel = New System.Windows.Forms.TableLayoutPanel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.BVS_Set_btn = New System.Windows.Forms.Button()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.BVS_Gridview = New System.Windows.Forms.DataGridView()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.BVS_ID = New System.Windows.Forms.TextBox()
-        Me.BVS_DELETE = New System.Windows.Forms.Button()
-        Me.BVS_TAB = New System.Windows.Forms.TabControl()
-        Me.TabPage5 = New System.Windows.Forms.TabPage()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.TBX_NBrand = New System.Windows.Forms.TextBox()
-        Me.TabPage6 = New System.Windows.Forms.TabPage()
-        Me.Panel11 = New System.Windows.Forms.Panel()
-        Me.TBX_NVariant = New System.Windows.Forms.TextBox()
-        Me.TabPage7 = New System.Windows.Forms.TabPage()
-        Me.Panel12 = New System.Windows.Forms.Panel()
-        Me.TBX_NCategory = New System.Windows.Forms.TextBox()
-        Me.TabPage8 = New System.Windows.Forms.TabPage()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Supplier_Name = New System.Windows.Forms.TextBox()
-        Me.Supplier_Email = New System.Windows.Forms.TextBox()
-        Me.Supplier_Number = New System.Windows.Forms.TextBox()
-        Me.Supplier_Media = New System.Windows.Forms.TextBox()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.BVS_ADD = New System.Windows.Forms.Button()
-        Me.BVS_CANCEL = New System.Windows.Forms.Button()
-        Me.Account_Panel = New System.Windows.Forms.TableLayoutPanel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Account_Set_BTN = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel8 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
-        Me.ID_HOLD = New System.Windows.Forms.TextBox()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.TBX_NUMBER = New System.Windows.Forms.TextBox()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.TBX_PASSWORD = New System.Windows.Forms.TextBox()
-        Me.TBX_EMAIL = New System.Windows.Forms.TextBox()
-        Me.TBX_LNAME = New System.Windows.Forms.TextBox()
-        Me.TBX_FNAME = New System.Windows.Forms.TextBox()
-        Me.CBX_Type = New System.Windows.Forms.ComboBox()
-        Me.TBX_Username = New System.Windows.Forms.TextBox()
-        Me.Account_RST = New System.Windows.Forms.Button()
-        Me.Account_Del = New System.Windows.Forms.Button()
-        Me.Account_CNC = New System.Windows.Forms.Button()
-        Me.Account_SV = New System.Windows.Forms.Button()
-        Me.SplitContainer4 = New System.Windows.Forms.SplitContainer()
-        Me.Acc_List_Grid = New System.Windows.Forms.DataGridView()
-        Me.Account_Add = New System.Windows.Forms.Button()
-        Me.Export_Panel = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label24 = New System.Windows.Forms.Label()
         Me.Panel_Home = New System.Windows.Forms.Panel()
         Me.APP_LABEL = New System.Windows.Forms.Label()
         Me.GroupBox_INFO = New System.Windows.Forms.GroupBox()
@@ -181,35 +112,77 @@ Partial Class Dashboard
         Me.Label16 = New System.Windows.Forms.Label()
         Me.LogDash_NI = New System.Windows.Forms.Button()
         Me.Log_View_Grid = New System.Windows.Forms.DataGridView()
+        Me.Panel_Settings = New System.Windows.Forms.Panel()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Settings_Panel = New System.Windows.Forms.TableLayoutPanel()
+        Me.BVS_Panel = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.BVS_Set_btn = New System.Windows.Forms.Button()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.BVS_Gridview = New System.Windows.Forms.DataGridView()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.BVS_ID = New System.Windows.Forms.TextBox()
+        Me.BVS_DELETE = New System.Windows.Forms.Button()
+        Me.BVS_TAB = New System.Windows.Forms.TabControl()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.TBX_NBrand = New System.Windows.Forms.TextBox()
+        Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.TBX_NVariant = New System.Windows.Forms.TextBox()
+        Me.TabPage7 = New System.Windows.Forms.TabPage()
+        Me.Panel12 = New System.Windows.Forms.Panel()
+        Me.TBX_NCategory = New System.Windows.Forms.TextBox()
+        Me.TabPage8 = New System.Windows.Forms.TabPage()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Supplier_Name = New System.Windows.Forms.TextBox()
+        Me.Supplier_Email = New System.Windows.Forms.TextBox()
+        Me.Supplier_Number = New System.Windows.Forms.TextBox()
+        Me.Supplier_Media = New System.Windows.Forms.TextBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.BVS_ADD = New System.Windows.Forms.Button()
+        Me.BVS_CANCEL = New System.Windows.Forms.Button()
+        Me.Account_Panel = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Account_Set_BTN = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TableLayoutPanel8 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
+        Me.ID_HOLD = New System.Windows.Forms.TextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.TBX_NUMBER = New System.Windows.Forms.TextBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.TBX_PASSWORD = New System.Windows.Forms.TextBox()
+        Me.TBX_EMAIL = New System.Windows.Forms.TextBox()
+        Me.TBX_LNAME = New System.Windows.Forms.TextBox()
+        Me.TBX_FNAME = New System.Windows.Forms.TextBox()
+        Me.CBX_Type = New System.Windows.Forms.ComboBox()
+        Me.TBX_Username = New System.Windows.Forms.TextBox()
+        Me.Account_RST = New System.Windows.Forms.Button()
+        Me.Account_Del = New System.Windows.Forms.Button()
+        Me.Account_CNC = New System.Windows.Forms.Button()
+        Me.Account_SV = New System.Windows.Forms.Button()
+        Me.SplitContainer4 = New System.Windows.Forms.SplitContainer()
+        Me.Acc_List_Grid = New System.Windows.Forms.DataGridView()
+        Me.Account_Add = New System.Windows.Forms.Button()
+        Me.Export_Panel = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.Panel_Sidebar.SuspendLayout()
         Me.Panel_Main.SuspendLayout()
-        Me.Panel_Settings.SuspendLayout()
-        Me.Settings_Panel.SuspendLayout()
-        Me.BVS_Panel.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.TableLayoutPanel7.SuspendLayout()
-        Me.Panel5.SuspendLayout()
-        CType(Me.BVS_Gridview, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel8.SuspendLayout()
-        Me.BVS_TAB.SuspendLayout()
-        Me.TabPage5.SuspendLayout()
-        Me.TabPage6.SuspendLayout()
-        Me.TabPage7.SuspendLayout()
-        Me.TabPage8.SuspendLayout()
-        Me.Account_Panel.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.TableLayoutPanel8.SuspendLayout()
-        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SplitContainer2.Panel1.SuspendLayout()
-        Me.SplitContainer2.Panel2.SuspendLayout()
-        Me.SplitContainer2.SuspendLayout()
-        CType(Me.SplitContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SplitContainer4.Panel1.SuspendLayout()
-        Me.SplitContainer4.Panel2.SuspendLayout()
-        Me.SplitContainer4.SuspendLayout()
-        CType(Me.Acc_List_Grid, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Export_Panel.SuspendLayout()
         Me.Panel_Home.SuspendLayout()
         Me.GroupBox_INFO.SuspendLayout()
         Me.TLB_QuickInfo.SuspendLayout()
@@ -249,6 +222,33 @@ Partial Class Dashboard
         Me.TableLayoutPanel13.SuspendLayout()
         Me.TableLayoutPanel14.SuspendLayout()
         CType(Me.Log_View_Grid, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel_Settings.SuspendLayout()
+        Me.Settings_Panel.SuspendLayout()
+        Me.BVS_Panel.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        Me.TableLayoutPanel7.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        CType(Me.BVS_Gridview, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel8.SuspendLayout()
+        Me.BVS_TAB.SuspendLayout()
+        Me.TabPage5.SuspendLayout()
+        Me.TabPage6.SuspendLayout()
+        Me.TabPage7.SuspendLayout()
+        Me.TabPage8.SuspendLayout()
+        Me.Account_Panel.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.TableLayoutPanel8.SuspendLayout()
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer2.Panel1.SuspendLayout()
+        Me.SplitContainer2.Panel2.SuspendLayout()
+        Me.SplitContainer2.SuspendLayout()
+        CType(Me.SplitContainer4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer4.Panel1.SuspendLayout()
+        Me.SplitContainer4.Panel2.SuspendLayout()
+        Me.SplitContainer4.SuspendLayout()
+        CType(Me.Acc_List_Grid, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Export_Panel.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel_Sidebar
@@ -344,6 +344,1230 @@ Partial Class Dashboard
         Me.Panel_Main.Name = "Panel_Main"
         Me.Panel_Main.Size = New System.Drawing.Size(884, 661)
         Me.Panel_Main.TabIndex = 1
+        '
+        'Panel_Home
+        '
+        Me.Panel_Home.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel_Home.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Panel_Home.Controls.Add(Me.APP_LABEL)
+        Me.Panel_Home.Controls.Add(Me.GroupBox_INFO)
+        Me.Panel_Home.Controls.Add(Me.Panel_DayView)
+        Me.Panel_Home.Controls.Add(Me.GBX_Dashboard_Controls)
+        Me.Panel_Home.Location = New System.Drawing.Point(0, 0)
+        Me.Panel_Home.Name = "Panel_Home"
+        Me.Panel_Home.Size = New System.Drawing.Size(884, 661)
+        Me.Panel_Home.TabIndex = 3
+        '
+        'APP_LABEL
+        '
+        Me.APP_LABEL.BackColor = System.Drawing.Color.Transparent
+        Me.APP_LABEL.Font = New System.Drawing.Font("Leelawadee UI", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.APP_LABEL.ForeColor = System.Drawing.SystemColors.InfoText
+        Me.APP_LABEL.Location = New System.Drawing.Point(23, 14)
+        Me.APP_LABEL.Name = "APP_LABEL"
+        Me.APP_LABEL.Size = New System.Drawing.Size(474, 99)
+        Me.APP_LABEL.TabIndex = 15
+        Me.APP_LABEL.Text = "JUANCHO'S VARIETY SHOP INVENTORY SYSTEM"
+        Me.APP_LABEL.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
+        'GroupBox_INFO
+        '
+        Me.GroupBox_INFO.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox_INFO.Controls.Add(Me.TLB_QuickInfo)
+        Me.GroupBox_INFO.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox_INFO.Location = New System.Drawing.Point(18, 128)
+        Me.GroupBox_INFO.Name = "GroupBox_INFO"
+        Me.GroupBox_INFO.Size = New System.Drawing.Size(854, 154)
+        Me.GroupBox_INFO.TabIndex = 4
+        Me.GroupBox_INFO.TabStop = False
+        Me.GroupBox_INFO.Text = "AT A GLANCE"
+        '
+        'TLB_QuickInfo
+        '
+        Me.TLB_QuickInfo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TLB_QuickInfo.ColumnCount = 4
+        Me.TLB_QuickInfo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TLB_QuickInfo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TLB_QuickInfo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TLB_QuickInfo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TLB_QuickInfo.Controls.Add(Me.TLB_VALUEOUT, 3, 0)
+        Me.TLB_QuickInfo.Controls.Add(Me.TLB_LOWSTOCK, 2, 0)
+        Me.TLB_QuickInfo.Controls.Add(Me.TLB_ITEMQTY, 1, 0)
+        Me.TLB_QuickInfo.Controls.Add(Me.TLB_INVENTORY_VALUE, 0, 0)
+        Me.TLB_QuickInfo.Location = New System.Drawing.Point(9, 27)
+        Me.TLB_QuickInfo.Name = "TLB_QuickInfo"
+        Me.TLB_QuickInfo.RowCount = 1
+        Me.TLB_QuickInfo.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TLB_QuickInfo.Size = New System.Drawing.Size(839, 118)
+        Me.TLB_QuickInfo.TabIndex = 3
+        '
+        'TLB_VALUEOUT
+        '
+        Me.TLB_VALUEOUT.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TLB_VALUEOUT.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.TLB_VALUEOUT.ColumnCount = 1
+        Me.TLB_VALUEOUT.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TLB_VALUEOUT.Controls.Add(Me.Label8, 0, 0)
+        Me.TLB_VALUEOUT.Controls.Add(Me.TLB_VALUEOUT_BTN, 0, 1)
+        Me.TLB_VALUEOUT.Location = New System.Drawing.Point(630, 3)
+        Me.TLB_VALUEOUT.Name = "TLB_VALUEOUT"
+        Me.TLB_VALUEOUT.RowCount = 2
+        Me.TLB_VALUEOUT.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TLB_VALUEOUT.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TLB_VALUEOUT.Size = New System.Drawing.Size(206, 112)
+        Me.TLB_VALUEOUT.TabIndex = 8
+        '
+        'Label8
+        '
+        Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label8.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label8.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label8.Location = New System.Drawing.Point(3, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(200, 28)
+        Me.Label8.TabIndex = 0
+        Me.Label8.Text = "ITEMS OUT - WEEK"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TLB_VALUEOUT_BTN
+        '
+        Me.TLB_VALUEOUT_BTN.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TLB_VALUEOUT_BTN.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.TLB_VALUEOUT_BTN.FlatAppearance.BorderSize = 0
+        Me.TLB_VALUEOUT_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(50, Byte), Integer))
+        Me.TLB_VALUEOUT_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.TLB_VALUEOUT_BTN.Font = New System.Drawing.Font("Leelawadee UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TLB_VALUEOUT_BTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.TLB_VALUEOUT_BTN.Location = New System.Drawing.Point(3, 31)
+        Me.TLB_VALUEOUT_BTN.Name = "TLB_VALUEOUT_BTN"
+        Me.TLB_VALUEOUT_BTN.Size = New System.Drawing.Size(200, 78)
+        Me.TLB_VALUEOUT_BTN.TabIndex = 1
+        Me.TLB_VALUEOUT_BTN.Text = "0"
+        Me.TLB_VALUEOUT_BTN.TextAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.TLB_VALUEOUT_BTN.UseVisualStyleBackColor = True
+        '
+        'TLB_LOWSTOCK
+        '
+        Me.TLB_LOWSTOCK.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TLB_LOWSTOCK.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.TLB_LOWSTOCK.ColumnCount = 1
+        Me.TLB_LOWSTOCK.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TLB_LOWSTOCK.Controls.Add(Me.Label7, 0, 0)
+        Me.TLB_LOWSTOCK.Controls.Add(Me.TLB_LOWSTOCK_BTN, 0, 1)
+        Me.TLB_LOWSTOCK.Location = New System.Drawing.Point(421, 3)
+        Me.TLB_LOWSTOCK.Name = "TLB_LOWSTOCK"
+        Me.TLB_LOWSTOCK.RowCount = 2
+        Me.TLB_LOWSTOCK.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TLB_LOWSTOCK.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TLB_LOWSTOCK.Size = New System.Drawing.Size(203, 112)
+        Me.TLB_LOWSTOCK.TabIndex = 7
+        '
+        'Label7
+        '
+        Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label7.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label7.Location = New System.Drawing.Point(3, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(197, 28)
+        Me.Label7.TabIndex = 0
+        Me.Label7.Text = "LOW STOCK"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TLB_LOWSTOCK_BTN
+        '
+        Me.TLB_LOWSTOCK_BTN.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TLB_LOWSTOCK_BTN.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TLB_LOWSTOCK_BTN.FlatAppearance.BorderSize = 0
+        Me.TLB_LOWSTOCK_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(50, Byte), Integer))
+        Me.TLB_LOWSTOCK_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.TLB_LOWSTOCK_BTN.Font = New System.Drawing.Font("Leelawadee UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TLB_LOWSTOCK_BTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.TLB_LOWSTOCK_BTN.Location = New System.Drawing.Point(3, 31)
+        Me.TLB_LOWSTOCK_BTN.Name = "TLB_LOWSTOCK_BTN"
+        Me.TLB_LOWSTOCK_BTN.Size = New System.Drawing.Size(197, 78)
+        Me.TLB_LOWSTOCK_BTN.TabIndex = 1
+        Me.TLB_LOWSTOCK_BTN.Text = "0"
+        Me.TLB_LOWSTOCK_BTN.TextAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.TLB_LOWSTOCK_BTN.UseVisualStyleBackColor = True
+        '
+        'TLB_ITEMQTY
+        '
+        Me.TLB_ITEMQTY.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TLB_ITEMQTY.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.TLB_ITEMQTY.ColumnCount = 1
+        Me.TLB_ITEMQTY.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TLB_ITEMQTY.Controls.Add(Me.Label6, 0, 0)
+        Me.TLB_ITEMQTY.Controls.Add(Me.TLB_ITEMQTY_BTN, 0, 1)
+        Me.TLB_ITEMQTY.Location = New System.Drawing.Point(212, 3)
+        Me.TLB_ITEMQTY.Name = "TLB_ITEMQTY"
+        Me.TLB_ITEMQTY.RowCount = 2
+        Me.TLB_ITEMQTY.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TLB_ITEMQTY.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TLB_ITEMQTY.Size = New System.Drawing.Size(203, 112)
+        Me.TLB_ITEMQTY.TabIndex = 6
+        '
+        'Label6
+        '
+        Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label6.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label6.Location = New System.Drawing.Point(3, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(197, 28)
+        Me.Label6.TabIndex = 0
+        Me.Label6.Text = "ITEM COUNT"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TLB_ITEMQTY_BTN
+        '
+        Me.TLB_ITEMQTY_BTN.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TLB_ITEMQTY_BTN.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TLB_ITEMQTY_BTN.FlatAppearance.BorderSize = 0
+        Me.TLB_ITEMQTY_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(50, Byte), Integer))
+        Me.TLB_ITEMQTY_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.TLB_ITEMQTY_BTN.Font = New System.Drawing.Font("Leelawadee UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TLB_ITEMQTY_BTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.TLB_ITEMQTY_BTN.Location = New System.Drawing.Point(3, 31)
+        Me.TLB_ITEMQTY_BTN.Name = "TLB_ITEMQTY_BTN"
+        Me.TLB_ITEMQTY_BTN.Size = New System.Drawing.Size(197, 78)
+        Me.TLB_ITEMQTY_BTN.TabIndex = 1
+        Me.TLB_ITEMQTY_BTN.Text = "0"
+        Me.TLB_ITEMQTY_BTN.TextAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.TLB_ITEMQTY_BTN.UseVisualStyleBackColor = True
+        '
+        'TLB_INVENTORY_VALUE
+        '
+        Me.TLB_INVENTORY_VALUE.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TLB_INVENTORY_VALUE.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.TLB_INVENTORY_VALUE.ColumnCount = 1
+        Me.TLB_INVENTORY_VALUE.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TLB_INVENTORY_VALUE.Controls.Add(Me.Label5, 0, 0)
+        Me.TLB_INVENTORY_VALUE.Controls.Add(Me.TLB_INVENTORY_VALUE_BTN, 0, 1)
+        Me.TLB_INVENTORY_VALUE.Location = New System.Drawing.Point(3, 3)
+        Me.TLB_INVENTORY_VALUE.Name = "TLB_INVENTORY_VALUE"
+        Me.TLB_INVENTORY_VALUE.RowCount = 2
+        Me.TLB_INVENTORY_VALUE.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TLB_INVENTORY_VALUE.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TLB_INVENTORY_VALUE.Size = New System.Drawing.Size(203, 112)
+        Me.TLB_INVENTORY_VALUE.TabIndex = 5
+        '
+        'Label5
+        '
+        Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label5.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label5.Location = New System.Drawing.Point(3, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(197, 28)
+        Me.Label5.TabIndex = 0
+        Me.Label5.Text = "INVENTORY VALUE"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TLB_INVENTORY_VALUE_BTN
+        '
+        Me.TLB_INVENTORY_VALUE_BTN.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TLB_INVENTORY_VALUE_BTN.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TLB_INVENTORY_VALUE_BTN.FlatAppearance.BorderSize = 0
+        Me.TLB_INVENTORY_VALUE_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(50, Byte), Integer))
+        Me.TLB_INVENTORY_VALUE_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.TLB_INVENTORY_VALUE_BTN.Font = New System.Drawing.Font("Leelawadee UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TLB_INVENTORY_VALUE_BTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.TLB_INVENTORY_VALUE_BTN.Location = New System.Drawing.Point(3, 31)
+        Me.TLB_INVENTORY_VALUE_BTN.Name = "TLB_INVENTORY_VALUE_BTN"
+        Me.TLB_INVENTORY_VALUE_BTN.Size = New System.Drawing.Size(197, 78)
+        Me.TLB_INVENTORY_VALUE_BTN.TabIndex = 1
+        Me.TLB_INVENTORY_VALUE_BTN.Text = "0"
+        Me.TLB_INVENTORY_VALUE_BTN.TextAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.TLB_INVENTORY_VALUE_BTN.UseVisualStyleBackColor = True
+        '
+        'Panel_DayView
+        '
+        Me.Panel_DayView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel_DayView.AutoSize = True
+        Me.Panel_DayView.Controls.Add(Me.Day_GridView)
+        Me.Panel_DayView.Controls.Add(Me.Panel_DV_Top)
+        Me.Panel_DayView.Location = New System.Drawing.Point(544, 303)
+        Me.Panel_DayView.MinimumSize = New System.Drawing.Size(293, 346)
+        Me.Panel_DayView.Name = "Panel_DayView"
+        Me.Panel_DayView.Size = New System.Drawing.Size(328, 346)
+        Me.Panel_DayView.TabIndex = 2
+        '
+        'Day_GridView
+        '
+        Me.Day_GridView.AllowUserToAddRows = False
+        Me.Day_GridView.AllowUserToDeleteRows = False
+        Me.Day_GridView.AllowUserToResizeColumns = False
+        Me.Day_GridView.AllowUserToResizeRows = False
+        Me.Day_GridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
+        Me.Day_GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Day_GridView.ColumnHeadersVisible = False
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Day_GridView.DefaultCellStyle = DataGridViewCellStyle1
+        Me.Day_GridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Day_GridView.Location = New System.Drawing.Point(0, 41)
+        Me.Day_GridView.Name = "Day_GridView"
+        Me.Day_GridView.ReadOnly = True
+        Me.Day_GridView.RowHeadersVisible = False
+        Me.Day_GridView.RowTemplate.Height = 40
+        Me.Day_GridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Day_GridView.Size = New System.Drawing.Size(328, 305)
+        Me.Day_GridView.TabIndex = 1
+        '
+        'Panel_DV_Top
+        '
+        Me.Panel_DV_Top.Controls.Add(Me.Label4)
+        Me.Panel_DV_Top.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel_DV_Top.Location = New System.Drawing.Point(0, 0)
+        Me.Panel_DV_Top.Name = "Panel_DV_Top"
+        Me.Panel_DV_Top.Size = New System.Drawing.Size(328, 41)
+        Me.Panel_DV_Top.TabIndex = 0
+        '
+        'Label4
+        '
+        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label4.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label4.Location = New System.Drawing.Point(0, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
+        Me.Label4.Size = New System.Drawing.Size(328, 41)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "DAY OVERVIEW"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'GBX_Dashboard_Controls
+        '
+        Me.GBX_Dashboard_Controls.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GBX_Dashboard_Controls.Controls.Add(Me.TLP_Home_BTN)
+        Me.GBX_Dashboard_Controls.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.GBX_Dashboard_Controls.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GBX_Dashboard_Controls.Location = New System.Drawing.Point(18, 290)
+        Me.GBX_Dashboard_Controls.Margin = New System.Windows.Forms.Padding(3, 3, 3, 5)
+        Me.GBX_Dashboard_Controls.MaximumSize = New System.Drawing.Size(700, 0)
+        Me.GBX_Dashboard_Controls.MinimumSize = New System.Drawing.Size(0, 360)
+        Me.GBX_Dashboard_Controls.Name = "GBX_Dashboard_Controls"
+        Me.GBX_Dashboard_Controls.Size = New System.Drawing.Size(516, 360)
+        Me.GBX_Dashboard_Controls.TabIndex = 0
+        Me.GBX_Dashboard_Controls.TabStop = False
+        Me.GBX_Dashboard_Controls.Text = "QUICK ACTIONS"
+        '
+        'TLP_Home_BTN
+        '
+        Me.TLP_Home_BTN.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TLP_Home_BTN.ColumnCount = 2
+        Me.TLP_Home_BTN.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TLP_Home_BTN.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TLP_Home_BTN.Controls.Add(Me.HOME_BTN_OUT, 1, 1)
+        Me.TLP_Home_BTN.Controls.Add(Me.HOME_BTN_IN, 0, 1)
+        Me.TLP_Home_BTN.Controls.Add(Me.HOME_BTN_ADDITEM, 0, 0)
+        Me.TLP_Home_BTN.Controls.Add(Me.HOME_BTN_LOGS, 1, 0)
+        Me.TLP_Home_BTN.Location = New System.Drawing.Point(6, 32)
+        Me.TLP_Home_BTN.Name = "TLP_Home_BTN"
+        Me.TLP_Home_BTN.RowCount = 2
+        Me.TLP_Home_BTN.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TLP_Home_BTN.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TLP_Home_BTN.Size = New System.Drawing.Size(505, 322)
+        Me.TLP_Home_BTN.TabIndex = 0
+        '
+        'HOME_BTN_OUT
+        '
+        Me.HOME_BTN_OUT.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.HOME_BTN_OUT.BackgroundImage = CType(resources.GetObject("HOME_BTN_OUT.BackgroundImage"), System.Drawing.Image)
+        Me.HOME_BTN_OUT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.HOME_BTN_OUT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HOME_BTN_OUT.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HOME_BTN_OUT.Location = New System.Drawing.Point(255, 164)
+        Me.HOME_BTN_OUT.Name = "HOME_BTN_OUT"
+        Me.HOME_BTN_OUT.Size = New System.Drawing.Size(247, 155)
+        Me.HOME_BTN_OUT.TabIndex = 5
+        Me.HOME_BTN_OUT.Text = "ITEM OUT"
+        Me.HOME_BTN_OUT.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.HOME_BTN_OUT.UseVisualStyleBackColor = True
+        '
+        'HOME_BTN_IN
+        '
+        Me.HOME_BTN_IN.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.HOME_BTN_IN.BackgroundImage = CType(resources.GetObject("HOME_BTN_IN.BackgroundImage"), System.Drawing.Image)
+        Me.HOME_BTN_IN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.HOME_BTN_IN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HOME_BTN_IN.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HOME_BTN_IN.Location = New System.Drawing.Point(3, 164)
+        Me.HOME_BTN_IN.Name = "HOME_BTN_IN"
+        Me.HOME_BTN_IN.Size = New System.Drawing.Size(246, 155)
+        Me.HOME_BTN_IN.TabIndex = 4
+        Me.HOME_BTN_IN.Text = "ITEM IN"
+        Me.HOME_BTN_IN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.HOME_BTN_IN.UseVisualStyleBackColor = True
+        '
+        'HOME_BTN_ADDITEM
+        '
+        Me.HOME_BTN_ADDITEM.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.HOME_BTN_ADDITEM.BackgroundImage = CType(resources.GetObject("HOME_BTN_ADDITEM.BackgroundImage"), System.Drawing.Image)
+        Me.HOME_BTN_ADDITEM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.HOME_BTN_ADDITEM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HOME_BTN_ADDITEM.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HOME_BTN_ADDITEM.Location = New System.Drawing.Point(3, 3)
+        Me.HOME_BTN_ADDITEM.Name = "HOME_BTN_ADDITEM"
+        Me.HOME_BTN_ADDITEM.Size = New System.Drawing.Size(246, 155)
+        Me.HOME_BTN_ADDITEM.TabIndex = 3
+        Me.HOME_BTN_ADDITEM.Text = "ADD NEW ITEM+"
+        Me.HOME_BTN_ADDITEM.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.HOME_BTN_ADDITEM.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.HOME_BTN_ADDITEM.UseVisualStyleBackColor = True
+        '
+        'HOME_BTN_LOGS
+        '
+        Me.HOME_BTN_LOGS.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.HOME_BTN_LOGS.BackgroundImage = CType(resources.GetObject("HOME_BTN_LOGS.BackgroundImage"), System.Drawing.Image)
+        Me.HOME_BTN_LOGS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.HOME_BTN_LOGS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HOME_BTN_LOGS.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HOME_BTN_LOGS.Location = New System.Drawing.Point(255, 3)
+        Me.HOME_BTN_LOGS.Name = "HOME_BTN_LOGS"
+        Me.HOME_BTN_LOGS.Size = New System.Drawing.Size(247, 155)
+        Me.HOME_BTN_LOGS.TabIndex = 2
+        Me.HOME_BTN_LOGS.Text = "HISTORY"
+        Me.HOME_BTN_LOGS.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.HOME_BTN_LOGS.UseVisualStyleBackColor = True
+        '
+        'Panel_Items
+        '
+        Me.Panel_Items.AutoScroll = True
+        Me.Panel_Items.BackColor = System.Drawing.Color.White
+        Me.Panel_Items.Controls.Add(Me.TableLayoutPanel1)
+        Me.Panel_Items.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel_Items.Location = New System.Drawing.Point(0, 0)
+        Me.Panel_Items.Name = "Panel_Items"
+        Me.Panel_Items.Size = New System.Drawing.Size(884, 661)
+        Me.Panel_Items.TabIndex = 2
+        Me.Panel_Items.Visible = False
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel1.ColumnCount = 1
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.SplitContainer1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Item_Table, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 1)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(18, 40)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 4
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(851, 601)
+        Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'SplitContainer1
+        '
+        Me.SplitContainer1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SplitContainer1.BackColor = System.Drawing.SystemColors.Control
+        Me.SplitContainer1.Location = New System.Drawing.Point(3, 3)
+        Me.SplitContainer1.Name = "SplitContainer1"
+        '
+        'SplitContainer1.Panel1
+        '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label3)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.ITM_SEARCH)
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Label9)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.FILTER_PANEL)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.ITM_FLTR_BTN)
+        Me.SplitContainer1.Size = New System.Drawing.Size(845, 41)
+        Me.SplitContainer1.SplitterDistance = 351
+        Me.SplitContainer1.TabIndex = 3
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.CausesValidation = False
+        Me.Label3.Font = New System.Drawing.Font("Leelawadee UI", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(4, 7)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(96, 30)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "In Stock"
+        '
+        'ITM_SEARCH
+        '
+        Me.ITM_SEARCH.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ITM_SEARCH.BackColor = System.Drawing.Color.White
+        Me.ITM_SEARCH.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.ITM_SEARCH.Location = New System.Drawing.Point(100, 7)
+        Me.ITM_SEARCH.Name = "ITM_SEARCH"
+        Me.ITM_SEARCH.Size = New System.Drawing.Size(245, 27)
+        Me.ITM_SEARCH.TabIndex = 2
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.CausesValidation = False
+        Me.Label9.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(-2, 11)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(53, 21)
+        Me.Label9.TabIndex = 4
+        Me.Label9.Text = "Filter:"
+        '
+        'FILTER_PANEL
+        '
+        Me.FILTER_PANEL.ColumnCount = 2
+        Me.FILTER_PANEL.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150.0!))
+        Me.FILTER_PANEL.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.FILTER_PANEL.Controls.Add(Me.FILTER_VAL, 1, 0)
+        Me.FILTER_PANEL.Controls.Add(Me.FILTER_CAT, 0, 0)
+        Me.FILTER_PANEL.Location = New System.Drawing.Point(48, 3)
+        Me.FILTER_PANEL.Name = "FILTER_PANEL"
+        Me.FILTER_PANEL.RowCount = 1
+        Me.FILTER_PANEL.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.FILTER_PANEL.Size = New System.Drawing.Size(148, 34)
+        Me.FILTER_PANEL.TabIndex = 18
+        '
+        'FILTER_VAL
+        '
+        Me.FILTER_VAL.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.FILTER_VAL.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.FILTER_VAL.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.FILTER_VAL.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.FILTER_VAL.FormattingEnabled = True
+        Me.FILTER_VAL.Items.AddRange(New Object() {"All"})
+        Me.FILTER_VAL.Location = New System.Drawing.Point(153, 3)
+        Me.FILTER_VAL.Name = "FILTER_VAL"
+        Me.FILTER_VAL.Size = New System.Drawing.Size(1, 28)
+        Me.FILTER_VAL.TabIndex = 4
+        Me.FILTER_VAL.Text = "All"
+        '
+        'FILTER_CAT
+        '
+        Me.FILTER_CAT.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.FILTER_CAT.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.FILTER_CAT.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.FILTER_CAT.FormattingEnabled = True
+        Me.FILTER_CAT.Items.AddRange(New Object() {"All", "Brand", "Category", "Supplier", "Stock Level"})
+        Me.FILTER_CAT.Location = New System.Drawing.Point(3, 3)
+        Me.FILTER_CAT.Name = "FILTER_CAT"
+        Me.FILTER_CAT.Size = New System.Drawing.Size(144, 28)
+        Me.FILTER_CAT.TabIndex = 3
+        Me.FILTER_CAT.Text = "All"
+        '
+        'ITM_FLTR_BTN
+        '
+        Me.ITM_FLTR_BTN.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ITM_FLTR_BTN.BackColor = System.Drawing.Color.Firebrick
+        Me.ITM_FLTR_BTN.BackgroundImage = CType(resources.GetObject("ITM_FLTR_BTN.BackgroundImage"), System.Drawing.Image)
+        Me.ITM_FLTR_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ITM_FLTR_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_FLTR_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_FLTR_BTN.FlatAppearance.BorderSize = 0
+        Me.ITM_FLTR_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.ITM_FLTR_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.ITM_FLTR_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_FLTR_BTN.Font = New System.Drawing.Font("Bahnschrift", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_FLTR_BTN.ForeColor = System.Drawing.Color.White
+        Me.ITM_FLTR_BTN.Location = New System.Drawing.Point(447, 5)
+        Me.ITM_FLTR_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 10)
+        Me.ITM_FLTR_BTN.Name = "ITM_FLTR_BTN"
+        Me.ITM_FLTR_BTN.Size = New System.Drawing.Size(37, 30)
+        Me.ITM_FLTR_BTN.TabIndex = 17
+        Me.ITM_FLTR_BTN.UseVisualStyleBackColor = False
+        '
+        'Item_Table
+        '
+        Me.Item_Table.AllowUserToAddRows = False
+        Me.Item_Table.AllowUserToDeleteRows = False
+        Me.Item_Table.AllowUserToResizeRows = False
+        Me.Item_Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
+        Me.Item_Table.BackgroundColor = System.Drawing.Color.White
+        Me.Item_Table.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.Item_Table.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(0, 10, 0, 10)
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Item_Table.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.Item_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Leelawadee UI Semilight", 8.75!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Item_Table.DefaultCellStyle = DataGridViewCellStyle3
+        Me.Item_Table.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Item_Table.EnableHeadersVisualStyles = False
+        Me.Item_Table.Location = New System.Drawing.Point(3, 107)
+        Me.Item_Table.MultiSelect = False
+        Me.Item_Table.Name = "Item_Table"
+        Me.Item_Table.ReadOnly = True
+        Me.Item_Table.RowHeadersVisible = False
+        Me.Item_Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.Item_Table.Size = New System.Drawing.Size(845, 442)
+        Me.Item_Table.TabIndex = 1
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 4
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel2.Controls.Add(Me.VIEW_RETURN, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.ITM_BTN_DELETE, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.ITM_BTN_EDIT, 2, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.ITM_BTN_NEW, 3, 0)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 555)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 1
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(845, 43)
+        Me.TableLayoutPanel2.TabIndex = 4
+        '
+        'VIEW_RETURN
+        '
+        Me.VIEW_RETURN.BackColor = System.Drawing.Color.Black
+        Me.VIEW_RETURN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.VIEW_RETURN.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.VIEW_RETURN.FlatAppearance.BorderSize = 0
+        Me.VIEW_RETURN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.VIEW_RETURN.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
+        Me.VIEW_RETURN.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.VIEW_RETURN.Location = New System.Drawing.Point(3, 3)
+        Me.VIEW_RETURN.Name = "VIEW_RETURN"
+        Me.VIEW_RETURN.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        Me.VIEW_RETURN.Size = New System.Drawing.Size(144, 37)
+        Me.VIEW_RETURN.TabIndex = 3
+        Me.VIEW_RETURN.Text = "FLAGGED ITEMS"
+        Me.VIEW_RETURN.UseVisualStyleBackColor = False
+        '
+        'ITM_BTN_DELETE
+        '
+        Me.ITM_BTN_DELETE.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ITM_BTN_DELETE.BackColor = System.Drawing.Color.Firebrick
+        Me.ITM_BTN_DELETE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ITM_BTN_DELETE.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_BTN_DELETE.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
+        Me.ITM_BTN_DELETE.FlatAppearance.BorderSize = 0
+        Me.ITM_BTN_DELETE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon
+        Me.ITM_BTN_DELETE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_BTN_DELETE.Font = New System.Drawing.Font("Leelawadee UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_BTN_DELETE.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.ITM_BTN_DELETE.Location = New System.Drawing.Point(527, 3)
+        Me.ITM_BTN_DELETE.Name = "ITM_BTN_DELETE"
+        Me.ITM_BTN_DELETE.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        Me.ITM_BTN_DELETE.Size = New System.Drawing.Size(89, 37)
+        Me.ITM_BTN_DELETE.TabIndex = 0
+        Me.ITM_BTN_DELETE.Text = "DELETE"
+        Me.ITM_BTN_DELETE.UseVisualStyleBackColor = False
+        '
+        'ITM_BTN_EDIT
+        '
+        Me.ITM_BTN_EDIT.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ITM_BTN_EDIT.BackColor = System.Drawing.Color.Navy
+        Me.ITM_BTN_EDIT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ITM_BTN_EDIT.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_BTN_EDIT.FlatAppearance.BorderColor = System.Drawing.Color.Navy
+        Me.ITM_BTN_EDIT.FlatAppearance.BorderSize = 0
+        Me.ITM_BTN_EDIT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_BTN_EDIT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_BTN_EDIT.Font = New System.Drawing.Font("Leelawadee UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_BTN_EDIT.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.ITM_BTN_EDIT.Location = New System.Drawing.Point(622, 3)
+        Me.ITM_BTN_EDIT.Name = "ITM_BTN_EDIT"
+        Me.ITM_BTN_EDIT.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        Me.ITM_BTN_EDIT.Size = New System.Drawing.Size(84, 37)
+        Me.ITM_BTN_EDIT.TabIndex = 1
+        Me.ITM_BTN_EDIT.Text = "EDIT"
+        Me.ITM_BTN_EDIT.UseVisualStyleBackColor = False
+        '
+        'ITM_BTN_NEW
+        '
+        Me.ITM_BTN_NEW.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ITM_BTN_NEW.BackColor = System.Drawing.Color.LimeGreen
+        Me.ITM_BTN_NEW.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_BTN_NEW.FlatAppearance.BorderColor = System.Drawing.Color.LimeGreen
+        Me.ITM_BTN_NEW.FlatAppearance.BorderSize = 0
+        Me.ITM_BTN_NEW.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green
+        Me.ITM_BTN_NEW.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_BTN_NEW.Font = New System.Drawing.Font("Leelawadee UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_BTN_NEW.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ITM_BTN_NEW.Location = New System.Drawing.Point(712, 3)
+        Me.ITM_BTN_NEW.Name = "ITM_BTN_NEW"
+        Me.ITM_BTN_NEW.Size = New System.Drawing.Size(130, 37)
+        Me.ITM_BTN_NEW.TabIndex = 2
+        Me.ITM_BTN_NEW.Text = "NEW ITEM+"
+        Me.ITM_BTN_NEW.UseVisualStyleBackColor = False
+        '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.TableLayoutPanel4)
+        Me.Panel1.Location = New System.Drawing.Point(3, 50)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(845, 51)
+        Me.Panel1.TabIndex = 5
+        '
+        'TableLayoutPanel4
+        '
+        Me.TableLayoutPanel4.ColumnCount = 4
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel4.Controls.Add(Me.ITM_BTN_STOCKIN, 0, 0)
+        Me.TableLayoutPanel4.Controls.Add(Me.ITM_BTN_STOCKOUT, 1, 0)
+        Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(0, 11)
+        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
+        Me.TableLayoutPanel4.RowCount = 1
+        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(845, 40)
+        Me.TableLayoutPanel4.TabIndex = 5
+        '
+        'ITM_BTN_STOCKIN
+        '
+        Me.ITM_BTN_STOCKIN.BackColor = System.Drawing.Color.Green
+        Me.ITM_BTN_STOCKIN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_BTN_STOCKIN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_BTN_STOCKIN.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_BTN_STOCKIN.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.ITM_BTN_STOCKIN.Location = New System.Drawing.Point(3, 3)
+        Me.ITM_BTN_STOCKIN.Name = "ITM_BTN_STOCKIN"
+        Me.ITM_BTN_STOCKIN.Size = New System.Drawing.Size(151, 34)
+        Me.ITM_BTN_STOCKIN.TabIndex = 3
+        Me.ITM_BTN_STOCKIN.Text = "STOCK IN"
+        Me.ITM_BTN_STOCKIN.UseVisualStyleBackColor = False
+        '
+        'ITM_BTN_STOCKOUT
+        '
+        Me.ITM_BTN_STOCKOUT.BackColor = System.Drawing.Color.Navy
+        Me.ITM_BTN_STOCKOUT.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_BTN_STOCKOUT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_BTN_STOCKOUT.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_BTN_STOCKOUT.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.ITM_BTN_STOCKOUT.Location = New System.Drawing.Point(160, 3)
+        Me.ITM_BTN_STOCKOUT.Name = "ITM_BTN_STOCKOUT"
+        Me.ITM_BTN_STOCKOUT.Size = New System.Drawing.Size(151, 34)
+        Me.ITM_BTN_STOCKOUT.TabIndex = 0
+        Me.ITM_BTN_STOCKOUT.Text = "STOCK OUT"
+        Me.ITM_BTN_STOCKOUT.UseVisualStyleBackColor = False
+        '
+        'Panel_History
+        '
+        Me.Panel_History.Controls.Add(Me.TableLayoutPanel3)
+        Me.Panel_History.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel_History.Location = New System.Drawing.Point(0, 0)
+        Me.Panel_History.Name = "Panel_History"
+        Me.Panel_History.Size = New System.Drawing.Size(884, 661)
+        Me.Panel_History.TabIndex = 1
+        Me.Panel_History.Visible = False
+        '
+        'TableLayoutPanel3
+        '
+        Me.TableLayoutPanel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel3.ColumnCount = 1
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel3.Controls.Add(Me.SplitContainer3, 0, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.GroupBox1, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.Log_View_Grid, 0, 2)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(27, 30)
+        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
+        Me.TableLayoutPanel3.RowCount = 3
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(830, 614)
+        Me.TableLayoutPanel3.TabIndex = 0
+        '
+        'SplitContainer3
+        '
+        Me.SplitContainer3.BackColor = System.Drawing.SystemColors.Control
+        Me.SplitContainer3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer3.Location = New System.Drawing.Point(3, 142)
+        Me.SplitContainer3.Name = "SplitContainer3"
+        '
+        'SplitContainer3.Panel1
+        '
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label2)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Log_Search)
+        '
+        'SplitContainer3.Panel2
+        '
+        Me.SplitContainer3.Panel2.Controls.Add(Me.TableLayoutPanel5)
+        Me.SplitContainer3.Panel2.Controls.Add(Me.Label10)
+        Me.SplitContainer3.Panel2.Controls.Add(Me.Button1)
+        Me.SplitContainer3.Size = New System.Drawing.Size(824, 48)
+        Me.SplitContainer3.SplitterDistance = 293
+        Me.SplitContainer3.TabIndex = 8
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.CausesValidation = False
+        Me.Label2.Font = New System.Drawing.Font("Leelawadee UI", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(4, 7)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(89, 30)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "History"
+        '
+        'Log_Search
+        '
+        Me.Log_Search.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Log_Search.BackColor = System.Drawing.Color.White
+        Me.Log_Search.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.Log_Search.Location = New System.Drawing.Point(99, 10)
+        Me.Log_Search.Name = "Log_Search"
+        Me.Log_Search.Size = New System.Drawing.Size(189, 27)
+        Me.Log_Search.TabIndex = 2
+        '
+        'TableLayoutPanel5
+        '
+        Me.TableLayoutPanel5.ColumnCount = 2
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TableLayoutPanel5.Controls.Add(Me.Range_Box, 0, 0)
+        Me.TableLayoutPanel5.Controls.Add(Me.DateRangeHolder, 1, 0)
+        Me.TableLayoutPanel5.Location = New System.Drawing.Point(72, 3)
+        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
+        Me.TableLayoutPanel5.RowCount = 1
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(379, 38)
+        Me.TableLayoutPanel5.TabIndex = 20
+        '
+        'Range_Box
+        '
+        Me.Range_Box.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Range_Box.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Range_Box.Controls.Add(Me.Range_CBX)
+        Me.Range_Box.Location = New System.Drawing.Point(3, 3)
+        Me.Range_Box.Name = "Range_Box"
+        Me.Range_Box.Size = New System.Drawing.Size(168, 32)
+        Me.Range_Box.TabIndex = 19
+        '
+        'Range_CBX
+        '
+        Me.Range_CBX.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Range_CBX.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.Range_CBX.FormattingEnabled = True
+        Me.Range_CBX.Items.AddRange(New Object() {"All:", "7 Days", "14 Days", "30 Days", "6 Months", "1 Year"})
+        Me.Range_CBX.Location = New System.Drawing.Point(2, 2)
+        Me.Range_CBX.Name = "Range_CBX"
+        Me.Range_CBX.Size = New System.Drawing.Size(163, 28)
+        Me.Range_CBX.TabIndex = 0
+        Me.Range_CBX.Text = "All:"
+        '
+        'DateRangeHolder
+        '
+        Me.DateRangeHolder.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DateRangeHolder.ColumnCount = 3
+        Me.DateRangeHolder.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.DateRangeHolder.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.DateRangeHolder.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
+        Me.DateRangeHolder.Controls.Add(Me.UpperDate, 1, 0)
+        Me.DateRangeHolder.Controls.Add(Me.LowerDate, 0, 0)
+        Me.DateRangeHolder.Controls.Add(Me.RangeSetButton, 2, 0)
+        Me.DateRangeHolder.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateRangeHolder.Location = New System.Drawing.Point(177, 3)
+        Me.DateRangeHolder.Name = "DateRangeHolder"
+        Me.DateRangeHolder.RowCount = 1
+        Me.DateRangeHolder.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.DateRangeHolder.Size = New System.Drawing.Size(28, 32)
+        Me.DateRangeHolder.TabIndex = 18
+        '
+        'UpperDate
+        '
+        Me.UpperDate.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.UpperDate.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.UpperDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.UpperDate.Location = New System.Drawing.Point(3, 3)
+        Me.UpperDate.Name = "UpperDate"
+        Me.UpperDate.Size = New System.Drawing.Size(1, 27)
+        Me.UpperDate.TabIndex = 1
+        '
+        'LowerDate
+        '
+        Me.LowerDate.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LowerDate.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
+        Me.LowerDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.LowerDate.Location = New System.Drawing.Point(3, 3)
+        Me.LowerDate.Name = "LowerDate"
+        Me.LowerDate.Size = New System.Drawing.Size(1, 27)
+        Me.LowerDate.TabIndex = 0
+        '
+        'RangeSetButton
+        '
+        Me.RangeSetButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.RangeSetButton.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RangeSetButton.FlatAppearance.BorderSize = 0
+        Me.RangeSetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RangeSetButton.Font = New System.Drawing.Font("Leelawadee UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RangeSetButton.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.RangeSetButton.Location = New System.Drawing.Point(3, 3)
+        Me.RangeSetButton.Name = "RangeSetButton"
+        Me.RangeSetButton.Size = New System.Drawing.Size(22, 26)
+        Me.RangeSetButton.TabIndex = 2
+        Me.RangeSetButton.Text = ">"
+        Me.RangeSetButton.UseVisualStyleBackColor = False
+        '
+        'Label10
+        '
+        Me.Label10.CausesValidation = False
+        Me.Label10.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(3, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(68, 45)
+        Me.Label10.TabIndex = 4
+        Me.Label10.Text = "Date Range:"
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.BackColor = System.Drawing.Color.Firebrick
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Bahnschrift", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(484, 5)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(0, 10, 0, 10)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(37, 34)
+        Me.Button1.TabIndex = 17
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.TableLayoutPanel10)
+        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GroupBox1.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(824, 133)
+        Me.GroupBox1.TabIndex = 6
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "AT A GLANCE"
+        '
+        'TableLayoutPanel10
+        '
+        Me.TableLayoutPanel10.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel10.ColumnCount = 4
+        Me.TableLayoutPanel10.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel10.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel10.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel10.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel10.Controls.Add(Me.TableLayoutPanel11, 3, 0)
+        Me.TableLayoutPanel10.Controls.Add(Me.TableLayoutPanel12, 2, 0)
+        Me.TableLayoutPanel10.Controls.Add(Me.TableLayoutPanel13, 1, 0)
+        Me.TableLayoutPanel10.Controls.Add(Me.TableLayoutPanel14, 0, 0)
+        Me.TableLayoutPanel10.Location = New System.Drawing.Point(9, 27)
+        Me.TableLayoutPanel10.Name = "TableLayoutPanel10"
+        Me.TableLayoutPanel10.RowCount = 1
+        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel10.Size = New System.Drawing.Size(809, 101)
+        Me.TableLayoutPanel10.TabIndex = 3
+        '
+        'TableLayoutPanel11
+        '
+        Me.TableLayoutPanel11.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.TableLayoutPanel11.ColumnCount = 1
+        Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel11.Controls.Add(Me.Label13, 0, 0)
+        Me.TableLayoutPanel11.Controls.Add(Me.LogDash_VO, 0, 1)
+        Me.TableLayoutPanel11.Location = New System.Drawing.Point(609, 3)
+        Me.TableLayoutPanel11.Name = "TableLayoutPanel11"
+        Me.TableLayoutPanel11.RowCount = 2
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel11.Size = New System.Drawing.Size(197, 95)
+        Me.TableLayoutPanel11.TabIndex = 8
+        '
+        'Label13
+        '
+        Me.Label13.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label13.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label13.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label13.Location = New System.Drawing.Point(3, 0)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(191, 28)
+        Me.Label13.TabIndex = 0
+        Me.Label13.Text = "VALUE OUT "
+        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LogDash_VO
+        '
+        Me.LogDash_VO.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.LogDash_VO.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.LogDash_VO.FlatAppearance.BorderSize = 0
+        Me.LogDash_VO.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.LogDash_VO.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LogDash_VO.Font = New System.Drawing.Font("Leelawadee UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LogDash_VO.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.LogDash_VO.Location = New System.Drawing.Point(3, 31)
+        Me.LogDash_VO.Name = "LogDash_VO"
+        Me.LogDash_VO.Size = New System.Drawing.Size(191, 78)
+        Me.LogDash_VO.TabIndex = 1
+        Me.LogDash_VO.Text = "0"
+        Me.LogDash_VO.TextAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.LogDash_VO.UseVisualStyleBackColor = True
+        '
+        'TableLayoutPanel12
+        '
+        Me.TableLayoutPanel12.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.TableLayoutPanel12.ColumnCount = 1
+        Me.TableLayoutPanel12.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel12.Controls.Add(Me.Label14, 0, 0)
+        Me.TableLayoutPanel12.Controls.Add(Me.LogDash_SO, 0, 1)
+        Me.TableLayoutPanel12.Location = New System.Drawing.Point(407, 3)
+        Me.TableLayoutPanel12.Name = "TableLayoutPanel12"
+        Me.TableLayoutPanel12.RowCount = 2
+        Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel12.Size = New System.Drawing.Size(196, 95)
+        Me.TableLayoutPanel12.TabIndex = 7
+        '
+        'Label14
+        '
+        Me.Label14.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label14.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label14.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label14.Location = New System.Drawing.Point(3, 0)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(190, 28)
+        Me.Label14.TabIndex = 0
+        Me.Label14.Text = "STOCKS OUT"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LogDash_SO
+        '
+        Me.LogDash_SO.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.LogDash_SO.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LogDash_SO.FlatAppearance.BorderSize = 0
+        Me.LogDash_SO.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LogDash_SO.Font = New System.Drawing.Font("Leelawadee UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LogDash_SO.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.LogDash_SO.Location = New System.Drawing.Point(3, 31)
+        Me.LogDash_SO.Name = "LogDash_SO"
+        Me.LogDash_SO.Size = New System.Drawing.Size(190, 78)
+        Me.LogDash_SO.TabIndex = 1
+        Me.LogDash_SO.Text = "0"
+        Me.LogDash_SO.TextAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.LogDash_SO.UseVisualStyleBackColor = True
+        '
+        'TableLayoutPanel13
+        '
+        Me.TableLayoutPanel13.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel13.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.TableLayoutPanel13.ColumnCount = 1
+        Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel13.Controls.Add(Me.Label15, 0, 0)
+        Me.TableLayoutPanel13.Controls.Add(Me.LogDash_SI, 0, 1)
+        Me.TableLayoutPanel13.Location = New System.Drawing.Point(205, 3)
+        Me.TableLayoutPanel13.Name = "TableLayoutPanel13"
+        Me.TableLayoutPanel13.RowCount = 2
+        Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel13.Size = New System.Drawing.Size(196, 95)
+        Me.TableLayoutPanel13.TabIndex = 6
+        '
+        'Label15
+        '
+        Me.Label15.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label15.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label15.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label15.Location = New System.Drawing.Point(3, 0)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(190, 28)
+        Me.Label15.TabIndex = 0
+        Me.Label15.Text = "STOCKS IN"
+        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LogDash_SI
+        '
+        Me.LogDash_SI.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.LogDash_SI.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LogDash_SI.FlatAppearance.BorderSize = 0
+        Me.LogDash_SI.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LogDash_SI.Font = New System.Drawing.Font("Leelawadee UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LogDash_SI.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.LogDash_SI.Location = New System.Drawing.Point(3, 31)
+        Me.LogDash_SI.Name = "LogDash_SI"
+        Me.LogDash_SI.Size = New System.Drawing.Size(190, 78)
+        Me.LogDash_SI.TabIndex = 1
+        Me.LogDash_SI.Text = "0"
+        Me.LogDash_SI.TextAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.LogDash_SI.UseVisualStyleBackColor = True
+        '
+        'TableLayoutPanel14
+        '
+        Me.TableLayoutPanel14.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.TableLayoutPanel14.ColumnCount = 1
+        Me.TableLayoutPanel14.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel14.Controls.Add(Me.Label16, 0, 0)
+        Me.TableLayoutPanel14.Controls.Add(Me.LogDash_NI, 0, 1)
+        Me.TableLayoutPanel14.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel14.Name = "TableLayoutPanel14"
+        Me.TableLayoutPanel14.RowCount = 2
+        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel14.Size = New System.Drawing.Size(196, 95)
+        Me.TableLayoutPanel14.TabIndex = 5
+        '
+        'Label16
+        '
+        Me.Label16.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label16.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label16.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label16.Location = New System.Drawing.Point(3, 0)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(190, 28)
+        Me.Label16.TabIndex = 0
+        Me.Label16.Text = "NEW ITEMS"
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'LogDash_NI
+        '
+        Me.LogDash_NI.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.LogDash_NI.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LogDash_NI.FlatAppearance.BorderSize = 0
+        Me.LogDash_NI.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LogDash_NI.Font = New System.Drawing.Font("Leelawadee UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LogDash_NI.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.LogDash_NI.Location = New System.Drawing.Point(3, 31)
+        Me.LogDash_NI.Name = "LogDash_NI"
+        Me.LogDash_NI.Size = New System.Drawing.Size(190, 78)
+        Me.LogDash_NI.TabIndex = 1
+        Me.LogDash_NI.Text = "0"
+        Me.LogDash_NI.TextAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.LogDash_NI.UseVisualStyleBackColor = True
+        '
+        'Log_View_Grid
+        '
+        Me.Log_View_Grid.AllowUserToAddRows = False
+        Me.Log_View_Grid.AllowUserToDeleteRows = False
+        Me.Log_View_Grid.AllowUserToResizeColumns = False
+        Me.Log_View_Grid.AllowUserToResizeRows = False
+        Me.Log_View_Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
+        Me.Log_View_Grid.BackgroundColor = System.Drawing.Color.White
+        Me.Log_View_Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        Me.Log_View_Grid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Leelawadee UI", 10.0!)
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Log_View_Grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.Log_View_Grid.ColumnHeadersHeight = 30
+        Me.Log_View_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Leelawadee UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Log_View_Grid.DefaultCellStyle = DataGridViewCellStyle5
+        Me.Log_View_Grid.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Log_View_Grid.EnableHeadersVisualStyles = False
+        Me.Log_View_Grid.Location = New System.Drawing.Point(3, 196)
+        Me.Log_View_Grid.Name = "Log_View_Grid"
+        Me.Log_View_Grid.ReadOnly = True
+        Me.Log_View_Grid.RowHeadersVisible = False
+        Me.Log_View_Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.Log_View_Grid.Size = New System.Drawing.Size(824, 415)
+        Me.Log_View_Grid.TabIndex = 7
         '
         'Panel_Settings
         '
@@ -491,24 +1715,24 @@ Partial Class Dashboard
         Me.BVS_Gridview.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.BVS_Gridview.BackgroundColor = System.Drawing.Color.White
         Me.BVS_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Leelawadee UI", 10.0!)
-        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BVS_Gridview.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Leelawadee UI", 10.0!)
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BVS_Gridview.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.BVS_Gridview.ColumnHeadersHeight = 40
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle18.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.BVS_Gridview.DefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle7.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.BVS_Gridview.DefaultCellStyle = DataGridViewCellStyle7
         Me.BVS_Gridview.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BVS_Gridview.EnableHeadersVisualStyles = False
         Me.BVS_Gridview.Location = New System.Drawing.Point(0, 33)
@@ -1121,15 +2345,15 @@ Partial Class Dashboard
         Me.Acc_List_Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.Acc_List_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Acc_List_Grid.ColumnHeadersVisible = False
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle19.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle19.Padding = New System.Windows.Forms.Padding(0, 10, 0, 10)
-        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.ControlDark
-        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.Desktop
-        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Acc_List_Grid.DefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle8.Padding = New System.Windows.Forms.Padding(0, 10, 0, 10)
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ControlDark
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.Desktop
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Acc_List_Grid.DefaultCellStyle = DataGridViewCellStyle8
         Me.Acc_List_Grid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Acc_List_Grid.Location = New System.Drawing.Point(0, 0)
         Me.Acc_List_Grid.MultiSelect = False
@@ -1185,1230 +2409,6 @@ Partial Class Dashboard
         Me.Label24.Text = "Export Files"
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
-        'Panel_Home
-        '
-        Me.Panel_Home.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel_Home.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Panel_Home.Controls.Add(Me.APP_LABEL)
-        Me.Panel_Home.Controls.Add(Me.GroupBox_INFO)
-        Me.Panel_Home.Controls.Add(Me.Panel_DayView)
-        Me.Panel_Home.Controls.Add(Me.GBX_Dashboard_Controls)
-        Me.Panel_Home.Location = New System.Drawing.Point(0, 0)
-        Me.Panel_Home.Name = "Panel_Home"
-        Me.Panel_Home.Size = New System.Drawing.Size(884, 661)
-        Me.Panel_Home.TabIndex = 3
-        '
-        'APP_LABEL
-        '
-        Me.APP_LABEL.BackColor = System.Drawing.Color.Transparent
-        Me.APP_LABEL.Font = New System.Drawing.Font("Leelawadee UI", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.APP_LABEL.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.APP_LABEL.Location = New System.Drawing.Point(23, 14)
-        Me.APP_LABEL.Name = "APP_LABEL"
-        Me.APP_LABEL.Size = New System.Drawing.Size(474, 99)
-        Me.APP_LABEL.TabIndex = 15
-        Me.APP_LABEL.Text = "JUANCHO'S VARIETY SHOP INVENTORY SYSTEM"
-        Me.APP_LABEL.TextAlign = System.Drawing.ContentAlignment.BottomLeft
-        '
-        'GroupBox_INFO
-        '
-        Me.GroupBox_INFO.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox_INFO.Controls.Add(Me.TLB_QuickInfo)
-        Me.GroupBox_INFO.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox_INFO.Location = New System.Drawing.Point(18, 128)
-        Me.GroupBox_INFO.Name = "GroupBox_INFO"
-        Me.GroupBox_INFO.Size = New System.Drawing.Size(854, 154)
-        Me.GroupBox_INFO.TabIndex = 4
-        Me.GroupBox_INFO.TabStop = False
-        Me.GroupBox_INFO.Text = "AT A GLANCE"
-        '
-        'TLB_QuickInfo
-        '
-        Me.TLB_QuickInfo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TLB_QuickInfo.ColumnCount = 4
-        Me.TLB_QuickInfo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TLB_QuickInfo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TLB_QuickInfo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TLB_QuickInfo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TLB_QuickInfo.Controls.Add(Me.TLB_VALUEOUT, 3, 0)
-        Me.TLB_QuickInfo.Controls.Add(Me.TLB_LOWSTOCK, 2, 0)
-        Me.TLB_QuickInfo.Controls.Add(Me.TLB_ITEMQTY, 1, 0)
-        Me.TLB_QuickInfo.Controls.Add(Me.TLB_INVENTORY_VALUE, 0, 0)
-        Me.TLB_QuickInfo.Location = New System.Drawing.Point(9, 27)
-        Me.TLB_QuickInfo.Name = "TLB_QuickInfo"
-        Me.TLB_QuickInfo.RowCount = 1
-        Me.TLB_QuickInfo.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TLB_QuickInfo.Size = New System.Drawing.Size(839, 118)
-        Me.TLB_QuickInfo.TabIndex = 3
-        '
-        'TLB_VALUEOUT
-        '
-        Me.TLB_VALUEOUT.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TLB_VALUEOUT.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TLB_VALUEOUT.ColumnCount = 1
-        Me.TLB_VALUEOUT.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TLB_VALUEOUT.Controls.Add(Me.Label8, 0, 0)
-        Me.TLB_VALUEOUT.Controls.Add(Me.TLB_VALUEOUT_BTN, 0, 1)
-        Me.TLB_VALUEOUT.Location = New System.Drawing.Point(630, 3)
-        Me.TLB_VALUEOUT.Name = "TLB_VALUEOUT"
-        Me.TLB_VALUEOUT.RowCount = 2
-        Me.TLB_VALUEOUT.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TLB_VALUEOUT.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TLB_VALUEOUT.Size = New System.Drawing.Size(206, 112)
-        Me.TLB_VALUEOUT.TabIndex = 8
-        '
-        'Label8
-        '
-        Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label8.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label8.Location = New System.Drawing.Point(3, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(200, 28)
-        Me.Label8.TabIndex = 0
-        Me.Label8.Text = "ITEMS OUT - WEEK"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TLB_VALUEOUT_BTN
-        '
-        Me.TLB_VALUEOUT_BTN.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.TLB_VALUEOUT_BTN.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TLB_VALUEOUT_BTN.FlatAppearance.BorderSize = 0
-        Me.TLB_VALUEOUT_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.TLB_VALUEOUT_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.TLB_VALUEOUT_BTN.Font = New System.Drawing.Font("Leelawadee UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TLB_VALUEOUT_BTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.TLB_VALUEOUT_BTN.Location = New System.Drawing.Point(3, 31)
-        Me.TLB_VALUEOUT_BTN.Name = "TLB_VALUEOUT_BTN"
-        Me.TLB_VALUEOUT_BTN.Size = New System.Drawing.Size(200, 78)
-        Me.TLB_VALUEOUT_BTN.TabIndex = 1
-        Me.TLB_VALUEOUT_BTN.Text = "0"
-        Me.TLB_VALUEOUT_BTN.TextAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.TLB_VALUEOUT_BTN.UseVisualStyleBackColor = True
-        '
-        'TLB_LOWSTOCK
-        '
-        Me.TLB_LOWSTOCK.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TLB_LOWSTOCK.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TLB_LOWSTOCK.ColumnCount = 1
-        Me.TLB_LOWSTOCK.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TLB_LOWSTOCK.Controls.Add(Me.Label7, 0, 0)
-        Me.TLB_LOWSTOCK.Controls.Add(Me.TLB_LOWSTOCK_BTN, 0, 1)
-        Me.TLB_LOWSTOCK.Location = New System.Drawing.Point(421, 3)
-        Me.TLB_LOWSTOCK.Name = "TLB_LOWSTOCK"
-        Me.TLB_LOWSTOCK.RowCount = 2
-        Me.TLB_LOWSTOCK.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TLB_LOWSTOCK.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TLB_LOWSTOCK.Size = New System.Drawing.Size(203, 112)
-        Me.TLB_LOWSTOCK.TabIndex = 7
-        '
-        'Label7
-        '
-        Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label7.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label7.Location = New System.Drawing.Point(3, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(197, 28)
-        Me.Label7.TabIndex = 0
-        Me.Label7.Text = "LOW STOCK"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TLB_LOWSTOCK_BTN
-        '
-        Me.TLB_LOWSTOCK_BTN.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.TLB_LOWSTOCK_BTN.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TLB_LOWSTOCK_BTN.FlatAppearance.BorderSize = 0
-        Me.TLB_LOWSTOCK_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.TLB_LOWSTOCK_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.TLB_LOWSTOCK_BTN.Font = New System.Drawing.Font("Leelawadee UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TLB_LOWSTOCK_BTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.TLB_LOWSTOCK_BTN.Location = New System.Drawing.Point(3, 31)
-        Me.TLB_LOWSTOCK_BTN.Name = "TLB_LOWSTOCK_BTN"
-        Me.TLB_LOWSTOCK_BTN.Size = New System.Drawing.Size(197, 78)
-        Me.TLB_LOWSTOCK_BTN.TabIndex = 1
-        Me.TLB_LOWSTOCK_BTN.Text = "0"
-        Me.TLB_LOWSTOCK_BTN.TextAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.TLB_LOWSTOCK_BTN.UseVisualStyleBackColor = True
-        '
-        'TLB_ITEMQTY
-        '
-        Me.TLB_ITEMQTY.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TLB_ITEMQTY.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TLB_ITEMQTY.ColumnCount = 1
-        Me.TLB_ITEMQTY.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TLB_ITEMQTY.Controls.Add(Me.Label6, 0, 0)
-        Me.TLB_ITEMQTY.Controls.Add(Me.TLB_ITEMQTY_BTN, 0, 1)
-        Me.TLB_ITEMQTY.Location = New System.Drawing.Point(212, 3)
-        Me.TLB_ITEMQTY.Name = "TLB_ITEMQTY"
-        Me.TLB_ITEMQTY.RowCount = 2
-        Me.TLB_ITEMQTY.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TLB_ITEMQTY.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TLB_ITEMQTY.Size = New System.Drawing.Size(203, 112)
-        Me.TLB_ITEMQTY.TabIndex = 6
-        '
-        'Label6
-        '
-        Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label6.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label6.Location = New System.Drawing.Point(3, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(197, 28)
-        Me.Label6.TabIndex = 0
-        Me.Label6.Text = "ITEM COUNT"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TLB_ITEMQTY_BTN
-        '
-        Me.TLB_ITEMQTY_BTN.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.TLB_ITEMQTY_BTN.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TLB_ITEMQTY_BTN.FlatAppearance.BorderSize = 0
-        Me.TLB_ITEMQTY_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.TLB_ITEMQTY_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.TLB_ITEMQTY_BTN.Font = New System.Drawing.Font("Leelawadee UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TLB_ITEMQTY_BTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.TLB_ITEMQTY_BTN.Location = New System.Drawing.Point(3, 31)
-        Me.TLB_ITEMQTY_BTN.Name = "TLB_ITEMQTY_BTN"
-        Me.TLB_ITEMQTY_BTN.Size = New System.Drawing.Size(197, 78)
-        Me.TLB_ITEMQTY_BTN.TabIndex = 1
-        Me.TLB_ITEMQTY_BTN.Text = "0"
-        Me.TLB_ITEMQTY_BTN.TextAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.TLB_ITEMQTY_BTN.UseVisualStyleBackColor = True
-        '
-        'TLB_INVENTORY_VALUE
-        '
-        Me.TLB_INVENTORY_VALUE.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TLB_INVENTORY_VALUE.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TLB_INVENTORY_VALUE.ColumnCount = 1
-        Me.TLB_INVENTORY_VALUE.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TLB_INVENTORY_VALUE.Controls.Add(Me.Label5, 0, 0)
-        Me.TLB_INVENTORY_VALUE.Controls.Add(Me.TLB_INVENTORY_VALUE_BTN, 0, 1)
-        Me.TLB_INVENTORY_VALUE.Location = New System.Drawing.Point(3, 3)
-        Me.TLB_INVENTORY_VALUE.Name = "TLB_INVENTORY_VALUE"
-        Me.TLB_INVENTORY_VALUE.RowCount = 2
-        Me.TLB_INVENTORY_VALUE.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TLB_INVENTORY_VALUE.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TLB_INVENTORY_VALUE.Size = New System.Drawing.Size(203, 112)
-        Me.TLB_INVENTORY_VALUE.TabIndex = 5
-        '
-        'Label5
-        '
-        Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label5.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label5.Location = New System.Drawing.Point(3, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(197, 28)
-        Me.Label5.TabIndex = 0
-        Me.Label5.Text = "INVENTORY VALUE"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TLB_INVENTORY_VALUE_BTN
-        '
-        Me.TLB_INVENTORY_VALUE_BTN.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.TLB_INVENTORY_VALUE_BTN.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TLB_INVENTORY_VALUE_BTN.FlatAppearance.BorderSize = 0
-        Me.TLB_INVENTORY_VALUE_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(50, Byte), Integer))
-        Me.TLB_INVENTORY_VALUE_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.TLB_INVENTORY_VALUE_BTN.Font = New System.Drawing.Font("Leelawadee UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TLB_INVENTORY_VALUE_BTN.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.TLB_INVENTORY_VALUE_BTN.Location = New System.Drawing.Point(3, 31)
-        Me.TLB_INVENTORY_VALUE_BTN.Name = "TLB_INVENTORY_VALUE_BTN"
-        Me.TLB_INVENTORY_VALUE_BTN.Size = New System.Drawing.Size(197, 78)
-        Me.TLB_INVENTORY_VALUE_BTN.TabIndex = 1
-        Me.TLB_INVENTORY_VALUE_BTN.Text = "0"
-        Me.TLB_INVENTORY_VALUE_BTN.TextAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.TLB_INVENTORY_VALUE_BTN.UseVisualStyleBackColor = True
-        '
-        'Panel_DayView
-        '
-        Me.Panel_DayView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel_DayView.AutoSize = True
-        Me.Panel_DayView.Controls.Add(Me.Day_GridView)
-        Me.Panel_DayView.Controls.Add(Me.Panel_DV_Top)
-        Me.Panel_DayView.Location = New System.Drawing.Point(544, 303)
-        Me.Panel_DayView.MinimumSize = New System.Drawing.Size(293, 346)
-        Me.Panel_DayView.Name = "Panel_DayView"
-        Me.Panel_DayView.Size = New System.Drawing.Size(328, 346)
-        Me.Panel_DayView.TabIndex = 2
-        '
-        'Day_GridView
-        '
-        Me.Day_GridView.AllowUserToAddRows = False
-        Me.Day_GridView.AllowUserToDeleteRows = False
-        Me.Day_GridView.AllowUserToResizeColumns = False
-        Me.Day_GridView.AllowUserToResizeRows = False
-        Me.Day_GridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
-        Me.Day_GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Day_GridView.ColumnHeadersVisible = False
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle20.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle20.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Day_GridView.DefaultCellStyle = DataGridViewCellStyle20
-        Me.Day_GridView.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Day_GridView.Location = New System.Drawing.Point(0, 41)
-        Me.Day_GridView.Name = "Day_GridView"
-        Me.Day_GridView.ReadOnly = True
-        Me.Day_GridView.RowHeadersVisible = False
-        Me.Day_GridView.RowTemplate.Height = 40
-        Me.Day_GridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Day_GridView.Size = New System.Drawing.Size(328, 305)
-        Me.Day_GridView.TabIndex = 1
-        '
-        'Panel_DV_Top
-        '
-        Me.Panel_DV_Top.Controls.Add(Me.Label4)
-        Me.Panel_DV_Top.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel_DV_Top.Location = New System.Drawing.Point(0, 0)
-        Me.Panel_DV_Top.Name = "Panel_DV_Top"
-        Me.Panel_DV_Top.Size = New System.Drawing.Size(328, 41)
-        Me.Panel_DV_Top.TabIndex = 0
-        '
-        'Label4
-        '
-        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label4.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label4.Location = New System.Drawing.Point(0, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Padding = New System.Windows.Forms.Padding(5, 0, 0, 0)
-        Me.Label4.Size = New System.Drawing.Size(328, 41)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "DAY OVERVIEW"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'GBX_Dashboard_Controls
-        '
-        Me.GBX_Dashboard_Controls.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.GBX_Dashboard_Controls.Controls.Add(Me.TLP_Home_BTN)
-        Me.GBX_Dashboard_Controls.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GBX_Dashboard_Controls.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBX_Dashboard_Controls.Location = New System.Drawing.Point(18, 290)
-        Me.GBX_Dashboard_Controls.Margin = New System.Windows.Forms.Padding(3, 3, 3, 5)
-        Me.GBX_Dashboard_Controls.MaximumSize = New System.Drawing.Size(700, 0)
-        Me.GBX_Dashboard_Controls.MinimumSize = New System.Drawing.Size(0, 360)
-        Me.GBX_Dashboard_Controls.Name = "GBX_Dashboard_Controls"
-        Me.GBX_Dashboard_Controls.Size = New System.Drawing.Size(516, 360)
-        Me.GBX_Dashboard_Controls.TabIndex = 0
-        Me.GBX_Dashboard_Controls.TabStop = False
-        Me.GBX_Dashboard_Controls.Text = "QUICK ACTIONS"
-        '
-        'TLP_Home_BTN
-        '
-        Me.TLP_Home_BTN.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TLP_Home_BTN.ColumnCount = 2
-        Me.TLP_Home_BTN.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TLP_Home_BTN.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TLP_Home_BTN.Controls.Add(Me.HOME_BTN_OUT, 1, 1)
-        Me.TLP_Home_BTN.Controls.Add(Me.HOME_BTN_IN, 0, 1)
-        Me.TLP_Home_BTN.Controls.Add(Me.HOME_BTN_ADDITEM, 0, 0)
-        Me.TLP_Home_BTN.Controls.Add(Me.HOME_BTN_LOGS, 1, 0)
-        Me.TLP_Home_BTN.Location = New System.Drawing.Point(6, 32)
-        Me.TLP_Home_BTN.Name = "TLP_Home_BTN"
-        Me.TLP_Home_BTN.RowCount = 2
-        Me.TLP_Home_BTN.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TLP_Home_BTN.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TLP_Home_BTN.Size = New System.Drawing.Size(505, 322)
-        Me.TLP_Home_BTN.TabIndex = 0
-        '
-        'HOME_BTN_OUT
-        '
-        Me.HOME_BTN_OUT.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.HOME_BTN_OUT.BackgroundImage = CType(resources.GetObject("HOME_BTN_OUT.BackgroundImage"), System.Drawing.Image)
-        Me.HOME_BTN_OUT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.HOME_BTN_OUT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HOME_BTN_OUT.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HOME_BTN_OUT.Location = New System.Drawing.Point(255, 164)
-        Me.HOME_BTN_OUT.Name = "HOME_BTN_OUT"
-        Me.HOME_BTN_OUT.Size = New System.Drawing.Size(247, 155)
-        Me.HOME_BTN_OUT.TabIndex = 5
-        Me.HOME_BTN_OUT.Text = "ITEM OUT"
-        Me.HOME_BTN_OUT.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.HOME_BTN_OUT.UseVisualStyleBackColor = True
-        '
-        'HOME_BTN_IN
-        '
-        Me.HOME_BTN_IN.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.HOME_BTN_IN.BackgroundImage = CType(resources.GetObject("HOME_BTN_IN.BackgroundImage"), System.Drawing.Image)
-        Me.HOME_BTN_IN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.HOME_BTN_IN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HOME_BTN_IN.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HOME_BTN_IN.Location = New System.Drawing.Point(3, 164)
-        Me.HOME_BTN_IN.Name = "HOME_BTN_IN"
-        Me.HOME_BTN_IN.Size = New System.Drawing.Size(246, 155)
-        Me.HOME_BTN_IN.TabIndex = 4
-        Me.HOME_BTN_IN.Text = "ITEM IN"
-        Me.HOME_BTN_IN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.HOME_BTN_IN.UseVisualStyleBackColor = True
-        '
-        'HOME_BTN_ADDITEM
-        '
-        Me.HOME_BTN_ADDITEM.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.HOME_BTN_ADDITEM.BackgroundImage = CType(resources.GetObject("HOME_BTN_ADDITEM.BackgroundImage"), System.Drawing.Image)
-        Me.HOME_BTN_ADDITEM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.HOME_BTN_ADDITEM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HOME_BTN_ADDITEM.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HOME_BTN_ADDITEM.Location = New System.Drawing.Point(3, 3)
-        Me.HOME_BTN_ADDITEM.Name = "HOME_BTN_ADDITEM"
-        Me.HOME_BTN_ADDITEM.Size = New System.Drawing.Size(246, 155)
-        Me.HOME_BTN_ADDITEM.TabIndex = 3
-        Me.HOME_BTN_ADDITEM.Text = "ADD NEW ITEM+"
-        Me.HOME_BTN_ADDITEM.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.HOME_BTN_ADDITEM.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.HOME_BTN_ADDITEM.UseVisualStyleBackColor = True
-        '
-        'HOME_BTN_LOGS
-        '
-        Me.HOME_BTN_LOGS.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.HOME_BTN_LOGS.BackgroundImage = CType(resources.GetObject("HOME_BTN_LOGS.BackgroundImage"), System.Drawing.Image)
-        Me.HOME_BTN_LOGS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.HOME_BTN_LOGS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HOME_BTN_LOGS.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HOME_BTN_LOGS.Location = New System.Drawing.Point(255, 3)
-        Me.HOME_BTN_LOGS.Name = "HOME_BTN_LOGS"
-        Me.HOME_BTN_LOGS.Size = New System.Drawing.Size(247, 155)
-        Me.HOME_BTN_LOGS.TabIndex = 2
-        Me.HOME_BTN_LOGS.Text = "HISTORY"
-        Me.HOME_BTN_LOGS.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.HOME_BTN_LOGS.UseVisualStyleBackColor = True
-        '
-        'Panel_Items
-        '
-        Me.Panel_Items.AutoScroll = True
-        Me.Panel_Items.BackColor = System.Drawing.Color.White
-        Me.Panel_Items.Controls.Add(Me.TableLayoutPanel1)
-        Me.Panel_Items.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel_Items.Location = New System.Drawing.Point(0, 0)
-        Me.Panel_Items.Name = "Panel_Items"
-        Me.Panel_Items.Size = New System.Drawing.Size(884, 661)
-        Me.Panel_Items.TabIndex = 2
-        Me.Panel_Items.Visible = False
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel1.ColumnCount = 1
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.SplitContainer1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Item_Table, 0, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 1)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(18, 40)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 4
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(851, 601)
-        Me.TableLayoutPanel1.TabIndex = 0
-        '
-        'SplitContainer1
-        '
-        Me.SplitContainer1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SplitContainer1.BackColor = System.Drawing.SystemColors.Control
-        Me.SplitContainer1.Location = New System.Drawing.Point(3, 3)
-        Me.SplitContainer1.Name = "SplitContainer1"
-        '
-        'SplitContainer1.Panel1
-        '
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Label3)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.ITM_SEARCH)
-        '
-        'SplitContainer1.Panel2
-        '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.Label9)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.FILTER_PANEL)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.ITM_FLTR_BTN)
-        Me.SplitContainer1.Size = New System.Drawing.Size(845, 41)
-        Me.SplitContainer1.SplitterDistance = 351
-        Me.SplitContainer1.TabIndex = 3
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.CausesValidation = False
-        Me.Label3.Font = New System.Drawing.Font("Leelawadee UI", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(4, 7)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(96, 30)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "In Stock"
-        '
-        'ITM_SEARCH
-        '
-        Me.ITM_SEARCH.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ITM_SEARCH.BackColor = System.Drawing.Color.White
-        Me.ITM_SEARCH.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
-        Me.ITM_SEARCH.Location = New System.Drawing.Point(100, 7)
-        Me.ITM_SEARCH.Name = "ITM_SEARCH"
-        Me.ITM_SEARCH.Size = New System.Drawing.Size(245, 27)
-        Me.ITM_SEARCH.TabIndex = 2
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.CausesValidation = False
-        Me.Label9.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(-2, 11)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(53, 21)
-        Me.Label9.TabIndex = 4
-        Me.Label9.Text = "Filter:"
-        '
-        'FILTER_PANEL
-        '
-        Me.FILTER_PANEL.ColumnCount = 2
-        Me.FILTER_PANEL.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150.0!))
-        Me.FILTER_PANEL.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.FILTER_PANEL.Controls.Add(Me.FILTER_VAL, 1, 0)
-        Me.FILTER_PANEL.Controls.Add(Me.FILTER_CAT, 0, 0)
-        Me.FILTER_PANEL.Location = New System.Drawing.Point(48, 3)
-        Me.FILTER_PANEL.Name = "FILTER_PANEL"
-        Me.FILTER_PANEL.RowCount = 1
-        Me.FILTER_PANEL.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.FILTER_PANEL.Size = New System.Drawing.Size(148, 34)
-        Me.FILTER_PANEL.TabIndex = 18
-        '
-        'FILTER_VAL
-        '
-        Me.FILTER_VAL.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.FILTER_VAL.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.FILTER_VAL.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.FILTER_VAL.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
-        Me.FILTER_VAL.FormattingEnabled = True
-        Me.FILTER_VAL.Items.AddRange(New Object() {"All"})
-        Me.FILTER_VAL.Location = New System.Drawing.Point(153, 3)
-        Me.FILTER_VAL.Name = "FILTER_VAL"
-        Me.FILTER_VAL.Size = New System.Drawing.Size(1, 28)
-        Me.FILTER_VAL.TabIndex = 4
-        Me.FILTER_VAL.Text = "All"
-        '
-        'FILTER_CAT
-        '
-        Me.FILTER_CAT.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.FILTER_CAT.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.FILTER_CAT.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
-        Me.FILTER_CAT.FormattingEnabled = True
-        Me.FILTER_CAT.Items.AddRange(New Object() {"All", "Brand", "Category", "Supplier", "Stock Level"})
-        Me.FILTER_CAT.Location = New System.Drawing.Point(3, 3)
-        Me.FILTER_CAT.Name = "FILTER_CAT"
-        Me.FILTER_CAT.Size = New System.Drawing.Size(144, 28)
-        Me.FILTER_CAT.TabIndex = 3
-        Me.FILTER_CAT.Text = "All"
-        '
-        'ITM_FLTR_BTN
-        '
-        Me.ITM_FLTR_BTN.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ITM_FLTR_BTN.BackColor = System.Drawing.Color.Firebrick
-        Me.ITM_FLTR_BTN.BackgroundImage = CType(resources.GetObject("ITM_FLTR_BTN.BackgroundImage"), System.Drawing.Image)
-        Me.ITM_FLTR_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ITM_FLTR_BTN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ITM_FLTR_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_FLTR_BTN.FlatAppearance.BorderSize = 0
-        Me.ITM_FLTR_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
-        Me.ITM_FLTR_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.ITM_FLTR_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_FLTR_BTN.Font = New System.Drawing.Font("Bahnschrift", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ITM_FLTR_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_FLTR_BTN.Location = New System.Drawing.Point(447, 5)
-        Me.ITM_FLTR_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 10)
-        Me.ITM_FLTR_BTN.Name = "ITM_FLTR_BTN"
-        Me.ITM_FLTR_BTN.Size = New System.Drawing.Size(37, 30)
-        Me.ITM_FLTR_BTN.TabIndex = 17
-        Me.ITM_FLTR_BTN.UseVisualStyleBackColor = False
-        '
-        'Item_Table
-        '
-        Me.Item_Table.AllowUserToAddRows = False
-        Me.Item_Table.AllowUserToDeleteRows = False
-        Me.Item_Table.AllowUserToResizeRows = False
-        Me.Item_Table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
-        Me.Item_Table.BackgroundColor = System.Drawing.Color.White
-        Me.Item_Table.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.Item_Table.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle21.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle21.Padding = New System.Windows.Forms.Padding(0, 10, 0, 10)
-        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Item_Table.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle21
-        Me.Item_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle22.Font = New System.Drawing.Font("Leelawadee UI Semilight", 8.75!)
-        DataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
-        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Item_Table.DefaultCellStyle = DataGridViewCellStyle22
-        Me.Item_Table.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Item_Table.EnableHeadersVisualStyles = False
-        Me.Item_Table.Location = New System.Drawing.Point(3, 107)
-        Me.Item_Table.MultiSelect = False
-        Me.Item_Table.Name = "Item_Table"
-        Me.Item_Table.ReadOnly = True
-        Me.Item_Table.RowHeadersVisible = False
-        Me.Item_Table.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.Item_Table.Size = New System.Drawing.Size(845, 442)
-        Me.Item_Table.TabIndex = 1
-        '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.ColumnCount = 4
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel2.Controls.Add(Me.VIEW_RETURN, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.ITM_BTN_DELETE, 1, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.ITM_BTN_EDIT, 2, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.ITM_BTN_NEW, 3, 0)
-        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 555)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 1
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(845, 43)
-        Me.TableLayoutPanel2.TabIndex = 4
-        '
-        'VIEW_RETURN
-        '
-        Me.VIEW_RETURN.BackColor = System.Drawing.Color.Black
-        Me.VIEW_RETURN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.VIEW_RETURN.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.VIEW_RETURN.FlatAppearance.BorderSize = 0
-        Me.VIEW_RETURN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.VIEW_RETURN.Font = New System.Drawing.Font("Leelawadee UI", 9.75!)
-        Me.VIEW_RETURN.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.VIEW_RETURN.Location = New System.Drawing.Point(3, 3)
-        Me.VIEW_RETURN.Name = "VIEW_RETURN"
-        Me.VIEW_RETURN.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.VIEW_RETURN.Size = New System.Drawing.Size(144, 37)
-        Me.VIEW_RETURN.TabIndex = 3
-        Me.VIEW_RETURN.Text = "FLAGGED ITEMS"
-        Me.VIEW_RETURN.UseVisualStyleBackColor = False
-        '
-        'ITM_BTN_DELETE
-        '
-        Me.ITM_BTN_DELETE.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ITM_BTN_DELETE.BackColor = System.Drawing.Color.Firebrick
-        Me.ITM_BTN_DELETE.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ITM_BTN_DELETE.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ITM_BTN_DELETE.FlatAppearance.BorderColor = System.Drawing.Color.Firebrick
-        Me.ITM_BTN_DELETE.FlatAppearance.BorderSize = 0
-        Me.ITM_BTN_DELETE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon
-        Me.ITM_BTN_DELETE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_BTN_DELETE.Font = New System.Drawing.Font("Leelawadee UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ITM_BTN_DELETE.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ITM_BTN_DELETE.Location = New System.Drawing.Point(527, 3)
-        Me.ITM_BTN_DELETE.Name = "ITM_BTN_DELETE"
-        Me.ITM_BTN_DELETE.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.ITM_BTN_DELETE.Size = New System.Drawing.Size(89, 37)
-        Me.ITM_BTN_DELETE.TabIndex = 0
-        Me.ITM_BTN_DELETE.Text = "DELETE"
-        Me.ITM_BTN_DELETE.UseVisualStyleBackColor = False
-        '
-        'ITM_BTN_EDIT
-        '
-        Me.ITM_BTN_EDIT.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ITM_BTN_EDIT.BackColor = System.Drawing.Color.Navy
-        Me.ITM_BTN_EDIT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ITM_BTN_EDIT.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ITM_BTN_EDIT.FlatAppearance.BorderColor = System.Drawing.Color.Navy
-        Me.ITM_BTN_EDIT.FlatAppearance.BorderSize = 0
-        Me.ITM_BTN_EDIT.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_BTN_EDIT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_BTN_EDIT.Font = New System.Drawing.Font("Leelawadee UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ITM_BTN_EDIT.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ITM_BTN_EDIT.Location = New System.Drawing.Point(622, 3)
-        Me.ITM_BTN_EDIT.Name = "ITM_BTN_EDIT"
-        Me.ITM_BTN_EDIT.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        Me.ITM_BTN_EDIT.Size = New System.Drawing.Size(84, 37)
-        Me.ITM_BTN_EDIT.TabIndex = 1
-        Me.ITM_BTN_EDIT.Text = "EDIT"
-        Me.ITM_BTN_EDIT.UseVisualStyleBackColor = False
-        '
-        'ITM_BTN_NEW
-        '
-        Me.ITM_BTN_NEW.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ITM_BTN_NEW.BackColor = System.Drawing.Color.LimeGreen
-        Me.ITM_BTN_NEW.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ITM_BTN_NEW.FlatAppearance.BorderColor = System.Drawing.Color.LimeGreen
-        Me.ITM_BTN_NEW.FlatAppearance.BorderSize = 0
-        Me.ITM_BTN_NEW.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green
-        Me.ITM_BTN_NEW.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_BTN_NEW.Font = New System.Drawing.Font("Leelawadee UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ITM_BTN_NEW.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ITM_BTN_NEW.Location = New System.Drawing.Point(712, 3)
-        Me.ITM_BTN_NEW.Name = "ITM_BTN_NEW"
-        Me.ITM_BTN_NEW.Size = New System.Drawing.Size(130, 37)
-        Me.ITM_BTN_NEW.TabIndex = 2
-        Me.ITM_BTN_NEW.Text = "NEW ITEM+"
-        Me.ITM_BTN_NEW.UseVisualStyleBackColor = False
-        '
-        'Panel1
-        '
-        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.TableLayoutPanel4)
-        Me.Panel1.Location = New System.Drawing.Point(3, 50)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(845, 51)
-        Me.Panel1.TabIndex = 5
-        '
-        'TableLayoutPanel4
-        '
-        Me.TableLayoutPanel4.ColumnCount = 4
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel4.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel4.Controls.Add(Me.ITM_BTN_STOCKIN, 0, 0)
-        Me.TableLayoutPanel4.Controls.Add(Me.ITM_BTN_STOCKOUT, 1, 0)
-        Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(0, 11)
-        Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
-        Me.TableLayoutPanel4.RowCount = 1
-        Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(845, 40)
-        Me.TableLayoutPanel4.TabIndex = 5
-        '
-        'ITM_BTN_STOCKIN
-        '
-        Me.ITM_BTN_STOCKIN.BackColor = System.Drawing.Color.Green
-        Me.ITM_BTN_STOCKIN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ITM_BTN_STOCKIN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_BTN_STOCKIN.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ITM_BTN_STOCKIN.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ITM_BTN_STOCKIN.Location = New System.Drawing.Point(3, 3)
-        Me.ITM_BTN_STOCKIN.Name = "ITM_BTN_STOCKIN"
-        Me.ITM_BTN_STOCKIN.Size = New System.Drawing.Size(151, 34)
-        Me.ITM_BTN_STOCKIN.TabIndex = 3
-        Me.ITM_BTN_STOCKIN.Text = "STOCK IN"
-        Me.ITM_BTN_STOCKIN.UseVisualStyleBackColor = False
-        '
-        'ITM_BTN_STOCKOUT
-        '
-        Me.ITM_BTN_STOCKOUT.BackColor = System.Drawing.Color.Navy
-        Me.ITM_BTN_STOCKOUT.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ITM_BTN_STOCKOUT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_BTN_STOCKOUT.Font = New System.Drawing.Font("Leelawadee UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ITM_BTN_STOCKOUT.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ITM_BTN_STOCKOUT.Location = New System.Drawing.Point(160, 3)
-        Me.ITM_BTN_STOCKOUT.Name = "ITM_BTN_STOCKOUT"
-        Me.ITM_BTN_STOCKOUT.Size = New System.Drawing.Size(151, 34)
-        Me.ITM_BTN_STOCKOUT.TabIndex = 0
-        Me.ITM_BTN_STOCKOUT.Text = "STOCK OUT"
-        Me.ITM_BTN_STOCKOUT.UseVisualStyleBackColor = False
-        '
-        'Panel_History
-        '
-        Me.Panel_History.Controls.Add(Me.TableLayoutPanel3)
-        Me.Panel_History.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel_History.Location = New System.Drawing.Point(0, 0)
-        Me.Panel_History.Name = "Panel_History"
-        Me.Panel_History.Size = New System.Drawing.Size(884, 661)
-        Me.Panel_History.TabIndex = 1
-        Me.Panel_History.Visible = False
-        '
-        'TableLayoutPanel3
-        '
-        Me.TableLayoutPanel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel3.ColumnCount = 1
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.Controls.Add(Me.SplitContainer3, 0, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.GroupBox1, 0, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.Log_View_Grid, 0, 2)
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(27, 30)
-        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        Me.TableLayoutPanel3.RowCount = 3
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(830, 614)
-        Me.TableLayoutPanel3.TabIndex = 0
-        '
-        'SplitContainer3
-        '
-        Me.SplitContainer3.BackColor = System.Drawing.SystemColors.Control
-        Me.SplitContainer3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer3.Location = New System.Drawing.Point(3, 142)
-        Me.SplitContainer3.Name = "SplitContainer3"
-        '
-        'SplitContainer3.Panel1
-        '
-        Me.SplitContainer3.Panel1.Controls.Add(Me.Label2)
-        Me.SplitContainer3.Panel1.Controls.Add(Me.Log_Search)
-        '
-        'SplitContainer3.Panel2
-        '
-        Me.SplitContainer3.Panel2.Controls.Add(Me.TableLayoutPanel5)
-        Me.SplitContainer3.Panel2.Controls.Add(Me.Label10)
-        Me.SplitContainer3.Panel2.Controls.Add(Me.Button1)
-        Me.SplitContainer3.Size = New System.Drawing.Size(824, 48)
-        Me.SplitContainer3.SplitterDistance = 293
-        Me.SplitContainer3.TabIndex = 8
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.CausesValidation = False
-        Me.Label2.Font = New System.Drawing.Font("Leelawadee UI", 16.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(4, 7)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(89, 30)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "History"
-        '
-        'Log_Search
-        '
-        Me.Log_Search.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Log_Search.BackColor = System.Drawing.Color.White
-        Me.Log_Search.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
-        Me.Log_Search.Location = New System.Drawing.Point(99, 10)
-        Me.Log_Search.Name = "Log_Search"
-        Me.Log_Search.Size = New System.Drawing.Size(189, 27)
-        Me.Log_Search.TabIndex = 2
-        '
-        'TableLayoutPanel5
-        '
-        Me.TableLayoutPanel5.ColumnCount = 2
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel5.Controls.Add(Me.Range_Box, 0, 0)
-        Me.TableLayoutPanel5.Controls.Add(Me.DateRangeHolder, 1, 0)
-        Me.TableLayoutPanel5.Location = New System.Drawing.Point(72, 3)
-        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
-        Me.TableLayoutPanel5.RowCount = 1
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(379, 38)
-        Me.TableLayoutPanel5.TabIndex = 20
-        '
-        'Range_Box
-        '
-        Me.Range_Box.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Range_Box.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Range_Box.Controls.Add(Me.Range_CBX)
-        Me.Range_Box.Location = New System.Drawing.Point(3, 3)
-        Me.Range_Box.Name = "Range_Box"
-        Me.Range_Box.Size = New System.Drawing.Size(168, 32)
-        Me.Range_Box.TabIndex = 19
-        '
-        'Range_CBX
-        '
-        Me.Range_CBX.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Range_CBX.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
-        Me.Range_CBX.FormattingEnabled = True
-        Me.Range_CBX.Items.AddRange(New Object() {"All:", "7 Days", "14 Days", "30 Days", "6 Months", "1 Year"})
-        Me.Range_CBX.Location = New System.Drawing.Point(2, 2)
-        Me.Range_CBX.Name = "Range_CBX"
-        Me.Range_CBX.Size = New System.Drawing.Size(163, 28)
-        Me.Range_CBX.TabIndex = 0
-        Me.Range_CBX.Text = "All:"
-        '
-        'DateRangeHolder
-        '
-        Me.DateRangeHolder.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DateRangeHolder.ColumnCount = 3
-        Me.DateRangeHolder.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.DateRangeHolder.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.DateRangeHolder.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28.0!))
-        Me.DateRangeHolder.Controls.Add(Me.UpperDate, 1, 0)
-        Me.DateRangeHolder.Controls.Add(Me.LowerDate, 0, 0)
-        Me.DateRangeHolder.Controls.Add(Me.RangeSetButton, 2, 0)
-        Me.DateRangeHolder.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateRangeHolder.Location = New System.Drawing.Point(177, 3)
-        Me.DateRangeHolder.Name = "DateRangeHolder"
-        Me.DateRangeHolder.RowCount = 1
-        Me.DateRangeHolder.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.DateRangeHolder.Size = New System.Drawing.Size(28, 32)
-        Me.DateRangeHolder.TabIndex = 18
-        '
-        'UpperDate
-        '
-        Me.UpperDate.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.UpperDate.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
-        Me.UpperDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.UpperDate.Location = New System.Drawing.Point(3, 3)
-        Me.UpperDate.Name = "UpperDate"
-        Me.UpperDate.Size = New System.Drawing.Size(1, 27)
-        Me.UpperDate.TabIndex = 1
-        '
-        'LowerDate
-        '
-        Me.LowerDate.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LowerDate.Font = New System.Drawing.Font("Leelawadee UI", 11.25!)
-        Me.LowerDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.LowerDate.Location = New System.Drawing.Point(3, 3)
-        Me.LowerDate.Name = "LowerDate"
-        Me.LowerDate.Size = New System.Drawing.Size(1, 27)
-        Me.LowerDate.TabIndex = 0
-        '
-        'RangeSetButton
-        '
-        Me.RangeSetButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.RangeSetButton.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RangeSetButton.FlatAppearance.BorderSize = 0
-        Me.RangeSetButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.RangeSetButton.Font = New System.Drawing.Font("Leelawadee UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RangeSetButton.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.RangeSetButton.Location = New System.Drawing.Point(3, 3)
-        Me.RangeSetButton.Name = "RangeSetButton"
-        Me.RangeSetButton.Size = New System.Drawing.Size(22, 26)
-        Me.RangeSetButton.TabIndex = 2
-        Me.RangeSetButton.Text = ">"
-        Me.RangeSetButton.UseVisualStyleBackColor = False
-        '
-        'Label10
-        '
-        Me.Label10.CausesValidation = False
-        Me.Label10.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(3, 0)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(68, 45)
-        Me.Label10.TabIndex = 4
-        Me.Label10.Text = "Date Range:"
-        '
-        'Button1
-        '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.BackColor = System.Drawing.Color.Firebrick
-        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Bahnschrift", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(484, 5)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(0, 10, 0, 10)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(37, 34)
-        Me.Button1.TabIndex = 17
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.TableLayoutPanel10)
-        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox1.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(824, 133)
-        Me.GroupBox1.TabIndex = 6
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "AT A GLANCE"
-        '
-        'TableLayoutPanel10
-        '
-        Me.TableLayoutPanel10.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel10.ColumnCount = 4
-        Me.TableLayoutPanel10.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel10.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel10.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel10.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.TableLayoutPanel10.Controls.Add(Me.TableLayoutPanel11, 3, 0)
-        Me.TableLayoutPanel10.Controls.Add(Me.TableLayoutPanel12, 2, 0)
-        Me.TableLayoutPanel10.Controls.Add(Me.TableLayoutPanel13, 1, 0)
-        Me.TableLayoutPanel10.Controls.Add(Me.TableLayoutPanel14, 0, 0)
-        Me.TableLayoutPanel10.Location = New System.Drawing.Point(9, 27)
-        Me.TableLayoutPanel10.Name = "TableLayoutPanel10"
-        Me.TableLayoutPanel10.RowCount = 1
-        Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel10.Size = New System.Drawing.Size(809, 101)
-        Me.TableLayoutPanel10.TabIndex = 3
-        '
-        'TableLayoutPanel11
-        '
-        Me.TableLayoutPanel11.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel11.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TableLayoutPanel11.ColumnCount = 1
-        Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel11.Controls.Add(Me.Label13, 0, 0)
-        Me.TableLayoutPanel11.Controls.Add(Me.LogDash_VO, 0, 1)
-        Me.TableLayoutPanel11.Location = New System.Drawing.Point(609, 3)
-        Me.TableLayoutPanel11.Name = "TableLayoutPanel11"
-        Me.TableLayoutPanel11.RowCount = 2
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel11.Size = New System.Drawing.Size(197, 95)
-        Me.TableLayoutPanel11.TabIndex = 8
-        '
-        'Label13
-        '
-        Me.Label13.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label13.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label13.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label13.Location = New System.Drawing.Point(3, 0)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(191, 28)
-        Me.Label13.TabIndex = 0
-        Me.Label13.Text = "VALUE OUT "
-        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'LogDash_VO
-        '
-        Me.LogDash_VO.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.LogDash_VO.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.LogDash_VO.FlatAppearance.BorderSize = 0
-        Me.LogDash_VO.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.LogDash_VO.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.LogDash_VO.Font = New System.Drawing.Font("Leelawadee UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LogDash_VO.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.LogDash_VO.Location = New System.Drawing.Point(3, 31)
-        Me.LogDash_VO.Name = "LogDash_VO"
-        Me.LogDash_VO.Size = New System.Drawing.Size(191, 78)
-        Me.LogDash_VO.TabIndex = 1
-        Me.LogDash_VO.Text = "0"
-        Me.LogDash_VO.TextAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.LogDash_VO.UseVisualStyleBackColor = True
-        '
-        'TableLayoutPanel12
-        '
-        Me.TableLayoutPanel12.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel12.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TableLayoutPanel12.ColumnCount = 1
-        Me.TableLayoutPanel12.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel12.Controls.Add(Me.Label14, 0, 0)
-        Me.TableLayoutPanel12.Controls.Add(Me.LogDash_SO, 0, 1)
-        Me.TableLayoutPanel12.Location = New System.Drawing.Point(407, 3)
-        Me.TableLayoutPanel12.Name = "TableLayoutPanel12"
-        Me.TableLayoutPanel12.RowCount = 2
-        Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel12.Size = New System.Drawing.Size(196, 95)
-        Me.TableLayoutPanel12.TabIndex = 7
-        '
-        'Label14
-        '
-        Me.Label14.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label14.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label14.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label14.Location = New System.Drawing.Point(3, 0)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(190, 28)
-        Me.Label14.TabIndex = 0
-        Me.Label14.Text = "STOCKS OUT"
-        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'LogDash_SO
-        '
-        Me.LogDash_SO.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.LogDash_SO.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LogDash_SO.FlatAppearance.BorderSize = 0
-        Me.LogDash_SO.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.LogDash_SO.Font = New System.Drawing.Font("Leelawadee UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LogDash_SO.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.LogDash_SO.Location = New System.Drawing.Point(3, 31)
-        Me.LogDash_SO.Name = "LogDash_SO"
-        Me.LogDash_SO.Size = New System.Drawing.Size(190, 78)
-        Me.LogDash_SO.TabIndex = 1
-        Me.LogDash_SO.Text = "0"
-        Me.LogDash_SO.TextAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.LogDash_SO.UseVisualStyleBackColor = True
-        '
-        'TableLayoutPanel13
-        '
-        Me.TableLayoutPanel13.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel13.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TableLayoutPanel13.ColumnCount = 1
-        Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel13.Controls.Add(Me.Label15, 0, 0)
-        Me.TableLayoutPanel13.Controls.Add(Me.LogDash_SI, 0, 1)
-        Me.TableLayoutPanel13.Location = New System.Drawing.Point(205, 3)
-        Me.TableLayoutPanel13.Name = "TableLayoutPanel13"
-        Me.TableLayoutPanel13.RowCount = 2
-        Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel13.Size = New System.Drawing.Size(196, 95)
-        Me.TableLayoutPanel13.TabIndex = 6
-        '
-        'Label15
-        '
-        Me.Label15.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label15.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label15.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label15.Location = New System.Drawing.Point(3, 0)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(190, 28)
-        Me.Label15.TabIndex = 0
-        Me.Label15.Text = "STOCKS IN"
-        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'LogDash_SI
-        '
-        Me.LogDash_SI.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.LogDash_SI.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LogDash_SI.FlatAppearance.BorderSize = 0
-        Me.LogDash_SI.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.LogDash_SI.Font = New System.Drawing.Font("Leelawadee UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LogDash_SI.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.LogDash_SI.Location = New System.Drawing.Point(3, 31)
-        Me.LogDash_SI.Name = "LogDash_SI"
-        Me.LogDash_SI.Size = New System.Drawing.Size(190, 78)
-        Me.LogDash_SI.TabIndex = 1
-        Me.LogDash_SI.Text = "0"
-        Me.LogDash_SI.TextAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.LogDash_SI.UseVisualStyleBackColor = True
-        '
-        'TableLayoutPanel14
-        '
-        Me.TableLayoutPanel14.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TableLayoutPanel14.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.TableLayoutPanel14.ColumnCount = 1
-        Me.TableLayoutPanel14.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel14.Controls.Add(Me.Label16, 0, 0)
-        Me.TableLayoutPanel14.Controls.Add(Me.LogDash_NI, 0, 1)
-        Me.TableLayoutPanel14.Location = New System.Drawing.Point(3, 3)
-        Me.TableLayoutPanel14.Name = "TableLayoutPanel14"
-        Me.TableLayoutPanel14.RowCount = 2
-        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel14.Size = New System.Drawing.Size(196, 95)
-        Me.TableLayoutPanel14.TabIndex = 5
-        '
-        'Label16
-        '
-        Me.Label16.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label16.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Label16.Font = New System.Drawing.Font("Leelawadee UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label16.Location = New System.Drawing.Point(3, 0)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(190, 28)
-        Me.Label16.TabIndex = 0
-        Me.Label16.Text = "NEW ITEMS"
-        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'LogDash_NI
-        '
-        Me.LogDash_NI.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.LogDash_NI.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.LogDash_NI.FlatAppearance.BorderSize = 0
-        Me.LogDash_NI.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.LogDash_NI.Font = New System.Drawing.Font("Leelawadee UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LogDash_NI.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.LogDash_NI.Location = New System.Drawing.Point(3, 31)
-        Me.LogDash_NI.Name = "LogDash_NI"
-        Me.LogDash_NI.Size = New System.Drawing.Size(190, 78)
-        Me.LogDash_NI.TabIndex = 1
-        Me.LogDash_NI.Text = "0"
-        Me.LogDash_NI.TextAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.LogDash_NI.UseVisualStyleBackColor = True
-        '
-        'Log_View_Grid
-        '
-        Me.Log_View_Grid.AllowUserToAddRows = False
-        Me.Log_View_Grid.AllowUserToDeleteRows = False
-        Me.Log_View_Grid.AllowUserToResizeColumns = False
-        Me.Log_View_Grid.AllowUserToResizeRows = False
-        Me.Log_View_Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
-        Me.Log_View_Grid.BackgroundColor = System.Drawing.Color.White
-        Me.Log_View_Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        Me.Log_View_Grid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle23.Font = New System.Drawing.Font("Leelawadee UI", 10.0!)
-        DataGridViewCellStyle23.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Log_View_Grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle23
-        Me.Log_View_Grid.ColumnHeadersHeight = 30
-        Me.Log_View_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle24.Font = New System.Drawing.Font("Leelawadee UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle24.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Log_View_Grid.DefaultCellStyle = DataGridViewCellStyle24
-        Me.Log_View_Grid.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Log_View_Grid.EnableHeadersVisualStyles = False
-        Me.Log_View_Grid.Location = New System.Drawing.Point(3, 196)
-        Me.Log_View_Grid.Name = "Log_View_Grid"
-        Me.Log_View_Grid.ReadOnly = True
-        Me.Log_View_Grid.RowHeadersVisible = False
-        Me.Log_View_Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.Log_View_Grid.Size = New System.Drawing.Size(824, 415)
-        Me.Log_View_Grid.TabIndex = 7
-        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2422,45 +2422,6 @@ Partial Class Dashboard
         Me.Text = "Form1"
         Me.Panel_Sidebar.ResumeLayout(False)
         Me.Panel_Main.ResumeLayout(False)
-        Me.Panel_Settings.ResumeLayout(False)
-        Me.Panel_Settings.PerformLayout()
-        Me.Settings_Panel.ResumeLayout(False)
-        Me.BVS_Panel.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
-        Me.TableLayoutPanel7.ResumeLayout(False)
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
-        CType(Me.BVS_Gridview, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel8.ResumeLayout(False)
-        Me.Panel8.PerformLayout()
-        Me.BVS_TAB.ResumeLayout(False)
-        Me.TabPage5.ResumeLayout(False)
-        Me.TabPage5.PerformLayout()
-        Me.TabPage6.ResumeLayout(False)
-        Me.TabPage6.PerformLayout()
-        Me.TabPage7.ResumeLayout(False)
-        Me.TabPage7.PerformLayout()
-        Me.TabPage8.ResumeLayout(False)
-        Me.TabPage8.PerformLayout()
-        Me.Account_Panel.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
-        Me.TableLayoutPanel8.ResumeLayout(False)
-        Me.TableLayoutPanel8.PerformLayout()
-        Me.SplitContainer2.Panel1.ResumeLayout(False)
-        Me.SplitContainer2.Panel1.PerformLayout()
-        Me.SplitContainer2.Panel2.ResumeLayout(False)
-        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer2.ResumeLayout(False)
-        Me.SplitContainer4.Panel1.ResumeLayout(False)
-        Me.SplitContainer4.Panel2.ResumeLayout(False)
-        CType(Me.SplitContainer4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer4.ResumeLayout(False)
-        CType(Me.Acc_List_Grid, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Export_Panel.ResumeLayout(False)
-        Me.Export_Panel.PerformLayout()
         Me.Panel_Home.ResumeLayout(False)
         Me.Panel_Home.PerformLayout()
         Me.GroupBox_INFO.ResumeLayout(False)
@@ -2504,6 +2465,45 @@ Partial Class Dashboard
         Me.TableLayoutPanel13.ResumeLayout(False)
         Me.TableLayoutPanel14.ResumeLayout(False)
         CType(Me.Log_View_Grid, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel_Settings.ResumeLayout(False)
+        Me.Panel_Settings.PerformLayout()
+        Me.Settings_Panel.ResumeLayout(False)
+        Me.BVS_Panel.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.TableLayoutPanel7.ResumeLayout(False)
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel5.PerformLayout()
+        CType(Me.BVS_Gridview, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel8.ResumeLayout(False)
+        Me.Panel8.PerformLayout()
+        Me.BVS_TAB.ResumeLayout(False)
+        Me.TabPage5.ResumeLayout(False)
+        Me.TabPage5.PerformLayout()
+        Me.TabPage6.ResumeLayout(False)
+        Me.TabPage6.PerformLayout()
+        Me.TabPage7.ResumeLayout(False)
+        Me.TabPage7.PerformLayout()
+        Me.TabPage8.ResumeLayout(False)
+        Me.TabPage8.PerformLayout()
+        Me.Account_Panel.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.TableLayoutPanel8.ResumeLayout(False)
+        Me.TableLayoutPanel8.PerformLayout()
+        Me.SplitContainer2.Panel1.ResumeLayout(False)
+        Me.SplitContainer2.Panel1.PerformLayout()
+        Me.SplitContainer2.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer2.ResumeLayout(False)
+        Me.SplitContainer4.Panel1.ResumeLayout(False)
+        Me.SplitContainer4.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer4.ResumeLayout(False)
+        CType(Me.Acc_List_Grid, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Export_Panel.ResumeLayout(False)
+        Me.Export_Panel.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
