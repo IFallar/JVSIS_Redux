@@ -47,6 +47,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>JVS_Icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=6.9.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -79,6 +82,12 @@
     </Compile>
     <Compile Include="Dashboard.Designer.vb">
       <DependentUpon>Dashboard.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Flagged_Items.Designer.vb">
+      <DependentUpon>Form_Flagged_Items.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Flagged_Items.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Item.Designer.vb">
@@ -126,6 +135,9 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Flagged_Items.resx">
+      <DependentUpon>Form_Flagged_Items.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Item.resx">
       <DependentUpon>Form_Item.vb</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +180,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\usericon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JVS_Icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -284,8 +284,6 @@ Public Class Dashboard
 
             ElseIf delete = MsgBoxResult.No Then
 
-
-
             End If
 
         Catch ex As Exception
@@ -406,6 +404,18 @@ Public Class Dashboard
             Form_Stock_DB.FORM_LABEL.Text = "STOCK OUT"
             Form_Stock_DB.Stock_Mode.Text = "Item Screen"
             Form_Stock_DB.ShowDialog()
+
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
+    Private Sub VIEW_RETURN_Click(sender As Object, e As EventArgs) Handles VIEW_RETURN.Click
+
+        Try
+            Dim Modal As New Form_Flagged_Items
+            Form_Flagged_Items.ShowDialog()
 
         Catch ex As Exception
 
@@ -1795,6 +1805,8 @@ Public Class Dashboard
         End If
 
     End Sub
+
+
     '===================================================================================================================================
 
 

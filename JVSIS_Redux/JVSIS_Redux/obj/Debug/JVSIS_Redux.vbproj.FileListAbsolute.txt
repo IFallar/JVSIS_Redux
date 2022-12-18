@@ -17,3 +17,4 @@ C:\Users\Shane Ivan Fallar\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\
 C:\Users\Shane Ivan Fallar\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.Form_Stock_DB.resources
 C:\Users\Shane Ivan Fallar\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.Form_Reports.resources
 C:\Users\Shane Ivan Fallar\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.Form_Log_In.resources
+C:\Users\Shane Ivan Fallar\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.Form_Flagged_Items.resources

@@ -22,15 +22,15 @@ Partial Class Dashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
-        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel_Sidebar = New System.Windows.Forms.Panel()
         Me.BTN_Side_Settings = New System.Windows.Forms.Button()
         Me.BTN_Side_Logs = New System.Windows.Forms.Button()
@@ -59,10 +59,6 @@ Partial Class Dashboard
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GBX_Dashboard_Controls = New System.Windows.Forms.GroupBox()
         Me.TLP_Home_BTN = New System.Windows.Forms.TableLayoutPanel()
-        Me.HOME_BTN_OUT = New System.Windows.Forms.Button()
-        Me.HOME_BTN_IN = New System.Windows.Forms.Button()
-        Me.HOME_BTN_ADDITEM = New System.Windows.Forms.Button()
-        Me.HOME_BTN_LOGS = New System.Windows.Forms.Button()
         Me.Panel_Items = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
@@ -72,7 +68,6 @@ Partial Class Dashboard
         Me.FILTER_PANEL = New System.Windows.Forms.TableLayoutPanel()
         Me.FILTER_VAL = New System.Windows.Forms.ComboBox()
         Me.FILTER_CAT = New System.Windows.Forms.ComboBox()
-        Me.ITM_FLTR_BTN = New System.Windows.Forms.Button()
         Me.Item_Table = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.VIEW_RETURN = New System.Windows.Forms.Button()
@@ -96,7 +91,6 @@ Partial Class Dashboard
         Me.LowerDate = New System.Windows.Forms.DateTimePicker()
         Me.RangeSetButton = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TableLayoutPanel10 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel11 = New System.Windows.Forms.TableLayoutPanel()
@@ -181,10 +175,16 @@ Partial Class Dashboard
         Me.Export_Panel = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label24 = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.acc_type_lbl = New System.Windows.Forms.Label()
         Me.acc_name_lbl = New System.Windows.Forms.Label()
         Me.log_out = New System.Windows.Forms.Button()
+        Me.ITM_FLTR_BTN = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.HOME_BTN_OUT = New System.Windows.Forms.Button()
+        Me.HOME_BTN_IN = New System.Windows.Forms.Button()
+        Me.HOME_BTN_ADDITEM = New System.Windows.Forms.Button()
+        Me.HOME_BTN_LOGS = New System.Windows.Forms.Button()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel_Sidebar.SuspendLayout()
         Me.Panel_Main.SuspendLayout()
         Me.Panel_Home.SuspendLayout()
@@ -344,10 +344,10 @@ Partial Class Dashboard
         '
         'Panel_Main
         '
-        Me.Panel_Main.Controls.Add(Me.Panel_Settings)
         Me.Panel_Main.Controls.Add(Me.Panel_Items)
         Me.Panel_Main.Controls.Add(Me.Panel_History)
         Me.Panel_Main.Controls.Add(Me.Panel_Home)
+        Me.Panel_Main.Controls.Add(Me.Panel_Settings)
         Me.Panel_Main.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel_Main.Location = New System.Drawing.Point(220, 0)
         Me.Panel_Main.Name = "Panel_Main"
@@ -633,15 +633,15 @@ Partial Class Dashboard
         Me.Day_GridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.Day_GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Day_GridView.ColumnHeadersVisible = False
-        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle25.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle25.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle25.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Day_GridView.DefaultCellStyle = DataGridViewCellStyle25
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle9.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Day_GridView.DefaultCellStyle = DataGridViewCellStyle9
         Me.Day_GridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Day_GridView.Location = New System.Drawing.Point(0, 41)
         Me.Day_GridView.Name = "Day_GridView"
@@ -712,71 +712,6 @@ Partial Class Dashboard
         Me.TLP_Home_BTN.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TLP_Home_BTN.Size = New System.Drawing.Size(505, 322)
         Me.TLP_Home_BTN.TabIndex = 0
-        '
-        'HOME_BTN_OUT
-        '
-        Me.HOME_BTN_OUT.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.HOME_BTN_OUT.BackgroundImage = CType(resources.GetObject("HOME_BTN_OUT.BackgroundImage"), System.Drawing.Image)
-        Me.HOME_BTN_OUT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.HOME_BTN_OUT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HOME_BTN_OUT.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HOME_BTN_OUT.Location = New System.Drawing.Point(255, 164)
-        Me.HOME_BTN_OUT.Name = "HOME_BTN_OUT"
-        Me.HOME_BTN_OUT.Size = New System.Drawing.Size(247, 155)
-        Me.HOME_BTN_OUT.TabIndex = 5
-        Me.HOME_BTN_OUT.Text = "ITEM OUT"
-        Me.HOME_BTN_OUT.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.HOME_BTN_OUT.UseVisualStyleBackColor = True
-        '
-        'HOME_BTN_IN
-        '
-        Me.HOME_BTN_IN.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.HOME_BTN_IN.BackgroundImage = CType(resources.GetObject("HOME_BTN_IN.BackgroundImage"), System.Drawing.Image)
-        Me.HOME_BTN_IN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.HOME_BTN_IN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HOME_BTN_IN.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HOME_BTN_IN.Location = New System.Drawing.Point(3, 164)
-        Me.HOME_BTN_IN.Name = "HOME_BTN_IN"
-        Me.HOME_BTN_IN.Size = New System.Drawing.Size(246, 155)
-        Me.HOME_BTN_IN.TabIndex = 4
-        Me.HOME_BTN_IN.Text = "ITEM IN"
-        Me.HOME_BTN_IN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.HOME_BTN_IN.UseVisualStyleBackColor = True
-        '
-        'HOME_BTN_ADDITEM
-        '
-        Me.HOME_BTN_ADDITEM.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.HOME_BTN_ADDITEM.BackgroundImage = CType(resources.GetObject("HOME_BTN_ADDITEM.BackgroundImage"), System.Drawing.Image)
-        Me.HOME_BTN_ADDITEM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.HOME_BTN_ADDITEM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HOME_BTN_ADDITEM.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HOME_BTN_ADDITEM.Location = New System.Drawing.Point(3, 3)
-        Me.HOME_BTN_ADDITEM.Name = "HOME_BTN_ADDITEM"
-        Me.HOME_BTN_ADDITEM.Size = New System.Drawing.Size(246, 155)
-        Me.HOME_BTN_ADDITEM.TabIndex = 3
-        Me.HOME_BTN_ADDITEM.Text = "ADD NEW ITEM+"
-        Me.HOME_BTN_ADDITEM.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.HOME_BTN_ADDITEM.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        Me.HOME_BTN_ADDITEM.UseVisualStyleBackColor = True
-        '
-        'HOME_BTN_LOGS
-        '
-        Me.HOME_BTN_LOGS.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.HOME_BTN_LOGS.BackgroundImage = CType(resources.GetObject("HOME_BTN_LOGS.BackgroundImage"), System.Drawing.Image)
-        Me.HOME_BTN_LOGS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.HOME_BTN_LOGS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HOME_BTN_LOGS.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HOME_BTN_LOGS.Location = New System.Drawing.Point(255, 3)
-        Me.HOME_BTN_LOGS.Name = "HOME_BTN_LOGS"
-        Me.HOME_BTN_LOGS.Size = New System.Drawing.Size(247, 155)
-        Me.HOME_BTN_LOGS.TabIndex = 2
-        Me.HOME_BTN_LOGS.Text = "REPORTS"
-        Me.HOME_BTN_LOGS.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.HOME_BTN_LOGS.UseVisualStyleBackColor = True
         '
         'Panel_Items
         '
@@ -908,27 +843,6 @@ Partial Class Dashboard
         Me.FILTER_CAT.TabIndex = 3
         Me.FILTER_CAT.Text = "All"
         '
-        'ITM_FLTR_BTN
-        '
-        Me.ITM_FLTR_BTN.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ITM_FLTR_BTN.BackColor = System.Drawing.Color.Firebrick
-        Me.ITM_FLTR_BTN.BackgroundImage = CType(resources.GetObject("ITM_FLTR_BTN.BackgroundImage"), System.Drawing.Image)
-        Me.ITM_FLTR_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.ITM_FLTR_BTN.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ITM_FLTR_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.ITM_FLTR_BTN.FlatAppearance.BorderSize = 0
-        Me.ITM_FLTR_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
-        Me.ITM_FLTR_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.ITM_FLTR_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ITM_FLTR_BTN.Font = New System.Drawing.Font("Bahnschrift", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ITM_FLTR_BTN.ForeColor = System.Drawing.Color.White
-        Me.ITM_FLTR_BTN.Location = New System.Drawing.Point(447, 5)
-        Me.ITM_FLTR_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 10)
-        Me.ITM_FLTR_BTN.Name = "ITM_FLTR_BTN"
-        Me.ITM_FLTR_BTN.Size = New System.Drawing.Size(37, 30)
-        Me.ITM_FLTR_BTN.TabIndex = 17
-        Me.ITM_FLTR_BTN.UseVisualStyleBackColor = False
-        '
         'Item_Table
         '
         Me.Item_Table.AllowUserToAddRows = False
@@ -938,24 +852,24 @@ Partial Class Dashboard
         Me.Item_Table.BackgroundColor = System.Drawing.Color.White
         Me.Item_Table.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.Item_Table.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle26.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle26.Padding = New System.Windows.Forms.Padding(0, 10, 0, 10)
-        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Item_Table.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle26
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle10.Padding = New System.Windows.Forms.Padding(0, 10, 0, 10)
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Item_Table.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.Item_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle27.Font = New System.Drawing.Font("Leelawadee UI Semilight", 8.75!)
-        DataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
-        DataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Item_Table.DefaultCellStyle = DataGridViewCellStyle27
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle11.Font = New System.Drawing.Font("Leelawadee UI Semilight", 8.75!)
+        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
+        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Item_Table.DefaultCellStyle = DataGridViewCellStyle11
         Me.Item_Table.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Item_Table.EnableHeadersVisualStyles = False
         Me.Item_Table.Location = New System.Drawing.Point(3, 107)
@@ -1293,27 +1207,6 @@ Partial Class Dashboard
         Me.Label10.TabIndex = 4
         Me.Label10.Text = "Date Range:"
         '
-        'Button1
-        '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.BackColor = System.Drawing.Color.Firebrick
-        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Bahnschrift", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(484, 5)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(0, 10, 0, 10)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(37, 34)
-        Me.Button1.TabIndex = 17
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.TableLayoutPanel10)
@@ -1549,25 +1442,25 @@ Partial Class Dashboard
         Me.Log_View_Grid.BackgroundColor = System.Drawing.Color.White
         Me.Log_View_Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.Log_View_Grid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle28.Font = New System.Drawing.Font("Leelawadee UI", 10.0!)
-        DataGridViewCellStyle28.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Log_View_Grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle28
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Leelawadee UI", 10.0!)
+        DataGridViewCellStyle12.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Log_View_Grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.Log_View_Grid.ColumnHeadersHeight = 30
         Me.Log_View_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle29.Font = New System.Drawing.Font("Leelawadee UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle29.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        DataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Log_View_Grid.DefaultCellStyle = DataGridViewCellStyle29
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Leelawadee UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle13.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Log_View_Grid.DefaultCellStyle = DataGridViewCellStyle13
         Me.Log_View_Grid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Log_View_Grid.EnableHeadersVisualStyles = False
         Me.Log_View_Grid.Location = New System.Drawing.Point(3, 196)
@@ -1724,24 +1617,24 @@ Partial Class Dashboard
         Me.BVS_Gridview.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.BVS_Gridview.BackgroundColor = System.Drawing.Color.White
         Me.BVS_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle30.Font = New System.Drawing.Font("Leelawadee UI", 10.0!)
-        DataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BVS_Gridview.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle30
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Leelawadee UI", 10.0!)
+        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BVS_Gridview.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
         Me.BVS_Gridview.ColumnHeadersHeight = 40
-        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle31.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle31.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        DataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
-        DataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.BVS_Gridview.DefaultCellStyle = DataGridViewCellStyle31
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle15.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.BVS_Gridview.DefaultCellStyle = DataGridViewCellStyle15
         Me.BVS_Gridview.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BVS_Gridview.EnableHeadersVisualStyles = False
         Me.BVS_Gridview.Location = New System.Drawing.Point(0, 33)
@@ -2354,15 +2247,15 @@ Partial Class Dashboard
         Me.Acc_List_Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.Acc_List_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Acc_List_Grid.ColumnHeadersVisible = False
-        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle32.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle32.Padding = New System.Windows.Forms.Padding(0, 10, 0, 10)
-        DataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.ControlDark
-        DataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.Desktop
-        DataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Acc_List_Grid.DefaultCellStyle = DataGridViewCellStyle32
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle16.Padding = New System.Windows.Forms.Padding(0, 10, 0, 10)
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.ControlDark
+        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.Desktop
+        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Acc_List_Grid.DefaultCellStyle = DataGridViewCellStyle16
         Me.Acc_List_Grid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Acc_List_Grid.Location = New System.Drawing.Point(0, 0)
         Me.Acc_List_Grid.MultiSelect = False
@@ -2418,17 +2311,6 @@ Partial Class Dashboard
         Me.Label24.Text = "Export Files"
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.PictureBox3.Image = Global.JVSIS_Redux.My.Resources.Resources.account_ico
-        Me.PictureBox3.Location = New System.Drawing.Point(42, 60)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(130, 130)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 17
-        Me.PictureBox3.TabStop = False
-        '
         'acc_type_lbl
         '
         Me.acc_type_lbl.BackColor = System.Drawing.Color.Transparent
@@ -2457,18 +2339,137 @@ Partial Class Dashboard
         '
         'log_out
         '
+        Me.log_out.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.log_out.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.log_out.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.log_out.FlatAppearance.BorderSize = 0
         Me.log_out.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.log_out.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.log_out.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.log_out.Location = New System.Drawing.Point(45, 633)
+        Me.log_out.Location = New System.Drawing.Point(45, 1294)
         Me.log_out.Name = "log_out"
         Me.log_out.Size = New System.Drawing.Size(172, 25)
         Me.log_out.TabIndex = 18
         Me.log_out.Text = "LOG-OUT"
         Me.log_out.UseVisualStyleBackColor = False
+        '
+        'ITM_FLTR_BTN
+        '
+        Me.ITM_FLTR_BTN.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ITM_FLTR_BTN.BackColor = System.Drawing.Color.Firebrick
+        Me.ITM_FLTR_BTN.BackgroundImage = CType(resources.GetObject("ITM_FLTR_BTN.BackgroundImage"), System.Drawing.Image)
+        Me.ITM_FLTR_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ITM_FLTR_BTN.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ITM_FLTR_BTN.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ITM_FLTR_BTN.FlatAppearance.BorderSize = 0
+        Me.ITM_FLTR_BTN.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.ITM_FLTR_BTN.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.ITM_FLTR_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ITM_FLTR_BTN.Font = New System.Drawing.Font("Bahnschrift", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ITM_FLTR_BTN.ForeColor = System.Drawing.Color.White
+        Me.ITM_FLTR_BTN.Location = New System.Drawing.Point(447, 5)
+        Me.ITM_FLTR_BTN.Margin = New System.Windows.Forms.Padding(0, 10, 0, 10)
+        Me.ITM_FLTR_BTN.Name = "ITM_FLTR_BTN"
+        Me.ITM_FLTR_BTN.Size = New System.Drawing.Size(37, 30)
+        Me.ITM_FLTR_BTN.TabIndex = 17
+        Me.ITM_FLTR_BTN.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.BackColor = System.Drawing.Color.Firebrick
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Bahnschrift", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(484, 5)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(0, 10, 0, 10)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(37, 34)
+        Me.Button1.TabIndex = 17
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'HOME_BTN_OUT
+        '
+        Me.HOME_BTN_OUT.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.HOME_BTN_OUT.BackgroundImage = CType(resources.GetObject("HOME_BTN_OUT.BackgroundImage"), System.Drawing.Image)
+        Me.HOME_BTN_OUT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.HOME_BTN_OUT.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HOME_BTN_OUT.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HOME_BTN_OUT.Location = New System.Drawing.Point(255, 164)
+        Me.HOME_BTN_OUT.Name = "HOME_BTN_OUT"
+        Me.HOME_BTN_OUT.Size = New System.Drawing.Size(247, 155)
+        Me.HOME_BTN_OUT.TabIndex = 5
+        Me.HOME_BTN_OUT.Text = "ITEM OUT"
+        Me.HOME_BTN_OUT.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.HOME_BTN_OUT.UseVisualStyleBackColor = True
+        '
+        'HOME_BTN_IN
+        '
+        Me.HOME_BTN_IN.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.HOME_BTN_IN.BackgroundImage = CType(resources.GetObject("HOME_BTN_IN.BackgroundImage"), System.Drawing.Image)
+        Me.HOME_BTN_IN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.HOME_BTN_IN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HOME_BTN_IN.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HOME_BTN_IN.Location = New System.Drawing.Point(3, 164)
+        Me.HOME_BTN_IN.Name = "HOME_BTN_IN"
+        Me.HOME_BTN_IN.Size = New System.Drawing.Size(246, 155)
+        Me.HOME_BTN_IN.TabIndex = 4
+        Me.HOME_BTN_IN.Text = "ITEM IN"
+        Me.HOME_BTN_IN.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.HOME_BTN_IN.UseVisualStyleBackColor = True
+        '
+        'HOME_BTN_ADDITEM
+        '
+        Me.HOME_BTN_ADDITEM.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.HOME_BTN_ADDITEM.BackgroundImage = CType(resources.GetObject("HOME_BTN_ADDITEM.BackgroundImage"), System.Drawing.Image)
+        Me.HOME_BTN_ADDITEM.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.HOME_BTN_ADDITEM.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HOME_BTN_ADDITEM.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HOME_BTN_ADDITEM.Location = New System.Drawing.Point(3, 3)
+        Me.HOME_BTN_ADDITEM.Name = "HOME_BTN_ADDITEM"
+        Me.HOME_BTN_ADDITEM.Size = New System.Drawing.Size(246, 155)
+        Me.HOME_BTN_ADDITEM.TabIndex = 3
+        Me.HOME_BTN_ADDITEM.Text = "ADD NEW ITEM+"
+        Me.HOME_BTN_ADDITEM.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.HOME_BTN_ADDITEM.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.HOME_BTN_ADDITEM.UseVisualStyleBackColor = True
+        '
+        'HOME_BTN_LOGS
+        '
+        Me.HOME_BTN_LOGS.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.HOME_BTN_LOGS.BackgroundImage = CType(resources.GetObject("HOME_BTN_LOGS.BackgroundImage"), System.Drawing.Image)
+        Me.HOME_BTN_LOGS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.HOME_BTN_LOGS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HOME_BTN_LOGS.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HOME_BTN_LOGS.Location = New System.Drawing.Point(255, 3)
+        Me.HOME_BTN_LOGS.Name = "HOME_BTN_LOGS"
+        Me.HOME_BTN_LOGS.Size = New System.Drawing.Size(247, 155)
+        Me.HOME_BTN_LOGS.TabIndex = 2
+        Me.HOME_BTN_LOGS.Text = "REPORTS"
+        Me.HOME_BTN_LOGS.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.HOME_BTN_LOGS.UseVisualStyleBackColor = True
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox3.Image = Global.JVSIS_Redux.My.Resources.Resources.account_ico
+        Me.PictureBox3.Location = New System.Drawing.Point(42, 60)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(130, 130)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 17
+        Me.PictureBox3.TabStop = False
         '
         'Dashboard
         '
@@ -2480,7 +2481,7 @@ Partial Class Dashboard
         Me.Controls.Add(Me.Panel_Sidebar)
         Me.Name = "Dashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "JUANCHO'S VARIETY SHOP INVENTORY SYSTEM"
         Me.Panel_Sidebar.ResumeLayout(False)
         Me.Panel_Main.ResumeLayout(False)
         Me.Panel_Home.ResumeLayout(False)
