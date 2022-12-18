@@ -39,9 +39,11 @@ Public Class Form_Stock_DB
         ElseIf CS = 0 Then
             Cur_Stock.BackColor = Color.Red
             New_QTY.BackColor = Color.Red
+            Current = False
         Else
             Cur_Stock.BackColor = Color.Orange
             New_QTY.BackColor = Color.Orange
+            Current = False
         End If
 
         DTG_SUGGEST.Visible = False
@@ -82,6 +84,7 @@ Public Class Form_Stock_DB
         DTG_SUGGEST.Height = 10
 
         LoadDashDetails()
+        DayLog()
 
     End Sub
 

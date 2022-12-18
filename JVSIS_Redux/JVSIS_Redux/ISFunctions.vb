@@ -153,7 +153,11 @@ Module ISFunctions
             cmd.Parameters.AddWithValue("@stat", NewStatus)
             cmd.Parameters.AddWithValue("@dat", StockDate)
 
-            cmd.CommandText = "UPDATE `products` SET `item_qty`= @qty, `item_stock_status`= @stat,`item_last_restock`= @dat WHERE item_id = '" & Dashboard.GlobalVariables.Selected_Item & "'"
+            If Form_Stock_DB.FORM_LABEL.Text = "RESTOCK ITEM" Then
+                cmd.CommandText = "UPDATE `products` SET `item_qty`= @qty, `item_stock_status`= @stat,`item_last_restock`= @dat WHERE item_id = '" & Dashboard.GlobalVariables.Selected_Item & "'"
+            Else
+                cmd.CommandText = "UPDATE `products` SET `item_qty`= @qty, `item_stock_status`= @stat WHERE item_id = '" & Dashboard.GlobalVariables.Selected_Item & "'"
+            End If
 
             cmd.ExecuteNonQuery()
 
@@ -232,11 +236,13 @@ Module ISFunctions
 
             transaction_type = "Edited Info"
             transaction_qty = "---"
+            LValue = "---"
 
         ElseIf Entry_Token = 5 Then
 
             transaction_type = "Item Deleted"
             transaction_qty = "---"
+            LValue = "---"
 
         ElseIf Entry_Token = 6 Then
 
@@ -344,9 +350,19 @@ Module ISFunctions
 
     Public Sub DayLog()
 
-        Dim DayDate As String = Date.Now().ToString("yyyy\-MM\-dd")
-        tableload("SELECT `log_id`, `item` AS 'Item', `c_qty` AS 'Change', (SELECT TIME_FORMAT(l_time, '%h:%i %p')) AS 'Time' FROM `transaction_log` WHERE l_date = '" & DayDate & "'", Dashboard.Day_GridView)
-        strconn.Close()
+        Try
+
+            Dim DayDate As String = Date.Now().ToString("yyyy\-MM\-dd")
+            tableload("SELECT `log_id`, `item` AS 'Item', `c_qty` AS 'Change', (SELECT TIME_FORMAT(l_time, '%h:%i %p')) AS 'Time' FROM `transaction_log` WHERE l_date = '" & DayDate & "' AND (type = 'Stock Out' OR type = 'Restock' OR type = 'New Item')", Dashboard.Day_GridView)
+            strconn.Close()
+
+        Catch ex As Exception
+
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+
+        End Try
+
+
 
     End Sub
 

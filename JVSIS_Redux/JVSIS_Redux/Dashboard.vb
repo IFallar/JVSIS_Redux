@@ -99,6 +99,9 @@ Public Class Dashboard
         BTN_Side_Logs.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
         BTN_Side_Settings.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50)
 
+        LoadDashDetails()
+        DayLog()
+
     End Sub
 
     Private Sub BTN_Side_Items_Click(sender As Object, e As EventArgs) Handles BTN_Side_Items.Click
@@ -159,7 +162,7 @@ Public Class Dashboard
 
         Panel_Home.Visible = False
         Panel_Items.Visible = False
-        Panel_History.Visible = True
+        Panel_History.Visible = False
         Panel_Settings.Visible = True
 
         BTN_Side_Home.BackColor = System.Drawing.Color.Transparent
@@ -181,7 +184,6 @@ Public Class Dashboard
         Load_BVS()
 
     End Sub
-
 
     '===================================================================================================================================
 
