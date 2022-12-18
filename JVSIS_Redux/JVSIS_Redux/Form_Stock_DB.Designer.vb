@@ -389,7 +389,7 @@ Partial Class Form_Stock_DB
         Me.MinimumSize = New System.Drawing.Size(550, 357)
         Me.Name = "Form_Stock_DB"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form_Stock_DB"
+        Me.Text = "STOCK FORM"
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.DTG_SUGGEST.ResumeLayout(False)

@@ -584,7 +584,7 @@ Partial Class Form_Item
         Me.MinimumSize = New System.Drawing.Size(672, 571)
         Me.Name = "Form_Item"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form_New_Item"
+        Me.Text = "ITEM FORM"
         Me.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel1.PerformLayout()
