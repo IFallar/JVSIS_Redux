@@ -87,6 +87,12 @@
     <Compile Include="Form_Item.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form_Log_In.Designer.vb">
+      <DependentUpon>Form_Log_In.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Log_In.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form_Reports.Designer.vb">
       <DependentUpon>Form_Reports.vb</DependentUpon>
     </Compile>
@@ -123,6 +129,9 @@
     <EmbeddedResource Include="Form_Item.resx">
       <DependentUpon>Form_Item.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Log_In.resx">
+      <DependentUpon>Form_Log_In.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Reports.resx">
       <DependentUpon>Form_Reports.vb</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +156,18 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_ico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogBG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usericon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

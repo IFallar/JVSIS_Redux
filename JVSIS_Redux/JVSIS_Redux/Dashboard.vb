@@ -14,14 +14,35 @@ Public Class Dashboard
 
         '=[USER RELATED]=============================
 
-        Public Shared UserID As Integer = 1
-        Public Shared logged_priv As Integer = 1
-        Public Shared logged As Integer = 1
+        Public Shared UserID As Integer
+        Public Shared logged_priv As Integer
+        Public Shared logged As Integer = 0
 
         '=[MODE RELATED]=============================
 
 
     End Class
+
+    Public Sub Show_Home()
+
+        If GlobalVariables.logged = 0 Then
+            Form_Log_In.ShowDialog()
+            Me.Hide()
+        Else
+            Me.Show()
+        End If
+
+    End Sub
+
+    Public Sub Set_Profile()
+        If GlobalVariables.logged_priv = 1 Then
+            PictureBox3.Image = My.Resources.usericon
+        ElseIf GlobalVariables.logged_priv = 0 Then
+            PictureBox3.Image = My.Resources.Admin
+        Else
+            PictureBox3.Image = My.Resources.account_ico
+        End If
+    End Sub
 
     Dim TableQuery As String = "SELECT `item_id`, `item_name` AS 'Product Name', (SELECT brand_name FROM brands WHERE brand_id = `item_brand`) AS 'Brand', (SELECT variant_name FROM variants WHERE variant_id = `item_variant` ) AS 'Variant', (SELECT category_name FROM category WHERE category_id = `item_category` ) AS 'Category', `item_p_cost` AS 'Cost', `item_s_cost_min` AS 'Min Price', `item_s_cost_max` AS 'Max Price', `item_qty` AS 'Quantity',`item_stock_status` AS 'Stock Level', (item_p_cost * item_qty) AS 'Total',  (SELECT supplier_name FROM supplier WHERE supplier_id = `item_supplier` ) as 'Supplier', `item_last_restock` AS 'Last Restock' FROM `products`"
 
@@ -66,6 +87,19 @@ Public Class Dashboard
     End Sub
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        Panel_Items.Visible = False
+        Panel_History.Visible = False
+        Panel_Settings.Visible = False
+
+        Show_Home()
+        Set_Profile()
+
+        If GlobalVariables.logged_priv = 0 Then
+            Account_Controls.Enabled = True
+        Else
+            Account_Controls.Enabled = False
+        End If
 
         LoadDashDetails()
         DayLog()
@@ -1740,13 +1774,27 @@ Public Class Dashboard
 
     End Sub
 
+    Private Sub log_out_Click(sender As Object, e As EventArgs) Handles log_out.Click
 
+        Dim logout = MsgBox("Are you sure you want to log out?", MsgBoxStyle.YesNo, "LOG OUT")
 
+        If logout = MsgBoxResult.Yes Then
 
+            acc_name_lbl.Text = "ACCOUNT NAME"
+            acc_type_lbl.Text = "ACCOUNT TYPE"
+            GlobalVariables.UserID = Nothing
+            GlobalVariables.logged_priv = Nothing
+            GlobalVariables.logged = 0
+            PictureBox3.Image = My.Resources.account_ico
 
+            Me.Hide()
+            Form_Log_In.Show()
 
+        ElseIf logout = MsgBoxResult.No Then
 
+        End If
 
+    End Sub
     '===================================================================================================================================
 
 

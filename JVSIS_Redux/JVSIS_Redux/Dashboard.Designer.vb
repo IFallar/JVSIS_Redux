@@ -22,15 +22,15 @@ Partial Class Dashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel_Sidebar = New System.Windows.Forms.Panel()
         Me.BTN_Side_Settings = New System.Windows.Forms.Button()
         Me.BTN_Side_Logs = New System.Windows.Forms.Button()
@@ -153,7 +153,7 @@ Partial Class Dashboard
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Account_Set_BTN = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel8 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Account_Controls = New System.Windows.Forms.TableLayoutPanel()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
@@ -181,6 +181,10 @@ Partial Class Dashboard
         Me.Export_Panel = New System.Windows.Forms.Panel()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label24 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.acc_type_lbl = New System.Windows.Forms.Label()
+        Me.acc_name_lbl = New System.Windows.Forms.Label()
+        Me.log_out = New System.Windows.Forms.Button()
         Me.Panel_Sidebar.SuspendLayout()
         Me.Panel_Main.SuspendLayout()
         Me.Panel_Home.SuspendLayout()
@@ -238,7 +242,7 @@ Partial Class Dashboard
         Me.TabPage8.SuspendLayout()
         Me.Account_Panel.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        Me.TableLayoutPanel8.SuspendLayout()
+        Me.Account_Controls.SuspendLayout()
         CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
@@ -249,11 +253,16 @@ Partial Class Dashboard
         Me.SplitContainer4.SuspendLayout()
         CType(Me.Acc_List_Grid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Export_Panel.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel_Sidebar
         '
         Me.Panel_Sidebar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel_Sidebar.Controls.Add(Me.log_out)
+        Me.Panel_Sidebar.Controls.Add(Me.PictureBox3)
+        Me.Panel_Sidebar.Controls.Add(Me.acc_type_lbl)
+        Me.Panel_Sidebar.Controls.Add(Me.acc_name_lbl)
         Me.Panel_Sidebar.Controls.Add(Me.BTN_Side_Settings)
         Me.Panel_Sidebar.Controls.Add(Me.BTN_Side_Logs)
         Me.Panel_Sidebar.Controls.Add(Me.BTN_Side_Items)
@@ -335,10 +344,10 @@ Partial Class Dashboard
         '
         'Panel_Main
         '
-        Me.Panel_Main.Controls.Add(Me.Panel_History)
-        Me.Panel_Main.Controls.Add(Me.Panel_Home)
         Me.Panel_Main.Controls.Add(Me.Panel_Settings)
         Me.Panel_Main.Controls.Add(Me.Panel_Items)
+        Me.Panel_Main.Controls.Add(Me.Panel_History)
+        Me.Panel_Main.Controls.Add(Me.Panel_Home)
         Me.Panel_Main.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel_Main.Location = New System.Drawing.Point(220, 0)
         Me.Panel_Main.Name = "Panel_Main"
@@ -624,15 +633,15 @@ Partial Class Dashboard
         Me.Day_GridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.Day_GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Day_GridView.ColumnHeadersVisible = False
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle17.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle17.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle17.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
-        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White
-        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Day_GridView.DefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle25.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle25.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle25.Padding = New System.Windows.Forms.Padding(0, 0, 5, 0)
+        DataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.White
+        DataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Day_GridView.DefaultCellStyle = DataGridViewCellStyle25
         Me.Day_GridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Day_GridView.Location = New System.Drawing.Point(0, 41)
         Me.Day_GridView.Name = "Day_GridView"
@@ -758,14 +767,14 @@ Partial Class Dashboard
         Me.HOME_BTN_LOGS.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.HOME_BTN_LOGS.BackgroundImage = CType(resources.GetObject("HOME_BTN_LOGS.BackgroundImage"), System.Drawing.Image)
-        Me.HOME_BTN_LOGS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.HOME_BTN_LOGS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.HOME_BTN_LOGS.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.HOME_BTN_LOGS.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HOME_BTN_LOGS.Location = New System.Drawing.Point(255, 3)
         Me.HOME_BTN_LOGS.Name = "HOME_BTN_LOGS"
         Me.HOME_BTN_LOGS.Size = New System.Drawing.Size(247, 155)
         Me.HOME_BTN_LOGS.TabIndex = 2
-        Me.HOME_BTN_LOGS.Text = "HISTORY"
+        Me.HOME_BTN_LOGS.Text = "REPORTS"
         Me.HOME_BTN_LOGS.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.HOME_BTN_LOGS.UseVisualStyleBackColor = True
         '
@@ -929,24 +938,24 @@ Partial Class Dashboard
         Me.Item_Table.BackgroundColor = System.Drawing.Color.White
         Me.Item_Table.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.Item_Table.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle18.Padding = New System.Windows.Forms.Padding(0, 10, 0, 10)
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Item_Table.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle26.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle26.Padding = New System.Windows.Forms.Padding(0, 10, 0, 10)
+        DataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Item_Table.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle26
         Me.Item_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle19.Font = New System.Drawing.Font("Leelawadee UI Semilight", 8.75!)
-        DataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
-        DataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Item_Table.DefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle27.Font = New System.Drawing.Font("Leelawadee UI Semilight", 8.75!)
+        DataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight
+        DataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Item_Table.DefaultCellStyle = DataGridViewCellStyle27
         Me.Item_Table.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Item_Table.EnableHeadersVisualStyles = False
         Me.Item_Table.Location = New System.Drawing.Point(3, 107)
@@ -1540,25 +1549,25 @@ Partial Class Dashboard
         Me.Log_View_Grid.BackgroundColor = System.Drawing.Color.White
         Me.Log_View_Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.Log_View_Grid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle20.Font = New System.Drawing.Font("Leelawadee UI", 10.0!)
-        DataGridViewCellStyle20.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.Log_View_Grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle28.Font = New System.Drawing.Font("Leelawadee UI", 10.0!)
+        DataGridViewCellStyle28.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Log_View_Grid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle28
         Me.Log_View_Grid.ColumnHeadersHeight = 30
         Me.Log_View_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle21.Font = New System.Drawing.Font("Leelawadee UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle21.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
-        DataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Log_View_Grid.DefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle29.Font = New System.Drawing.Font("Leelawadee UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle29.Padding = New System.Windows.Forms.Padding(5, 0, 5, 0)
+        DataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Log_View_Grid.DefaultCellStyle = DataGridViewCellStyle29
         Me.Log_View_Grid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Log_View_Grid.EnableHeadersVisualStyles = False
         Me.Log_View_Grid.Location = New System.Drawing.Point(3, 196)
@@ -1715,24 +1724,24 @@ Partial Class Dashboard
         Me.BVS_Gridview.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.BVS_Gridview.BackgroundColor = System.Drawing.Color.White
         Me.BVS_Gridview.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle22.Font = New System.Drawing.Font("Leelawadee UI", 10.0!)
-        DataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.Info
-        DataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.BVS_Gridview.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle30.Font = New System.Drawing.Font("Leelawadee UI", 10.0!)
+        DataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.Info
+        DataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.BVS_Gridview.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle30
         Me.BVS_Gridview.ColumnHeadersHeight = 40
-        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle23.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle23.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
-        DataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
-        DataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.BVS_Gridview.DefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle31.Font = New System.Drawing.Font("Leelawadee UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle31.Padding = New System.Windows.Forms.Padding(0, 5, 0, 5)
+        DataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark
+        DataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.BVS_Gridview.DefaultCellStyle = DataGridViewCellStyle31
         Me.BVS_Gridview.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.BVS_Gridview.EnableHeadersVisualStyles = False
         Me.BVS_Gridview.Location = New System.Drawing.Point(0, 33)
@@ -2006,7 +2015,7 @@ Partial Class Dashboard
         Me.Account_Panel.ColumnCount = 1
         Me.Account_Panel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.Account_Panel.Controls.Add(Me.Panel3, 0, 0)
-        Me.Account_Panel.Controls.Add(Me.TableLayoutPanel8, 0, 1)
+        Me.Account_Panel.Controls.Add(Me.Account_Controls, 0, 1)
         Me.Account_Panel.Location = New System.Drawing.Point(4, 4)
         Me.Account_Panel.Name = "Account_Panel"
         Me.Account_Panel.RowCount = 2
@@ -2049,23 +2058,23 @@ Partial Class Dashboard
         Me.Label1.Text = "Account Settings"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
-        'TableLayoutPanel8
+        'Account_Controls
         '
-        Me.TableLayoutPanel8.ColumnCount = 2
-        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.3942!))
-        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.6058!))
-        Me.TableLayoutPanel8.Controls.Add(Me.Label11, 0, 0)
-        Me.TableLayoutPanel8.Controls.Add(Me.Label12, 1, 0)
-        Me.TableLayoutPanel8.Controls.Add(Me.SplitContainer2, 0, 1)
-        Me.TableLayoutPanel8.Controls.Add(Me.SplitContainer4, 1, 1)
-        Me.TableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel8.Location = New System.Drawing.Point(3, 43)
-        Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
-        Me.TableLayoutPanel8.RowCount = 2
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
-        Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel8.Size = New System.Drawing.Size(827, 269)
-        Me.TableLayoutPanel8.TabIndex = 0
+        Me.Account_Controls.ColumnCount = 2
+        Me.Account_Controls.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.3942!))
+        Me.Account_Controls.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.6058!))
+        Me.Account_Controls.Controls.Add(Me.Label11, 0, 0)
+        Me.Account_Controls.Controls.Add(Me.Label12, 1, 0)
+        Me.Account_Controls.Controls.Add(Me.SplitContainer2, 0, 1)
+        Me.Account_Controls.Controls.Add(Me.SplitContainer4, 1, 1)
+        Me.Account_Controls.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Account_Controls.Location = New System.Drawing.Point(3, 43)
+        Me.Account_Controls.Name = "Account_Controls"
+        Me.Account_Controls.RowCount = 2
+        Me.Account_Controls.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30.0!))
+        Me.Account_Controls.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.Account_Controls.Size = New System.Drawing.Size(827, 269)
+        Me.Account_Controls.TabIndex = 0
         '
         'Label11
         '
@@ -2345,15 +2354,15 @@ Partial Class Dashboard
         Me.Acc_List_Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.Acc_List_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Acc_List_Grid.ColumnHeadersVisible = False
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle24.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle24.Padding = New System.Windows.Forms.Padding(0, 10, 0, 10)
-        DataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.ControlDark
-        DataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.Desktop
-        DataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.Acc_List_Grid.DefaultCellStyle = DataGridViewCellStyle24
+        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle32.Font = New System.Drawing.Font("Leelawadee UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle32.Padding = New System.Windows.Forms.Padding(0, 10, 0, 10)
+        DataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.ControlDark
+        DataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.Desktop
+        DataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.Acc_List_Grid.DefaultCellStyle = DataGridViewCellStyle32
         Me.Acc_List_Grid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Acc_List_Grid.Location = New System.Drawing.Point(0, 0)
         Me.Acc_List_Grid.MultiSelect = False
@@ -2408,6 +2417,58 @@ Partial Class Dashboard
         Me.Label24.TabIndex = 6
         Me.Label24.Text = "Export Files"
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.PictureBox3.Image = Global.JVSIS_Redux.My.Resources.Resources.account_ico
+        Me.PictureBox3.Location = New System.Drawing.Point(42, 60)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(130, 130)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 17
+        Me.PictureBox3.TabStop = False
+        '
+        'acc_type_lbl
+        '
+        Me.acc_type_lbl.BackColor = System.Drawing.Color.Transparent
+        Me.acc_type_lbl.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.acc_type_lbl.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.acc_type_lbl.Location = New System.Drawing.Point(-4, 214)
+        Me.acc_type_lbl.Name = "acc_type_lbl"
+        Me.acc_type_lbl.Padding = New System.Windows.Forms.Padding(5, 5, 5, 0)
+        Me.acc_type_lbl.Size = New System.Drawing.Size(224, 31)
+        Me.acc_type_lbl.TabIndex = 16
+        Me.acc_type_lbl.Text = "ACCOUNT TYPE"
+        Me.acc_type_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'acc_name_lbl
+        '
+        Me.acc_name_lbl.BackColor = System.Drawing.Color.Transparent
+        Me.acc_name_lbl.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.acc_name_lbl.ForeColor = System.Drawing.SystemColors.HighlightText
+        Me.acc_name_lbl.Location = New System.Drawing.Point(-4, 183)
+        Me.acc_name_lbl.Name = "acc_name_lbl"
+        Me.acc_name_lbl.Padding = New System.Windows.Forms.Padding(5, 5, 5, 0)
+        Me.acc_name_lbl.Size = New System.Drawing.Size(222, 31)
+        Me.acc_name_lbl.TabIndex = 15
+        Me.acc_name_lbl.Text = "ACCOUNT NAME"
+        Me.acc_name_lbl.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        '
+        'log_out
+        '
+        Me.log_out.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.log_out.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.log_out.FlatAppearance.BorderSize = 0
+        Me.log_out.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.log_out.Font = New System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.log_out.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.log_out.Location = New System.Drawing.Point(45, 633)
+        Me.log_out.Name = "log_out"
+        Me.log_out.Size = New System.Drawing.Size(172, 25)
+        Me.log_out.TabIndex = 18
+        Me.log_out.Text = "LOG-OUT"
+        Me.log_out.UseVisualStyleBackColor = False
         '
         'Dashboard
         '
@@ -2490,8 +2551,8 @@ Partial Class Dashboard
         Me.Account_Panel.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        Me.TableLayoutPanel8.ResumeLayout(False)
-        Me.TableLayoutPanel8.PerformLayout()
+        Me.Account_Controls.ResumeLayout(False)
+        Me.Account_Controls.PerformLayout()
         Me.SplitContainer2.Panel1.ResumeLayout(False)
         Me.SplitContainer2.Panel1.PerformLayout()
         Me.SplitContainer2.Panel2.ResumeLayout(False)
@@ -2504,6 +2565,7 @@ Partial Class Dashboard
         CType(Me.Acc_List_Grid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Export_Panel.ResumeLayout(False)
         Me.Export_Panel.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2590,7 +2652,7 @@ Partial Class Dashboard
     Friend WithEvents TableLayoutPanel5 As TableLayoutPanel
     Friend WithEvents Settings_Panel As TableLayoutPanel
     Friend WithEvents Account_Panel As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel8 As TableLayoutPanel
+    Friend WithEvents Account_Controls As TableLayoutPanel
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents TBX_FNAME As TextBox
@@ -2658,4 +2720,8 @@ Partial Class Dashboard
     Friend WithEvents TBX_NVariant As TextBox
     Friend WithEvents TBX_NCategory As TextBox
     Friend WithEvents Day_GridView As DataGridView
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents acc_type_lbl As Label
+    Friend WithEvents acc_name_lbl As Label
+    Friend WithEvents log_out As Button
 End Class

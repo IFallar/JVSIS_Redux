@@ -22,5 +22,25 @@ JVSIS_Redux
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:JVSIS_Redux.My.Resources.Resources.account_ico">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JVSIS_Redux.My.Resources.Resources.Admin">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JVSIS_Redux.My.Resources.Resources.LogBG">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JVSIS_Redux.My.Resources.Resources.usericon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>
