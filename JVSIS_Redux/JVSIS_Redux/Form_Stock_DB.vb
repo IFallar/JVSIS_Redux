@@ -300,6 +300,8 @@ Public Class Form_Stock_DB
 
         Log_entry(Log_Token, To_Stock, LogItemName, LogValue)
 
+        Dashboard.LoadMain()
+
     End Sub
 
 End Class

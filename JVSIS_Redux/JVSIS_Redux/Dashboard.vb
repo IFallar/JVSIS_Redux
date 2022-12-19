@@ -1784,7 +1784,7 @@ Public Class Dashboard
 
     End Sub
 
-    Private Sub log_out_Click(sender As Object, e As EventArgs) Handles log_out.Click
+    Private Sub LogOutBtn_Click(sender As Object, e As EventArgs) Handles LogOutBtn.Click
 
         Dim logout = MsgBox("Are you sure you want to log out?", MsgBoxStyle.YesNo, "LOG OUT")
 
