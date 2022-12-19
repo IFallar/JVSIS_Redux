@@ -22,17 +22,16 @@ Partial Class Form_Reports
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Base_Panel = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.InventoryValue_GridView = New System.Windows.Forms.DataGridView()
         Me.Max_Price = New System.Windows.Forms.RadioButton()
         Me.Min_Price = New System.Windows.Forms.RadioButton()
@@ -65,6 +64,8 @@ Partial Class Form_Reports
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -81,8 +82,6 @@ Partial Class Form_Reports
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.FORM_LABEL = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Base_Panel.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -157,7 +156,6 @@ Partial Class Form_Reports
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.White
-        Me.Panel4.Controls.Add(Me.Button3)
         Me.Panel4.Controls.Add(Me.InventoryValue_GridView)
         Me.Panel4.Controls.Add(Me.Max_Price)
         Me.Panel4.Controls.Add(Me.Min_Price)
@@ -170,19 +168,6 @@ Partial Class Form_Reports
         Me.Panel4.Size = New System.Drawing.Size(594, 301)
         Me.Panel4.TabIndex = 1
         '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Leelawadee UI", 8.0!)
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(533, 248)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(58, 53)
-        Me.Button3.TabIndex = 27
-        Me.Button3.Text = "EXPORT FILE"
-        Me.Button3.UseVisualStyleBackColor = False
-        '
         'InventoryValue_GridView
         '
         Me.InventoryValue_GridView.AllowUserToAddRows = False
@@ -194,24 +179,24 @@ Partial Class Form_Reports
         Me.InventoryValue_GridView.BackgroundColor = System.Drawing.Color.White
         Me.InventoryValue_GridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.InventoryValue_GridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Leelawadee UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.InventoryValue_GridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Leelawadee UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.InventoryValue_GridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.InventoryValue_GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Leelawadee UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle7.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.InventoryValue_GridView.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Leelawadee UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.InventoryValue_GridView.DefaultCellStyle = DataGridViewCellStyle2
         Me.InventoryValue_GridView.EnableHeadersVisualStyles = False
         Me.InventoryValue_GridView.GridColor = System.Drawing.SystemColors.Control
         Me.InventoryValue_GridView.Location = New System.Drawing.Point(0, 38)
@@ -272,7 +257,7 @@ Partial Class Form_Reports
         Me.TLB_QuickInfo.Name = "TLB_QuickInfo"
         Me.TLB_QuickInfo.RowCount = 1
         Me.TLB_QuickInfo.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TLB_QuickInfo.Size = New System.Drawing.Size(530, 56)
+        Me.TLB_QuickInfo.Size = New System.Drawing.Size(594, 56)
         Me.TLB_QuickInfo.TabIndex = 19
         '
         'TLB_VALUEOUT
@@ -285,12 +270,12 @@ Partial Class Form_Reports
         Me.TLB_VALUEOUT.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TLB_VALUEOUT.Controls.Add(Me.Label15, 0, 0)
         Me.TLB_VALUEOUT.Controls.Add(Me.TLB_PROFIT_MARGIN, 0, 1)
-        Me.TLB_VALUEOUT.Location = New System.Drawing.Point(399, 3)
+        Me.TLB_VALUEOUT.Location = New System.Drawing.Point(447, 3)
         Me.TLB_VALUEOUT.Name = "TLB_VALUEOUT"
         Me.TLB_VALUEOUT.RowCount = 2
         Me.TLB_VALUEOUT.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TLB_VALUEOUT.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TLB_VALUEOUT.Size = New System.Drawing.Size(128, 50)
+        Me.TLB_VALUEOUT.Size = New System.Drawing.Size(144, 50)
         Me.TLB_VALUEOUT.TabIndex = 8
         '
         'Label15
@@ -320,7 +305,7 @@ Partial Class Form_Reports
         Me.TLB_PROFIT_MARGIN.Location = New System.Drawing.Point(3, 19)
         Me.TLB_PROFIT_MARGIN.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
         Me.TLB_PROFIT_MARGIN.Name = "TLB_PROFIT_MARGIN"
-        Me.TLB_PROFIT_MARGIN.Size = New System.Drawing.Size(122, 34)
+        Me.TLB_PROFIT_MARGIN.Size = New System.Drawing.Size(138, 34)
         Me.TLB_PROFIT_MARGIN.TabIndex = 1
         Me.TLB_PROFIT_MARGIN.Text = "0"
         Me.TLB_PROFIT_MARGIN.TextAlign = System.Drawing.ContentAlignment.TopLeft
@@ -336,12 +321,12 @@ Partial Class Form_Reports
         Me.TLB_LOWSTOCK.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TLB_LOWSTOCK.Controls.Add(Me.Label16, 0, 0)
         Me.TLB_LOWSTOCK.Controls.Add(Me.TLB_SELL_VALUE, 0, 1)
-        Me.TLB_LOWSTOCK.Location = New System.Drawing.Point(267, 3)
+        Me.TLB_LOWSTOCK.Location = New System.Drawing.Point(299, 3)
         Me.TLB_LOWSTOCK.Name = "TLB_LOWSTOCK"
         Me.TLB_LOWSTOCK.RowCount = 2
         Me.TLB_LOWSTOCK.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TLB_LOWSTOCK.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TLB_LOWSTOCK.Size = New System.Drawing.Size(126, 50)
+        Me.TLB_LOWSTOCK.Size = New System.Drawing.Size(142, 50)
         Me.TLB_LOWSTOCK.TabIndex = 7
         '
         'Label16
@@ -372,7 +357,7 @@ Partial Class Form_Reports
         Me.TLB_SELL_VALUE.Location = New System.Drawing.Point(3, 19)
         Me.TLB_SELL_VALUE.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
         Me.TLB_SELL_VALUE.Name = "TLB_SELL_VALUE"
-        Me.TLB_SELL_VALUE.Size = New System.Drawing.Size(120, 34)
+        Me.TLB_SELL_VALUE.Size = New System.Drawing.Size(136, 34)
         Me.TLB_SELL_VALUE.TabIndex = 1
         Me.TLB_SELL_VALUE.Text = "0"
         Me.TLB_SELL_VALUE.TextAlign = System.Drawing.ContentAlignment.TopLeft
@@ -388,12 +373,12 @@ Partial Class Form_Reports
         Me.TLB_ITEMQTY.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TLB_ITEMQTY.Controls.Add(Me.Label17, 0, 0)
         Me.TLB_ITEMQTY.Controls.Add(Me.TLB_LIABILITIES, 0, 1)
-        Me.TLB_ITEMQTY.Location = New System.Drawing.Point(135, 3)
+        Me.TLB_ITEMQTY.Location = New System.Drawing.Point(151, 3)
         Me.TLB_ITEMQTY.Name = "TLB_ITEMQTY"
         Me.TLB_ITEMQTY.RowCount = 2
         Me.TLB_ITEMQTY.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TLB_ITEMQTY.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TLB_ITEMQTY.Size = New System.Drawing.Size(126, 50)
+        Me.TLB_ITEMQTY.Size = New System.Drawing.Size(142, 50)
         Me.TLB_ITEMQTY.TabIndex = 6
         '
         'Label17
@@ -423,7 +408,7 @@ Partial Class Form_Reports
         Me.TLB_LIABILITIES.Location = New System.Drawing.Point(3, 19)
         Me.TLB_LIABILITIES.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
         Me.TLB_LIABILITIES.Name = "TLB_LIABILITIES"
-        Me.TLB_LIABILITIES.Size = New System.Drawing.Size(120, 34)
+        Me.TLB_LIABILITIES.Size = New System.Drawing.Size(136, 34)
         Me.TLB_LIABILITIES.TabIndex = 1
         Me.TLB_LIABILITIES.Text = "0"
         Me.TLB_LIABILITIES.TextAlign = System.Drawing.ContentAlignment.TopLeft
@@ -444,7 +429,7 @@ Partial Class Form_Reports
         Me.TLB_INVENTORY_VALUE.RowCount = 2
         Me.TLB_INVENTORY_VALUE.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TLB_INVENTORY_VALUE.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TLB_INVENTORY_VALUE.Size = New System.Drawing.Size(126, 50)
+        Me.TLB_INVENTORY_VALUE.Size = New System.Drawing.Size(142, 50)
         Me.TLB_INVENTORY_VALUE.TabIndex = 5
         '
         'Label18
@@ -474,7 +459,7 @@ Partial Class Form_Reports
         Me.TLB_COST_VALUE.Location = New System.Drawing.Point(3, 19)
         Me.TLB_COST_VALUE.Margin = New System.Windows.Forms.Padding(3, 0, 3, 3)
         Me.TLB_COST_VALUE.Name = "TLB_COST_VALUE"
-        Me.TLB_COST_VALUE.Size = New System.Drawing.Size(120, 34)
+        Me.TLB_COST_VALUE.Size = New System.Drawing.Size(136, 34)
         Me.TLB_COST_VALUE.TabIndex = 1
         Me.TLB_COST_VALUE.Text = "0"
         Me.TLB_COST_VALUE.TextAlign = System.Drawing.ContentAlignment.TopLeft
@@ -585,7 +570,6 @@ Partial Class Form_Reports
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(151, 35)
         Me.Button1.TabIndex = 22
-        Me.Button1.Text = "GET PRINTABLE FILE"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Label4
@@ -624,15 +608,15 @@ Partial Class Form_Reports
         Me.RetrievedItems_GridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.RetrievedItems_GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.RetrievedItems_GridView.ColumnHeadersVisible = False
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Leelawadee UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.RetrievedItems_GridView.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Leelawadee UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.RetrievedItems_GridView.DefaultCellStyle = DataGridViewCellStyle3
         Me.RetrievedItems_GridView.EnableHeadersVisualStyles = False
         Me.RetrievedItems_GridView.GridColor = System.Drawing.SystemColors.Control
         Me.RetrievedItems_GridView.Location = New System.Drawing.Point(3, 38)
@@ -685,6 +669,30 @@ Partial Class Form_Reports
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(296, 291)
         Me.Panel6.TabIndex = 3
+        '
+        'Label6
+        '
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Leelawadee UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.Desktop
+        Me.Label6.Location = New System.Drawing.Point(3, 153)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(145, 31)
+        Me.Label6.TabIndex = 33
+        Me.Label6.Text = "0"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label7
+        '
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.SystemColors.Desktop
+        Me.Label7.Location = New System.Drawing.Point(3, 131)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(223, 22)
+        Me.Label7.TabIndex = 32
+        Me.Label7.Text = "ITEMS TO ORDER"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Panel10
         '
@@ -777,7 +785,6 @@ Partial Class Form_Reports
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(296, 36)
         Me.Button2.TabIndex = 23
-        Me.Button2.Text = "GET PRINTABLE FILE"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Panel7
@@ -812,24 +819,24 @@ Partial Class Form_Reports
         Me.LowStock_GridView.BackgroundColor = System.Drawing.Color.White
         Me.LowStock_GridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
         Me.LowStock_GridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Leelawadee UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.LowStock_GridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Leelawadee UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.LowStock_GridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.LowStock_GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Leelawadee UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle10.Padding = New System.Windows.Forms.Padding(5)
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.LowStock_GridView.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Leelawadee UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.Padding = New System.Windows.Forms.Padding(5)
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.LowStock_GridView.DefaultCellStyle = DataGridViewCellStyle5
         Me.LowStock_GridView.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.LowStock_GridView.EnableHeadersVisualStyles = False
         Me.LowStock_GridView.GridColor = System.Drawing.SystemColors.Control
@@ -897,30 +904,6 @@ Partial Class Form_Reports
         Me.FORM_LABEL.TabIndex = 17
         Me.FORM_LABEL.Text = "INVENTORY REPORTS"
         Me.FORM_LABEL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label6
-        '
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Leelawadee UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Label6.Location = New System.Drawing.Point(3, 153)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(145, 31)
-        Me.Label6.TabIndex = 33
-        Me.Label6.Text = "0"
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label7
-        '
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Leelawadee UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Label7.Location = New System.Drawing.Point(3, 131)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(223, 22)
-        Me.Label7.TabIndex = 32
-        Me.Label7.Text = "ITEMS TO ORDER"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Form_Reports
         '
@@ -1012,7 +995,6 @@ Partial Class Form_Reports
     Friend WithEvents Min_Price As RadioButton
     Friend WithEvents InventoryValue_GridView As DataGridView
     Friend WithEvents LowStock_GridView As DataGridView
-    Friend WithEvents Button3 As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
 End Class
