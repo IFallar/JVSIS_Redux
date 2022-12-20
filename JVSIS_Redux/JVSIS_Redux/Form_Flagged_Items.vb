@@ -17,29 +17,35 @@ Public Class Form_Flagged_Items
     End Sub
 
     Public Sub StockSelect()
+        Try
+            opencon()
 
-        opencon()
+            cmd.Connection = con
+            cmd.CommandText = "SELECT `item_name` AS 'Product Name', (SELECT brand_name FROM brands WHERE brand_id = `item_brand`) AS 'Brand', (SELECT variant_name FROM variants WHERE variant_id = `item_variant` ) AS 'Variant', (SELECT supplier_name FROM supplier WHERE supplier_id = `item_supplier` ) as 'Supplier', item_qty, item_threshold, item_stock_status FROM products WHERE item_id = '" & Dashboard.GlobalVariables.Selected_Item & "'"
+            cmd.Prepare()
 
-        cmd.Connection = con
-        cmd.CommandText = "SELECT `item_name` AS 'Product Name', (SELECT brand_name FROM brands WHERE brand_id = `item_brand`) AS 'Brand', (SELECT variant_name FROM variants WHERE variant_id = `item_variant` ) AS 'Variant', (SELECT supplier_name FROM supplier WHERE supplier_id = `item_supplier` ) as 'Supplier', item_qty, item_threshold, item_stock_status FROM products WHERE item_id = '" & Dashboard.GlobalVariables.Selected_Item & "'"
-        cmd.Prepare()
+            cmdreader = cmd.ExecuteReader
 
-        cmdreader = cmd.ExecuteReader
+            While cmdreader.Read
+                FS_RS_TBX.Text = cmdreader.GetString(0)
+                FS_RS_BRAND.Text = cmdreader.GetString(1)
+                FS_RS_VAR.Text = cmdreader.GetString(2)
+                FS_RS_SUPP.Text = cmdreader.GetString(3)
+                QTY = cmdreader.GetString(4)
+                TH = cmdreader.GetValue(5)
+            End While
 
-        While cmdreader.Read
-            FS_RS_TBX.Text = cmdreader.GetString(0)
-            FS_RS_BRAND.Text = cmdreader.GetString(1)
-            FS_RS_VAR.Text = cmdreader.GetString(2)
-            FS_RS_SUPP.Text = cmdreader.GetString(3)
-            QTY = cmdreader.GetString(4)
-            TH = cmdreader.GetValue(5)
-        End While
+            cmdreader.Close()
+            con.Close()
 
-        cmdreader.Close()
-        con.Close()
+            DTG_SUGGEST.Visible = False
+            DTG_SUGGEST.Height = 10
+        Catch ex As Exception
 
-        DTG_SUGGEST.Visible = False
-        DTG_SUGGEST.Height = 10
+            MessageBox.Show(String.Format("Error: {0}", ex.Message))
+
+        End Try
+
 
     End Sub
 
@@ -65,6 +71,7 @@ Public Class Form_Flagged_Items
         Try
 
             Dashboard.GlobalVariables.Selected_Item = DTG_ITM_RECC.CurrentRow.Cells(0).Value
+            StockSelect()
 
         Catch ex As NullReferenceException
 
@@ -72,7 +79,7 @@ Public Class Form_Flagged_Items
 
         End Try
 
-        StockSelect()
+
 
     End Sub
 
@@ -85,7 +92,8 @@ Public Class Form_Flagged_Items
             FlagEntry = Flagged_Item_GridView.CurrentRow.Cells(0).Value
             Issue_Box.Text = Flagged_Item_GridView.CurrentRow.Cells(3).Value
             RETURN_UNIT.Value = Flagged_Item_GridView.CurrentRow.Cells(2).Value
-            Dashboard.GlobalVariables.Selected_Item = Flagged_Item_GridView.CurrentRow.Cells(5).Value
+            Dashboard.GlobalVariables.Selected_Item = Flagged_Item_GridView.CurrentRow.Cells(0).Value
+            StockSelect()
 
         Catch ex As NullReferenceException
 
@@ -93,7 +101,7 @@ Public Class Form_Flagged_Items
 
         End Try
 
-        StockSelect()
+
 
     End Sub
 
