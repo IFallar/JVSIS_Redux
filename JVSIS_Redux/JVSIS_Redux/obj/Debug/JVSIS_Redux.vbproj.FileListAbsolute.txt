@@ -22,3 +22,26 @@ C:\Users\Shane Ivan Fallar\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\
 C:\Users\Shane Ivan Fallar\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\bin\Debug\JVSIS_Redux.application
 C:\Users\Shane Ivan Fallar\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.exe.manifest
 C:\Users\Shane Ivan Fallar\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.application
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\bin\Debug\JVSIS_Redux.exe.config
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\bin\Debug\JVSIS_Redux.exe.manifest
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\bin\Debug\JVSIS_Redux.application
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\bin\Debug\JVSIS_Redux.exe
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\bin\Debug\JVSIS_Redux.pdb
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\bin\Debug\JVSIS_Redux.xml
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\bin\Debug\MySql.Data.xml
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.vbprojAssemblyReference.cache
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.Dashboard.resources
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.Form_Flagged_Items.resources
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.Form_Item.resources
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.Form_Log_In.resources
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.Form_Reports.resources
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.Form_Stock_DB.resources
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.Resources.resources
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.vbproj.GenerateResource.cache
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.vbproj.CoreCompileInputs.cache
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.exe.manifest
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.application
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.vbproj.CopyComplete
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.exe
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.xml
+C:\Users\Asus\Documents\GitHub\JVSIS_Redux\JVSIS_Redux\JVSIS_Redux\obj\Debug\JVSIS_Redux.pdb
